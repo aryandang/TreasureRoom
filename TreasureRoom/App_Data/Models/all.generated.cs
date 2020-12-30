@@ -6,8 +6,8 @@ using  Umbraco.Core.Models;
 using  Umbraco.Core.Models.PublishedContent;
 using  Umbraco.Web;
 using  Umbraco.ModelsBuilder.Embedded;
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "2e4538139ae9b0f")]
-[assembly:System.Reflection.AssemblyVersion("0.0.0.10")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "22f9194dec32fca7")]
+[assembly:System.Reflection.AssemblyVersion("0.0.0.13")]
 
 
 // FILE: models.generated.cs
@@ -83,6 +83,13 @@ namespace Umbraco.Web.PublishedModels
 		public string SearchBar3 => global::Umbraco.Web.PublishedModels.ContentControls.GetSearchBar3(this);
 
 		///<summary>
+		/// Section 1 Image: Pick an image
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		[ImplementPropertyType("section1Image")]
+		public global::Umbraco.Core.Models.PublishedContent.IPublishedContent Section1Image => global::Umbraco.Web.PublishedModels.ContentControls.GetSection1Image(this);
+
+		///<summary>
 		/// Services Heading: Enter the heading
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
@@ -112,6 +119,10 @@ namespace Umbraco.Web.PublishedModels
 		/// <summary>Search Bar 3</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
 		string SearchBar3 { get; }
+
+		/// <summary>Section 1 Image</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		global::Umbraco.Core.Models.PublishedContent.IPublishedContent Section1Image { get; }
 
 		/// <summary>Services Heading</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
@@ -179,6 +190,17 @@ namespace Umbraco.Web.PublishedModels
 		/// <summary>Static getter for Search Bar 3</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
 		public static string GetSearchBar3(IContentControls that) => that.Value<string>("searchBar3");
+
+		///<summary>
+		/// Section 1 Image: Pick an image
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		[ImplementPropertyType("section1Image")]
+		public global::Umbraco.Core.Models.PublishedContent.IPublishedContent Section1Image => GetSection1Image(this);
+
+		/// <summary>Static getter for Section 1 Image</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		public static global::Umbraco.Core.Models.PublishedContent.IPublishedContent GetSection1Image(IContentControls that) => that.Value<global::Umbraco.Core.Models.PublishedContent.IPublishedContent>("section1Image");
 
 		///<summary>
 		/// Services Heading: Enter the heading
