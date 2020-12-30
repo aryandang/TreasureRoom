@@ -2,6 +2,78 @@
 @{
 	Layout = null;
 }
+<html>
 
-@* the fun starts here *@
-@RenderBody()
+<head>
+	<title>Treasure Room Website Template</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+	<section id="nav-bar">
+		<nav class="navbar navbar-expand-lg navbar-light">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="#"><img src="images/TreasureRoom-Logo.png"></a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+					<i class="fa fa-bars"></i>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item">
+							<a class="nav-link" href="#top">HOME</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#services">SERVICES</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#about">ABOUT</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#testimonials">TESTIMONIALS</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#contact">CONTACT</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</section>
+	@RenderBody()
+	<!-- footer section -->
+	<section id="footer">
+		<img src="images/FooterWave.png" id="footer-wave-img">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 footer-box">
+					<img src="images/TreasureRoom-Logo.png">
+					<p>
+						Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+					</p>
+				</div>
+				<div class="col-md-4 footer-box">
+					<p><b>CONTACT</b></p>
+					<p><i class="fa fa-map-marker"></i> London, United Kingdom</p>
+					<p><i class="fa fa-phone"></i> +44 1234567891</p>
+					<p><i class="fa fa-envelope-o"></i> 1721964@brunel.ac.uk</p>
+				</div>
+				<div class="col-md-4 footer-box">
+					<p><b>SUBSCRIBE NEWSLETTER</b></p>
+					<input type="email" class="form-control" placeholder="Your Email">
+					<button type="button" class="btn btn-primary">Subscribe</button>
+				</div>
+			</div>
+			<hr>
+			<p class="copyright">Website implemented by Aryan Dang</p>
+		</div>
+	</section>
+	<!-- smooth scroll -->
+	<script src="js/smooth-scroll.js"></script>
+	<script>var scroll = new SmoothScroll('a[href*="#"]');</script>
+</body>
+
+</html>

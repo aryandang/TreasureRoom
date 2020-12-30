@@ -1,8 +1,118 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<Umbraco.Web.PublishedModels.Home>
-@{
+	@{
 	Layout = "Master.cshtml";
-}
+	}
 
-@* the fun starts here *@
+	@* the fun starts here *@
 
-@Model.Title
+	<!--banner section-->
+	<section id="banner">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<p class="promo-title">@Model.Title</p>
+					<input type="text" class="search-field keyword" placeholder="@Model.SearchBar1">
+					<input type="text" class="search-field location" placeholder="@Model.SearchBar2">
+					<input type="text" class="search-field item-type" placeholder="@Model.SearchBar3">
+					<button class="search-btn" type="button">Search</button>
+				</div>
+			</div>
+		</div>
+		</div>
+		<img src="images/BannerWave.png" id="banner-wave-img">
+	</section>
+	<!-- Services section -->
+	<section id="services">
+		<div class="container text-center">
+			<h1 class="title">@Model.ServicesHeading</h1>
+			<div class="row text-center">
+				<div class="col-md-4 services">
+					<img src="images/Police-Logo.png" class="services-img">
+					<h4>
+						The laws for lost & found in the UK
+					</h4>
+					<p>
+						Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has
+						survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+					</p>
+				</div>
+				<div class="col-md-4 services">
+					<img src="images/Community-Logo.png" class="services-img">
+					<h4>
+						We care for the public
+					</h4>
+					<p>
+						Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has
+						survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+					</p>
+				</div>
+				<div class="col-md-4 services">
+					<img src="images/Internet-Logo.png" class="services-img">
+					<h4>
+						The laws for lost & found in the UK
+					</h4>
+					<p>
+						Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has
+						survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+					</p>
+				</div>
+			</div>
+			<button type="button" class="btn btn-primary">All Services</button>
+		</div>
+	</section>
+	<!-- About us -->
+	<section id="about">
+		<div class="container">
+			<h1 class="title text-center">WHY CHOOSE US?</h1>
+			<div class="row">
+				<div class="col-md-6 about">
+					<p class="about-title">
+						Why we are different than other websites
+					</p>
+					<ul>
+						<li>
+							Believe in doing business with honesty
+						</li>
+						<li>
+							Believe in doing business with honesty
+						</li>
+						<li>
+							Believe in doing business with honesty
+						</li>
+						<li>
+							Believe in doing business with honesty
+						</li>
+					</ul>
+				</div>
+				<div class="col-md-6">
+					<img src="" class="image-fluid">
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Testimonials -->
+	<section id="testimonials">
+		<div class="container">
+			<h1 class="title text-center">WHAT CLIENTS SAY</h1>
+			<div class="row">
+				<div class="col-md-5 testimonials">
+					<p>
+						Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+					</p>
+					<img src="images/AryanDang.jpeg">
+					<p class="user-details"><b>Aryan Dang</b><br>Founder</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- social media section -->
+	<section id="social-media">
+		<div class="container text-center">
+			<div class="col-md- 5 contact">
+				<p>FIND US ON SOCIAL MEDIA</p>
+				<div class="social-icons">
+					<a href="#"><i class="fa fa-envelope"></i></a>
+				</div>
+			</div>
+		</div>
+	</section>
