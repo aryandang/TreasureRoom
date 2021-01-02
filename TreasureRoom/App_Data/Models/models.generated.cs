@@ -17,8 +17,8 @@ using Umbraco.Core.Models.PublishedContent;
 using Umbraco.Web;
 using Umbraco.ModelsBuilder.Embedded;
 
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "22f9194dec32fca7")]
-[assembly:System.Reflection.AssemblyVersion("0.0.0.13")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "a06dae6b85b3ff57")]
+[assembly:System.Reflection.AssemblyVersion("0.0.0.2")]
 
 namespace Umbraco.Web.PublishedModels
 {
@@ -48,27 +48,6 @@ namespace Umbraco.Web.PublishedModels
 		// properties
 
 		///<summary>
-		/// Search Bar 1
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
-		[ImplementPropertyType("searchBar1")]
-		public string SearchBar1 => global::Umbraco.Web.PublishedModels.ContentControls.GetSearchBar1(this);
-
-		///<summary>
-		/// Search Bar 2
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
-		[ImplementPropertyType("searchBar2")]
-		public string SearchBar2 => global::Umbraco.Web.PublishedModels.ContentControls.GetSearchBar2(this);
-
-		///<summary>
-		/// Search Bar 3
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
-		[ImplementPropertyType("searchBar3")]
-		public string SearchBar3 => global::Umbraco.Web.PublishedModels.ContentControls.GetSearchBar3(this);
-
-		///<summary>
 		/// Section 1 Image: Pick an image
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
@@ -94,18 +73,6 @@ namespace Umbraco.Web.PublishedModels
 	/// <summary>Content Controls</summary>
 	public partial interface IContentControls : IPublishedContent
 	{
-		/// <summary>Search Bar 1</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
-		string SearchBar1 { get; }
-
-		/// <summary>Search Bar 2</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
-		string SearchBar2 { get; }
-
-		/// <summary>Search Bar 3</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
-		string SearchBar3 { get; }
-
 		/// <summary>Section 1 Image</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
 		global::Umbraco.Core.Models.PublishedContent.IPublishedContent Section1Image { get; }
@@ -143,39 +110,6 @@ namespace Umbraco.Web.PublishedModels
 		{ }
 
 		// properties
-
-		///<summary>
-		/// Search Bar 1
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
-		[ImplementPropertyType("searchBar1")]
-		public string SearchBar1 => GetSearchBar1(this);
-
-		/// <summary>Static getter for Search Bar 1</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
-		public static string GetSearchBar1(IContentControls that) => that.Value<string>("searchBar1");
-
-		///<summary>
-		/// Search Bar 2
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
-		[ImplementPropertyType("searchBar2")]
-		public string SearchBar2 => GetSearchBar2(this);
-
-		/// <summary>Static getter for Search Bar 2</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
-		public static string GetSearchBar2(IContentControls that) => that.Value<string>("searchBar2");
-
-		///<summary>
-		/// Search Bar 3
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
-		[ImplementPropertyType("searchBar3")]
-		public string SearchBar3 => GetSearchBar3(this);
-
-		/// <summary>Static getter for Search Bar 3</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
-		public static string GetSearchBar3(IContentControls that) => that.Value<string>("searchBar3");
 
 		///<summary>
 		/// Section 1 Image: Pick an image

@@ -12,8 +12,5 @@ namespace TreasureRoom.Models
         public int ID { get; set; }
         public string ItemType { get; set; }
 
-        [NotMapped]
-        public List<ItemTypes> ItemTypesCollection { get; set; }
-
     }
 }

@@ -1,0 +1,19 @@
+USE [TreasureRoom]
+GO
+
+/****** Object:  Table [dbo].[dbo.LostItems]    Script Date: 02/01/2021 15:15:13 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[dbo.LostItems](
+	[ID] [nvarchar](50) NOT NULL,
+	[Description] [nvarchar](255) NULL,
+	[Postcode] [nvarchar](50) NULL,
+	[ItemType] [nvarchar](50) NULL,
+	[Image] [nvarchar](50) NULL
+) ON [PRIMARY]
+GO
+

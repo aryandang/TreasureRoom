@@ -212,3 +212,4 @@ C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom\bin\EntityFr
 C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom\bin\EntityFramework.SqlServer.dll
 C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom\bin\EntityFramework.xml
 C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom\bin\EntityFramework.SqlServer.xml
+C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom\obj\Debug\TreasureRoom.csprojAssemblyReference.cache
