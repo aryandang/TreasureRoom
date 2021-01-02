@@ -6,10 +6,11 @@ using System.Web.Mvc;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
+using Umbraco.Web.Mvc;
 
 namespace TreasureRoom.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : SurfaceController
     {
         public ActionResult Index()
         {
