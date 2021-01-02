@@ -3,14 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using TreasureRoom.Models;
 
 namespace TreasureRoom.Controllers
 {
     public class HomeController : Controller
     {
+        TreasureRoomEntities1 db = new TreasureRoomEntities1();
         public ActionResult Index()
         {
-            return View();
+            ItemTypes model = new ItemTypes();
+            //model.ItemType = db.get_ItemTypes().FirstOrDefault();
+            return View(model);
         }
 
         public ActionResult About()
