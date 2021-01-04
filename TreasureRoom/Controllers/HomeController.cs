@@ -6,12 +6,14 @@ using System.Web.Mvc;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
+using TreasureRoom.Models;
 using Umbraco.Web.Mvc;
 
 namespace TreasureRoom.Controllers
 {
-    public class HomeController : SurfaceController
+    public class HomeController : Controller
     {
+        TreasureRoomEntities db = new TreasureRoomEntities();
         public ActionResult Index()
         {
             return View();
@@ -33,7 +35,9 @@ namespace TreasureRoom.Controllers
 
         public ActionResult DropDownSearch()
         {
-            return View();
+            ItemTypes model = new ItemTypes();
+            model.GetItemTypes = db.Get_ItemTypes();
+            return View(model);
         }
     }
 }

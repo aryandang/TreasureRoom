@@ -9,9 +9,14 @@ namespace TreasureRoom.Models
 {
     public class ItemTypes
     {
+        public IEnumerable<Get_ItemTypes_Result> GetItemTypes { get; set; }
+
+
+
         public int ItemTypeID { get; set; }
         public string ItemType { get; set; }
 
-        public List<ItemTypes> ItemTypesCollection { get; set; }
+        //[NotMapped]
+        //public List<ItemTypes> ItemTypesCollection { get; set; }
     }
 }

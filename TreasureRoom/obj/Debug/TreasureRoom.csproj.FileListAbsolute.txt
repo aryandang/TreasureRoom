@@ -71,6 +71,8 @@ C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom\bin\Antlr3.R
 C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom\bin\ClientDependency.Core.dll
 C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom\bin\ClientDependency.Core.Mvc.dll
 C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom\bin\CSharpTest.Net.Collections.dll
+C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom\bin\EntityFramework.dll
+C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom\bin\EntityFramework.SqlServer.dll
 C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom\bin\Examine.dll
 C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom\bin\HtmlAgilityPack.dll
 C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom\bin\HtmlSanitizer.dll
@@ -138,6 +140,8 @@ C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom\bin\AngleSha
 C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom\bin\ClientDependency.Core.pdb
 C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom\bin\ClientDependency.Core.Mvc.pdb
 C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom\bin\CSharpTest.Net.Collections.xml
+C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom\bin\EntityFramework.xml
+C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom\bin\EntityFramework.SqlServer.xml
 C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom\bin\Examine.pdb
 C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom\bin\HtmlAgilityPack.pdb
 C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom\bin\HtmlAgilityPack.xml
@@ -204,12 +208,8 @@ C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom\bin\Umbraco.
 C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom\bin\Umbraco.Web.UI.xml
 C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom\bin\Antlr3.Runtime.pdb
 C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom\obj\Debug\TreasureRoom.csprojAssemblyReference.cache
 C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom\obj\Debug\TreasureRoom.csproj.CoreCompileInputs.cache
 C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom\obj\Debug\TreasureRoom.csproj.CopyComplete
 C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom\obj\Debug\TreasureRoom.dll
 C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom\obj\Debug\TreasureRoom.pdb
-C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom\bin\EntityFramework.dll
-C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom\bin\EntityFramework.SqlServer.dll
-C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom\bin\EntityFramework.xml
-C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom\bin\EntityFramework.SqlServer.xml
-C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom\obj\Debug\TreasureRoom.csprojAssemblyReference.cache

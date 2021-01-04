@@ -1,6 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="TreasureRoomModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <!--Errors Found During Generation:
+warning 6002: The table/view 'TreasureRoom.dbo.dbo.ItemTypes' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="dbo_ItemTypes">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ItemType" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
 warning 6002: The table/view 'TreasureRoom.dbo.dbo.LostItems' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="dbo_LostItems">
     <Key>
@@ -8,16 +17,23 @@ warning 6002: The table/view 'TreasureRoom.dbo.dbo.LostItems' does not have a pr
     </Key>
     <Property Name="ID" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="Description" Type="nvarchar" MaxLength="255" />
-    <Property Name="Location" Type="nvarchar" MaxLength="50" />
+    <Property Name="Postcode" Type="nvarchar" MaxLength="50" />
     <Property Name="ItemType" Type="nvarchar" MaxLength="50" />
     <Property Name="Image" Type="nvarchar" MaxLength="50" />
   </EntityType>
+  <Function Name="Get_ItemTypes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <EntityContainer Name="TreasureRoomModelStoreContainer">
+    <EntitySet Name="dbo_ItemTypes" EntityType="Self.dbo_ItemTypes" store:Type="Tables" store:Schema="dbo" store:Name="dbo.ItemTypes">
+      <DefiningQuery>SELECT 
+    [dbo_ItemTypes].[ID] AS [ID], 
+    [dbo_ItemTypes].[ItemType] AS [ItemType]
+    FROM [dbo].[dbo.ItemTypes] AS [dbo_ItemTypes]</DefiningQuery>
+    </EntitySet>
     <EntitySet Name="dbo_LostItems" EntityType="Self.dbo_LostItems" store:Type="Tables" store:Schema="dbo" store:Name="dbo.LostItems">
       <DefiningQuery>SELECT 
     [dbo_LostItems].[ID] AS [ID], 
     [dbo_LostItems].[Description] AS [Description], 
-    [dbo_LostItems].[Location] AS [Location], 
+    [dbo_LostItems].[Postcode] AS [Postcode], 
     [dbo_LostItems].[ItemType] AS [ItemType], 
     [dbo_LostItems].[Image] AS [Image]
     FROM [dbo].[dbo.LostItems] AS [dbo_LostItems]</DefiningQuery>

@@ -4,5 +4,5 @@
     ViewBag.Title = "DropDownSearch";
 }
 
-<h2>DropDownSearch</h2>
+@Html.DropDownListFor(model => model.GetItemTypes, new SelectList(Model.GetItemTypes, "ItemTypeID", "ItemTypeID"))
 

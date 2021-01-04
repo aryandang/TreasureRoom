@@ -12,6 +12,8 @@ namespace TreasureRoom.Models
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Entity.Core.Objects;
+    using System.Linq;
     
     public partial class TreasureRoomEntities : DbContext
     {
@@ -26,5 +28,11 @@ namespace TreasureRoom.Models
         }
     
         public virtual DbSet<dbo_LostItems> dbo_LostItems { get; set; }
+        public virtual DbSet<dbo_ItemTypes> dbo_ItemTypes { get; set; }
+    
+        public virtual ObjectResult<Get_ItemTypes_Result> Get_ItemTypes()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Get_ItemTypes_Result>("Get_ItemTypes");
+        }
     }
 }
