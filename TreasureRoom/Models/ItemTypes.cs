@@ -9,8 +9,9 @@ namespace TreasureRoom.Models
 {
     public class ItemTypes
     {
-        public static int ID { get; set; }
-        public static string ItemType { get; set; }
+        public int ItemTypeID { get; set; }
+        public string ItemType { get; set; }
 
+        public List<ItemTypes> ItemTypesCollection { get; set; }
     }
 }

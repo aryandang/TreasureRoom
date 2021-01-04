@@ -30,5 +30,10 @@ namespace TreasureRoom.Controllers
 
             return View();
         }
+
+        public ActionResult DropDownSearch()
+        {
+            return View();
+        }
     }
 }
