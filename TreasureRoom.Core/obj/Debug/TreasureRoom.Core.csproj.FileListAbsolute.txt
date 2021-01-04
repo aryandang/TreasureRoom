@@ -1,0 +1,6 @@
+C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom.Core\obj\Debug\TreasureRoom.Core.csprojAssemblyReference.cache
+C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom.Core\obj\Debug\TreasureRoom.Core.csproj.CoreCompileInputs.cache
+C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom.Core\bin\Debug\TreasureRoom.Core.dll
+C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom.Core\bin\Debug\TreasureRoom.Core.pdb
+C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom.Core\obj\Debug\TreasureRoom.Core.dll
+C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom.Core\obj\Debug\TreasureRoom.Core.pdb
