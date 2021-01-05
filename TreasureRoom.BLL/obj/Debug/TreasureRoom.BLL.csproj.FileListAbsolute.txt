@@ -1,0 +1,6 @@
+C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom.BLL\bin\Debug\TreasureRoom.BLL.dll
+C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom.BLL\bin\Debug\TreasureRoom.BLL.pdb
+C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom.BLL\obj\Debug\TreasureRoom.BLL.csprojAssemblyReference.cache
+C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom.BLL\obj\Debug\TreasureRoom.BLL.csproj.CoreCompileInputs.cache
+C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom.BLL\obj\Debug\TreasureRoom.BLL.dll
+C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom.BLL\obj\Debug\TreasureRoom.BLL.pdb

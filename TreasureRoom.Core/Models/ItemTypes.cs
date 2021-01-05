@@ -9,7 +9,6 @@ namespace TreasureRoom.Models
 {
     public class ItemTypes
     {
-        public IEnumerable<Get_ItemTypes_Result> GetItemTypes { get; set; }
 
 
 
