@@ -416,8 +416,11 @@
       <LastGenOutput>ModelsBuilder.generated.cs</LastGenOutput>
     </Compile>
     <Compile Include="Models\ModelsBuilder.generated.cs">
-      <AutoGen>True</AutoGen>
+      <DependentUpon>ModelsBuilder.cs</DependentUpon>
       <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Models\SearchPage.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
