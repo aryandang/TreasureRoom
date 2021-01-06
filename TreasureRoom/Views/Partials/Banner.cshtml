@@ -1,0 +1,14 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage
+
+<!--banner section-->
+<section id="banner">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <p class="promo-title">@Model.Value("title")</p>
+                @Html.Partial("~/Views/SearchPage.cshtml")
+            </div>
+        </div>
+    </div>
+    <img src="images/BannerWave.png" id="banner-wave-img">
+</section>

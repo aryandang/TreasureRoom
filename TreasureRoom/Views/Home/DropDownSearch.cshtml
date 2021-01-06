@@ -1,0 +1,8 @@
+﻿@model TreasureRoom.Models.ItemTypes
+
+@{
+    ViewBag.Title = "DropDownSearch";
+}
+
+@Html.DropDownListFor(model => model.GetItemTypes, new SelectList(Model.GetItemTypes, "ItemTypeID", "ItemTypeID"))
+

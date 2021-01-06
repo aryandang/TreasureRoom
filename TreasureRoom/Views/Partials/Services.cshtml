@@ -1,0 +1,45 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage
+@{
+
+    var image = Model.Value<IPublishedContent>("section1Image");
+}
+
+<!-- Services section -->
+<section id="services">
+    <div class="container text-center">
+        <h1 class="title">@Model.Value("servicesHeading")</h1>
+        <div class="row text-center">
+            <div class="col-md-4 services">
+                <img style="" class="services-img" />
+                <h4>
+                    The laws for lost & found in the UK
+                </h4>
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has
+                    survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                </p>
+            </div>
+            <div class="col-md-4 services">
+                <img src="images/Community-Logo.png" class="services-img">
+                <h4>
+                    We care for the public
+                </h4>
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has
+                    survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                </p>
+            </div>
+            <div class="col-md-4 services">
+                <img src="images/Internet-Logo.png" class="services-img">
+                <h4>
+                    The laws for lost & found in the UK
+                </h4>
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has
+                    survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                </p>
+            </div>
+        </div>
+        <button type="button" class="btn btn-primary">All Services</button>
+    </div>
+</section>
