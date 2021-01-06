@@ -14,13 +14,13 @@ namespace TreasureRoom.ViewModels
     public class SearchViewModel
     {
 
-        public SearchViewModel(IPublishedContent content, CultureInfo culture) : base(content, culture)
-        {
-        }
+        //public SearchViewModel(IPublishedContent content, CultureInfo culture) : base(content, culture)
+        //{
+        //}
 
         [Required(ErrorMessage = "Please enter your name")]
         public string Keyword { get; set; }
-
+          
         [Required]
         [MaxLength(9)]
         public string Postcode { get; set; }

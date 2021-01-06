@@ -7,11 +7,11 @@ namespace TreasureRoom.Controllers
 {
     public class HomeController : RenderMvcController
     {
-        public override ActionResult Index(ContentModel model)
-        {
-            var search = new SearchViewModel(model.Content, model.CurrentCulture);
-            //var dropDown = new Search(model.Content);
-            return View("Search", SearchViewModel);
-        }
+        //public override ActionResult Index(ContentModel model)
+        //{
+        //    //var search = new SearchViewModel(model.Content, model.CurrentCulture);
+        //    ////var dropDown = new Search(model.Content);
+        //    return View("Search");
+        //}
     }
 }
