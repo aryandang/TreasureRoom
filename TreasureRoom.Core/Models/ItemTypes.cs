@@ -9,9 +9,6 @@ namespace TreasureRoom.Models
 {
     public class ItemTypes
     {
-
-
-
         public int ItemTypeID { get; set; }
         public string ItemType { get; set; }
 
