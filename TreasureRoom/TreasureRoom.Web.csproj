@@ -446,7 +446,6 @@
     <Compile Include="App_Data\Models\Home.generated.cs" />
     <Compile Include="App_Data\Models\Image.generated.cs" />
     <Compile Include="App_Data\Models\Member.generated.cs" />
-    <Compile Include="App_Data\Models\SearchPage.generated.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -3029,7 +3028,6 @@
     <Content Include="Umbraco\Views\users\views\users\users.html" />
     <Content Include="Umbraco\Views\users\views\user\details.html" />
     <Content Include="Views\Home.cshtml" />
-    <Content Include="Views\Home\DropDownSearch.cshtml" />
     <Content Include="Views\Master.cshtml" />
     <Content Include="Views\Partials\AboutUs.cshtml" />
     <Content Include="Views\Partials\Banner.cshtml" />
@@ -3152,7 +3150,6 @@
     <Content Include="Umbraco\Views\Default.cshtml" />
     <Content Include="Umbraco\Views\Preview\Index.cshtml" />
     <Content Include="Umbraco\Views\web.config" />
-    <Content Include="Views\SearchPage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\TEMP\FileUploads\" />
