@@ -1,6 +1,11 @@
-﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<Umbraco.Web.PublishedModels.Home>
+﻿@using System.Web.UI.WebControls
+@inherits Umbraco.Web.Mvc.UmbracoViewPage<TreasureRoom.Models.HomeContentModel>
 
 <input type="text" class="search-field keyword" placeholder="Keywords or Image">
 <input type="text" class="search-field location" placeholder="Postcode">
 <input type="text" class="search-field location" placeholder="Item Type">
 <a href="searchResult.html"><button class="search-btn" type="button">Search</button></a>
+
+@Html.EditorFor(x => Model.Keyword, new{PlaceHolder = "Keywords or Image"})
+@Html.EditorFor(x => Model.Postcode, new{PlaceHolder = "Postcode" })
+@Html.EditorFor(x => Model.ItemType, new{PlaceHolder = "Item Type" })

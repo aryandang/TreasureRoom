@@ -1,4 +1,3 @@
-C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom.Core\obj\Debug\TreasureRoom.Core.csprojAssemblyReference.cache
 C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom.Core\obj\Debug\TreasureRoom.Core.csproj.CoreCompileInputs.cache
 C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom.Core\bin\Debug\TreasureRoom.Core.dll
 C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom.Core\bin\Debug\TreasureRoom.Core.pdb
@@ -132,9 +131,7 @@ C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom.Core\bin\Deb
 C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom.Core\bin\Debug\System.Web.WebPages.Razor.dll
 C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom.Core\bin\Debug\Umbraco.Core.dll
 C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom.Core\bin\Debug\Umbraco.Examine.dll
-C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom.Core\bin\Debug\Umbraco.ModelsBuilder.Embedded.dll
 C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom.Core\bin\Debug\Umbraco.Web.dll
-C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom.Core\bin\Debug\Umbraco.Web.UI.dll
 C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom.Core\bin\Debug\AngleSharp.xml
 C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom.Core\bin\Debug\ClientDependency.Core.pdb
 C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom.Core\bin\Debug\ClientDependency.Core.Mvc.pdb
@@ -195,15 +192,6 @@ C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom.Core\bin\Deb
 C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom.Core\bin\Debug\System.Web.WebPages.xml
 C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom.Core\bin\Debug\System.Web.WebPages.Deployment.xml
 C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom.Core\bin\Debug\System.Web.WebPages.Razor.xml
-C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom.Core\bin\Debug\Umbraco.Core.pdb
-C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom.Core\bin\Debug\Umbraco.Core.xml
-C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom.Core\bin\Debug\Umbraco.Examine.pdb
-C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom.Core\bin\Debug\Umbraco.Examine.xml
-C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom.Core\bin\Debug\Umbraco.ModelsBuilder.Embedded.pdb
-C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom.Core\bin\Debug\Umbraco.ModelsBuilder.Embedded.xml
-C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom.Core\bin\Debug\Umbraco.Web.pdb
-C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom.Core\bin\Debug\Umbraco.Web.xml
-C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom.Core\bin\Debug\Umbraco.Web.UI.xml
 C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom.Core\obj\Debug\TreasureRoom.Core.csproj.CopyComplete
 C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom.Core\bin\Debug\Microsoft.CodeAnalysis.CSharp.dll
 C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom.Core\bin\Debug\Microsoft.CodeAnalysis.dll
@@ -248,3 +236,4 @@ C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom.Core\bin\Deb
 C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom.Core\bin\Debug\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
 C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom.Core\bin\Debug\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
 C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom.Core\bin\Debug\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom.Core\obj\Debug\TreasureRoom.Core.csprojAssemblyReference.cache

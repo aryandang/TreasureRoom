@@ -1,15 +1,13 @@
-﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<TreasureRoom.Models.HomeContentModel>
 @{
-	Layout = "Master.cshtml";
+    Layout = "Master.cshtml";
 }
 
 @Html.Partial("~/Views/Partials/Banner.cshtml")
-
 @Html.Partial("~/Views/Partials/Services.cshtml")
-
 @Html.Partial("~/Views/Partials/AboutUs.cshtml")
-
 @Html.Partial("~/Views/Partials/Testimonials.cshtml")
+
 <!-- social media section -->
 <section id="social-media">
     <div class="container text-center">
@@ -21,5 +19,3 @@
         </div>
     </div>
 </section>
-
-

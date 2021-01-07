@@ -1,0 +1,15 @@
+﻿@inherits UmbracoViewPage<TreasureRoom.Models.ViewModel.SearchViewModel>
+
+@using (Html.BeginUmbracoForm("SubmitForm", "SearchSurface", FormMethod.Post))
+{
+    <div class="container">
+        <div class="row">
+            <div class="form-group col-6">
+                @Html.LabelFor(m => m.Keyword)
+                <div class="input-group">
+                    @Html.EditorFor(m=>m.Keyword, new )
+                </div>
+            </div>
+        </div>
+    </div>
+}
