@@ -20,79 +20,94 @@ using Umbraco.ModelsBuilder.Umbraco;
 
 namespace Umbraco.Web.PublishedModels
 {
-	// Mixin Content Type with alias "contentControls"
-	/// <summary>Content Controls</summary>
-	public partial interface IContentControls : IPublishedContent
+	// Mixin Content Type with alias "homePageControls"
+	/// <summary>Search Controls</summary>
+	public partial interface IHomePageControls : IPublishedContent
 	{
-		/// <summary>Section 1 Image</summary>
+		/// <summary>Banner Title</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		IPublishedContent Section1Image { get; }
+		string BannerTitle { get; }
 
-		/// <summary>Services Heading</summary>
+		/// <summary>Search Bar 1</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		string ServicesHeading { get; }
+		string SearchBar1 { get; }
 
-		/// <summary>Title</summary>
+		/// <summary>Search Bar 2</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		string Title { get; }
+		string SearchBar2 { get; }
+
+		/// <summary>Search Bar 3</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		string SearchBar3 { get; }
 	}
 
-	/// <summary>Content Controls</summary>
-	[PublishedModel("contentControls")]
-	public partial class ContentControls : PublishedContentModel, IContentControls
+	/// <summary>Search Controls</summary>
+	[PublishedModel("homePageControls")]
+	public partial class HomePageControls : PublishedContentModel, IHomePageControls
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		public new const string ModelTypeAlias = "contentControls";
+		public new const string ModelTypeAlias = "homePageControls";
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		public new static IPublishedContentType GetModelContentType()
 			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<ContentControls, TValue>> selector)
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<HomePageControls, TValue>> selector)
 			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
 #pragma warning restore 0109
 
 		// ctor
-		public ContentControls(IPublishedContent content)
+		public HomePageControls(IPublishedContent content)
 			: base(content)
 		{ }
 
 		// properties
 
 		///<summary>
-		/// Section 1 Image: Pick an image
+		/// Banner Title
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("section1Image")]
-		public IPublishedContent Section1Image => GetSection1Image(this);
+		[ImplementPropertyType("bannerTitle")]
+		public string BannerTitle => GetBannerTitle(this);
 
-		/// <summary>Static getter for Section 1 Image</summary>
+		/// <summary>Static getter for Banner Title</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		public static IPublishedContent GetSection1Image(IContentControls that) => that.Value<IPublishedContent>("section1Image");
+		public static string GetBannerTitle(IHomePageControls that) => that.Value<string>("bannerTitle");
 
 		///<summary>
-		/// Services Heading: Enter the heading
+		/// Search Bar 1
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("servicesHeading")]
-		public string ServicesHeading => GetServicesHeading(this);
+		[ImplementPropertyType("searchBar1")]
+		public string SearchBar1 => GetSearchBar1(this);
 
-		/// <summary>Static getter for Services Heading</summary>
+		/// <summary>Static getter for Search Bar 1</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		public static string GetServicesHeading(IContentControls that) => that.Value<string>("servicesHeading");
+		public static string GetSearchBar1(IHomePageControls that) => that.Value<string>("searchBar1");
 
 		///<summary>
-		/// Title: Enter a title
+		/// Search Bar 2
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("title")]
-		public string Title => GetTitle(this);
+		[ImplementPropertyType("searchBar2")]
+		public string SearchBar2 => GetSearchBar2(this);
 
-		/// <summary>Static getter for Title</summary>
+		/// <summary>Static getter for Search Bar 2</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		public static string GetTitle(IContentControls that) => that.Value<string>("title");
+		public static string GetSearchBar2(IHomePageControls that) => that.Value<string>("searchBar2");
+
+		///<summary>
+		/// Search Bar 3
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("searchBar3")]
+		public string SearchBar3 => GetSearchBar3(this);
+
+		/// <summary>Static getter for Search Bar 3</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		public static string GetSearchBar3(IHomePageControls that) => that.Value<string>("searchBar3");
 	}
 }

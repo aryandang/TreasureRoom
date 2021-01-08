@@ -1,0 +1,11 @@
+﻿@using TreasureRoom.Models.ViewModel
+@inherits Umbraco.Web.Mvc.UmbracoViewPage<TreasureRoom.Models.SearchContentModel>
+
+@{
+    Layout = "Master.cshtml";
+}
+
+@Html.Partial("~/Views/Partials/Navigation.cshtml")
+@RenderBody()
+@Html.Partial("~/Views/Partials/SearchForm.cshtml", new SearchViewModel())
+@Html.Partial("~/Views/Partials/Footer.cshtml")

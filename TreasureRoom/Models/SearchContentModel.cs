@@ -7,9 +7,9 @@ using Umbraco.Web.Models;
 
 namespace TreasureRoom.Models
 {
-    public class HomeContentModel : ContentModel
+    public class SearchContentModel : ContentModel
     {
-        public HomeContentModel(IPublishedContent content) : base(content)
+        public SearchContentModel(IPublishedContent content) : base(content)
         {
 
         }

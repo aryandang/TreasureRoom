@@ -445,17 +445,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_Data\Models\ContentControls.generated.cs" />
     <Compile Include="App_Data\Models\File.generated.cs" />
     <Compile Include="App_Data\Models\Folder.generated.cs" />
     <Compile Include="App_Data\Models\Home.generated.cs" />
+    <Compile Include="App_Data\Models\HomePageControls.generated.cs" />
     <Compile Include="App_Data\Models\Image.generated.cs" />
     <Compile Include="App_Data\Models\Member.generated.cs" />
+    <Compile Include="App_Data\Models\SearchPage.generated.cs" />
+    <Compile Include="App_Data\Models\ServicesControls.generated.cs" />
+    <Compile Include="App_Data\Models\TestimonialsControls.generated.cs" />
+    <Compile Include="App_Data\Models\WhyChooseUsControls.generated.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Models\HomeContentModel.cs" />
+    <Compile Include="Controllers\SearchPageController.cs" />
+    <Compile Include="Models\SearchContentModel.cs" />
     <Compile Include="Models\ViewModel\SearchViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -898,6 +902,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="searchResult.html" />
     <Content Include="Umbraco\assets\css\canvasdesigner.css" />
     <Content Include="Umbraco\assets\css\installer.css" />
     <Content Include="Umbraco\assets\css\nonodes.style.min.css" />
@@ -3442,7 +3447,8 @@
     <Content Include="Views\Partials\Grid\Bootstrap3.cshtml" />
     <Content Include="Views\Partials\Grid\Bootstrap3-Fluid.cshtml" />
     <Content Include="Views\Partials\BlockList\Default.cshtml" />
-    <Content Include="Views\Partials\SearchForm.cshtml" />
+    <None Include="Views\Partials\SearchForm.cshtml" />
+    <Content Include="Views\SearchPage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\TEMP\FileUploads\" />

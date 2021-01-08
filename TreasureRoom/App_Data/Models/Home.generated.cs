@@ -22,7 +22,7 @@ namespace Umbraco.Web.PublishedModels
 {
 	/// <summary>Home</summary>
 	[PublishedModel("home")]
-	public partial class Home : PublishedContentModel, IContentControls
+	public partial class Home : PublishedContentModel, IHomePageControls, IServicesControls, ITestimonialsControls, IWhyChooseUsControls
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -46,24 +46,129 @@ namespace Umbraco.Web.PublishedModels
 		// properties
 
 		///<summary>
-		/// Section 1 Image: Pick an image
+		/// Banner Title
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("section1Image")]
-		public IPublishedContent Section1Image => ContentControls.GetSection1Image(this);
+		[ImplementPropertyType("bannerTitle")]
+		public string BannerTitle => HomePageControls.GetBannerTitle(this);
 
 		///<summary>
-		/// Services Heading: Enter the heading
+		/// Search Bar 1
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("servicesHeading")]
-		public string ServicesHeading => ContentControls.GetServicesHeading(this);
+		[ImplementPropertyType("searchBar1")]
+		public string SearchBar1 => HomePageControls.GetSearchBar1(this);
 
 		///<summary>
-		/// Title: Enter a title
+		/// Search Bar 2
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("title")]
-		public string Title => ContentControls.GetTitle(this);
+		[ImplementPropertyType("searchBar2")]
+		public string SearchBar2 => HomePageControls.GetSearchBar2(this);
+
+		///<summary>
+		/// Search Bar 3
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("searchBar3")]
+		public string SearchBar3 => HomePageControls.GetSearchBar3(this);
+
+		///<summary>
+		/// First Column Image
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("firstColumnImage")]
+		public IPublishedContent FirstColumnImage => ServicesControls.GetFirstColumnImage(this);
+
+		///<summary>
+		/// First Column Text
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("firstColumnText")]
+		public IHtmlString FirstColumnText => ServicesControls.GetFirstColumnText(this);
+
+		///<summary>
+		/// Second Column Image
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("secondColumnImage")]
+		public IPublishedContent SecondColumnImage => ServicesControls.GetSecondColumnImage(this);
+
+		///<summary>
+		/// Second Column Text
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("secondColumnText")]
+		public IHtmlString SecondColumnText => ServicesControls.GetSecondColumnText(this);
+
+		///<summary>
+		/// Services Header
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("servicesHeader")]
+		public IHtmlString ServicesHeader => ServicesControls.GetServicesHeader(this);
+
+		///<summary>
+		/// Third Column Image
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("thirdColumnImage")]
+		public IPublishedContent ThirdColumnImage => ServicesControls.GetThirdColumnImage(this);
+
+		///<summary>
+		/// Third Column Text
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("thirdColumnText")]
+		public IHtmlString ThirdColumnText => ServicesControls.GetThirdColumnText(this);
+
+		///<summary>
+		/// Aryan Dang Text
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("aryanDangText")]
+		public IHtmlString AryanDangText => TestimonialsControls.GetAryanDangText(this);
+
+		///<summary>
+		/// About Us Header
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("aboutUsHeader")]
+		public IHtmlString AboutUsHeader => WhyChooseUsControls.GetAboutUsHeader(this);
+
+		///<summary>
+		/// Bullet Point 1
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("bulletPoint1")]
+		public IHtmlString BulletPoint1 => WhyChooseUsControls.GetBulletPoint1(this);
+
+		///<summary>
+		/// Bullet Point 2
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("bulletPoint2")]
+		public IHtmlString BulletPoint2 => WhyChooseUsControls.GetBulletPoint2(this);
+
+		///<summary>
+		/// Bullet Point 3
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("bulletPoint3")]
+		public IHtmlString BulletPoint3 => WhyChooseUsControls.GetBulletPoint3(this);
+
+		///<summary>
+		/// Bullet Point 4
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("bulletPoint4")]
+		public IHtmlString BulletPoint4 => WhyChooseUsControls.GetBulletPoint4(this);
+
+		///<summary>
+		/// Main Text Heading
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("mainTextHeading")]
+		public IHtmlString MainTextHeading => WhyChooseUsControls.GetMainTextHeading(this);
 	}
 }
