@@ -458,7 +458,8 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\SearchPageController.cs" />
+    <Compile Include="Controllers\RenderMvc\SearchPageController.cs" />
+    <Compile Include="Controllers\Surface\SearchSurfaceController.cs" />
     <Compile Include="Models\SearchContentModel.cs" />
     <Compile Include="Models\ViewModel\SearchViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
