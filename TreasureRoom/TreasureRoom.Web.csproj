@@ -812,6 +812,14 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Content\Site.css" />
     <Content Include="Global.asax" />
+    <Content Include="images\AryanDang.jpeg" />
+    <Content Include="images\BannerWave.png" />
+    <Content Include="images\Community-Logo.png" />
+    <Content Include="images\EmailLogo.png" />
+    <Content Include="images\FooterWave.png" />
+    <Content Include="images\Internet-Logo.png" />
+    <Content Include="images\Police-Logo.png" />
+    <Content Include="images\TreasureRoom-Logo.png" />
     <Content Include="js\search-validation.js" />
     <Content Include="js\smooth-scroll.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -892,6 +900,7 @@
     <Content Include="config\serilog.config" />
     <Content Include="config\HealthChecks.config" />
     <Content Include="config\ClientDependency.config" />
+    <Content Include="images\.DS_Store" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />

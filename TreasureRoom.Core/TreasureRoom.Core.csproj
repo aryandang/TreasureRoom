@@ -368,8 +368,10 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Umbraco.Core, Version=8.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\TreasureRoom\bin\Umbraco.Core.dll</HintPath>
+      <HintPath>..\packages\UmbracoCms.Core.8.10.1\lib\net472\Umbraco.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Umbraco.Examine, Version=8.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\UmbracoCms.Web.8.10.1\lib\net472\Umbraco.Examine.dll</HintPath>
     </Reference>
     <Reference Include="Umbraco.ModelsBuilder, Version=8.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Umbraco.ModelsBuilder.8.1.6\lib\net472\Umbraco.ModelsBuilder.dll</HintPath>
@@ -377,15 +379,18 @@
     <Reference Include="Umbraco.ModelsBuilder.Api, Version=8.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Umbraco.ModelsBuilder.Api.8.1.6\lib\net472\Umbraco.ModelsBuilder.Api.dll</HintPath>
     </Reference>
+    <Reference Include="Umbraco.ModelsBuilder.Embedded, Version=8.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\UmbracoCms.Web.8.10.1\lib\net472\Umbraco.ModelsBuilder.Embedded.dll</HintPath>
+    </Reference>
     <Reference Include="Umbraco.Web, Version=8.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\TreasureRoom\bin\Umbraco.Web.dll</HintPath>
+      <HintPath>..\packages\UmbracoCms.Web.8.10.1\lib\net472\Umbraco.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Umbraco.Web.UI, Version=8.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\UmbracoCms.Web.8.10.1\lib\net472\Umbraco.Web.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\ItemTypes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ViewModels\SearchViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
@@ -395,9 +400,7 @@
     <None Include="App_Plugins\ModelsBuilder\package.manifest" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="SurfaceControllers\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="App_Plugins\ModelsBuilder\modelsbuilder.controller.js" />
     <Content Include="App_Plugins\ModelsBuilder\modelsbuilder.html" />

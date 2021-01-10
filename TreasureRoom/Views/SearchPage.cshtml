@@ -5,7 +5,18 @@
     Layout = "Master.cshtml";
 }
 
-@Html.Partial("~/Views/Partials/Navigation.cshtml")
-@RenderBody()
+
+<!--banner section-->
+<section id="banner">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <p class="promo-title">"Hello"</p>
+                @Html.Partial("~/Views/Partials/Search.cshtml")
+            </div>
+        </div>
+    </div>
+    <img src="Partials/images/BannerWave.png" id="banner-wave-img">
+</section>
 @Html.Partial("~/Views/Partials/SearchForm.cshtml", new SearchViewModel())
-@Html.Partial("~/Views/Partials/Footer.cshtml")
+
