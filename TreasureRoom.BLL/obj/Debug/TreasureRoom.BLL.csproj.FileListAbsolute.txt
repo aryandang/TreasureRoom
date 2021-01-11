@@ -1,3 +1,4 @@
+C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom.BLL\bin\Debug\roslyn\Microsoft.CodeAnalysis.CSharp.dll
 C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom.BLL\bin\Debug\amd64\Microsoft.VC90.CRT\Microsoft.VC90.CRT.manifest
 C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom.BLL\bin\Debug\amd64\Microsoft.VC90.CRT\msvcr90.dll
 C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom.BLL\bin\Debug\amd64\sqlceca40.dll
@@ -24,7 +25,6 @@ C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom.BLL\bin\Debu
 C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom.BLL\bin\Debug\roslyn\csi.exe.config
 C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom.BLL\bin\Debug\roslyn\csi.rsp
 C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom.BLL\bin\Debug\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom.BLL\bin\Debug\roslyn\Microsoft.CodeAnalysis.CSharp.dll
 C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom.BLL\bin\Debug\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
 C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom.BLL\bin\Debug\roslyn\Microsoft.CodeAnalysis.dll
 C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom.BLL\bin\Debug\roslyn\Microsoft.CodeAnalysis.Scripting.dll

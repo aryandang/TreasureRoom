@@ -2,33 +2,30 @@
 
 @using (Html.BeginUmbracoForm("SubmitForm", "SearchSurface", FormMethod.Post))
 {
-    <div class="container">
-        <div class="row">
-            <div class="form-group col-md-3">
-                @Html.LabelFor(m => m.Keyword)
-                <div class="input-group">
-                    @Html.EditorFor(m => m.Keyword, new { @class = "search-field keyword", placeholder = "Keywords" })
-                    @Html.ValidationMessageFor(m => m.Keyword)
+    <div id="bannerForContent">
+        <div class="container">
+            <div class="row">
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Keyword)
+                    <div class="input-group">
+                        @Html.EditorFor(m => m.Keyword, new { htmlAttributes = new { @class = "search-field keyword", placeholder = "Keywords" } })
+                        @Html.ValidationMessageFor(m => m.Keyword)
+                    </div>
                 </div>
-            </div>
-            <div class="form-group col-md-3">
-                @Html.LabelFor(m => m.Postcode)
-                <div class="input-group">
-                    @Html.EditorFor(m => m.Postcode, new { @class = "search-field postcode", placeholder = "Postcode" })
-                    @Html.ValidationMessageFor(m => m.Postcode)
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Postcode)
+                    <div class="input-group">
+                        @Html.EditorFor(m => m.Postcode, new { htmlAttributes = new { @class = "search-field location", placeholder = "Postcode" } })
+                        @Html.ValidationMessageFor(m => m.Postcode)
+                    </div>
                 </div>
-            </div>
-            <div class="form-group col-md-3">
-                @Html.LabelFor(m => m.ItemType)
-                <div class="input-group">
-                    @Html.EditorFor(m => m.ItemType, new { @class = "search-field keyword", placeholder = "Item Type" })
-                    @Html.ValidationMessageFor(m => m.ItemType)
-                </div>
-            </div>
-            <div class="form-group col-md-3">
-                <label>Search</label>
-                <div class="input-group">
-                    <button id="Submit" class="search-btn">Search</button>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.ItemType)
+                    <div class="input-group">
+                        @Html.EditorFor(m => m.ItemType, new { htmlAttributes = new { @class = "search-field item-tye", placeholder = "Item Type" } })
+                        @Html.ValidationMessageFor(m => m.ItemType)
+                        <button id="Submit" class="search-btn">Search</button>
+                    </div>
                 </div>
             </div>
         </div>

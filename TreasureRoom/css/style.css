@@ -34,16 +34,16 @@ main {
     padding: 0 10px;
 }
 
-    .navbar-nav li a {
-        color: white !important;
-        font-weight: 300;
-        float: right;
-        text-align: left;
-    }
+.navbar-nav li a {
+    color: white !important;
+    font-weight: 300;
+    float: right;
+    text-align: left;
+}
 
-        .navbar-nav li a:hover {
-            text-shadow: 0 0 10px black;
-        }
+.navbar-nav li a:hover {
+    text-shadow: 0 0 10px black;
+}
 
 .fa-bars {
     color: white;
@@ -67,7 +67,7 @@ main {
 #bannerForContent {
     background-image: linear-gradient(to right, #20BDFF, blue);
     color: white;
-    padding-top: 5%;
+    padding-top: 2%;
     margin-bottom: 30px;
 }
 
@@ -115,12 +115,12 @@ main {
     background: #ffeb3b;
 }
 
-    .search-btn:hover {
-        background: #ffc107;
-        cursor: pointer;
-        outline: none;
-        border: none;
-    }
+.search-btn:hover {
+    background: #ffc107;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
 
 .col-md-12 {
     margin-bottom: 30px;
@@ -142,15 +142,15 @@ main {
     padding: 20px;
 }
 
-    .services h4 {
-        padding: 5px;
-        margin-top: 25px;
-        text-transform: uppercase;
-    }
+.services h4 {
+    padding: 5px;
+    margin-top: 25px;
+    text-transform: uppercase;
+}
 
-    .services p {
-        text-align: justify;
-    }
+.services p {
+    text-align: justify;
+}
 
 .title::after {
     content: '';
@@ -172,10 +172,10 @@ main {
     background: #101cb9;
 }
 
-    #services .btn-primary:hover {
-        transform: translate(0, -7px);
-        background-image: linear-gradient(to right, #05d5ff, #53f);
-    }
+#services .btn-primary:hover {
+    transform: translate(0, -7px);
+    background-image: linear-gradient(to right, #05d5ff, #53f);
+}
 
 
 /* about section */
@@ -214,12 +214,12 @@ main {
     margin-bottom: 50px;
 }
 
-    .testimonials img {
-        height: 100px;
-        widows: 1000px;
-        border-radius: 100%;
-        margin: 0 10px;
-    }
+.testimonials img {
+    height: 100px;
+    widows: 1000px;
+    border-radius: 100%;
+    margin: 0 10px;
+}
 
 .user-details {
     display: inline-block;
@@ -234,21 +234,21 @@ main {
     padding: 50px 0;
 }
 
-    #social-media a {
-        text-align: center;
-    }
+#social-media a {
+    text-align: center;
+}
 
-    #social-media p {
-        font-size: 36px;
-        font-weight: 600px;
-        margin-bottom: 30px;
-        align-items: center;
-    }
+#social-media p {
+    font-size: 36px;
+    font-weight: 600px;
+    margin-bottom: 30px;
+    align-items: center;
+}
 
-    #social-media img {
-        width: 100px;
-        height: 100px;
-    }
+#social-media img {
+    width: 100px;
+    height: 100px;
+}
 
 .social-icons .fa {
     font-size: 70px;
@@ -257,9 +257,9 @@ main {
     color: #000000;
 }
 
-    .social-icons .fa:hover {
-        color: white;
-    }
+.social-icons .fa:hover {
+    color: white;
+}
 
 .social-icons a {
     display: inherit;
@@ -273,13 +273,13 @@ main {
     box-shadow: 0 5px 4px rgba(0, 0, 0, 0.5);
 }
 
-    .social-icons a:hover {
-        transform: translate(0, -10px);
-    }
+.social-icons a:hover {
+    transform: translate(0, -10px);
+}
 
-    .social-icons a:hover {
-        background-color: #101cb9;
-    }
+.social-icons a:hover {
+    background-color: #101cb9;
+}
 
 
 /* footer section */
@@ -301,35 +301,35 @@ main {
     margin-top: -40px;
 }
 
-    .footer-box img {
-        width: 170px;
-        margin-bottom: 20px;
-    }
+.footer-box img {
+    width: 170px;
+    margin-bottom: 20px;
+}
 
-    .footer-box .fa {
-        margin-right: 8px;
-        font-size: 25px;
-        height: 40px;
-        width: 40px;
-        text-align: center;
-        padding-top: 7px;
-        border-radius: 2px;
-        background-image: linear-gradient(to right, #05d5ff, #53f);
-    }
+.footer-box .fa {
+    margin-right: 8px;
+    font-size: 25px;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    padding-top: 7px;
+    border-radius: 2px;
+    background-image: linear-gradient(to right, #05d5ff, #53f);
+}
 
-    .footer-box .form-control {
-        box-shadow: none !important;
-        border: none;
-        margin-top: 25px;
-        max-width: 250px;
-    }
+.footer-box .form-control {
+    box-shadow: none !important;
+    border: none;
+    margin-top: 25px;
+    max-width: 250px;
+}
 
-    .footer-box .btn-primary {
-        box-shadow: none;
-        border: none;
-        margin-top: 10px;
-        background-image: linear-gradient(to right, #05d5ff, #53f);
-    }
+.footer-box .btn-primary {
+    box-shadow: none;
+    border: none;
+    margin-top: 10px;
+    background-image: linear-gradient(to right, #05d5ff, #53f);
+}
 
 hr {
     background-color: white;
