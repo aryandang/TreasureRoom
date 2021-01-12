@@ -10,14 +10,14 @@
                     <div class="input-group">
                         @Html.EditorFor(m => m.Keyword, new { htmlAttributes = new { @class = "search-field keyword", placeholder = "Keywords" } })
                     </div>
-                    @Html.ValidationMessageFor(m => m.Keyword, "", new { @class = "validation-messages" })
+                    @Html.ValidationMessageFor(m => m.Keyword, String.Empty, new { @class = "validation-messages" })
                 </div>
                 <div class="form-group">
                     @Html.LabelFor(m => m.Postcode)
                     <div class="input-group">
                         @Html.EditorFor(m => m.Postcode, new { htmlAttributes = new { @class = "search-field location", placeholder = "Postcode" } })
                     </div>
-                    @Html.ValidationMessageFor(m => m.Postcode, "", new { @class = "validation-messages" })
+                    @Html.ValidationMessageFor(m => m.Postcode, String.Empty, new { @class = "validation-messages" })
                 </div>
                 <div class="form-group">
                     @Html.LabelFor(m => m.ItemType)
@@ -25,7 +25,7 @@
                         @Html.EditorFor(m => m.ItemType, new { htmlAttributes = new { @class = "search-field item-tye", placeholder = "Item Type" } })
                         <button id="Submit" class="search-btn">Search</button>
                     </div>
-                    @Html.ValidationMessageFor(m => m.ItemType, "", new { @class = "validation-messages" })
+                    @Html.ValidationMessageFor(m => m.ItemType, String.Empty, new { @class = "validation-messages" })
                 </div>
             </div>
         </div>
