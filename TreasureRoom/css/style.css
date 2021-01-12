@@ -340,3 +340,7 @@ hr {
     padding-bottom: 20px;
     text-align: center;
 }
+
+.validation-messages {
+    color: red;
+}
