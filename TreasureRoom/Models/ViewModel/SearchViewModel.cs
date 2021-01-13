@@ -1,4 +1,7 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Web.Mvc;
 
 namespace TreasureRoom.Models.ViewModel
 {
@@ -15,5 +18,6 @@ namespace TreasureRoom.Models.ViewModel
         [Display(Name = "Item Type")]
         [Required(ErrorMessage = "Must select the item type*")]
         public string ItemType { get; set; }
+        public IEnumerable<SelectListItem> ItemTypesList { get; set; }
     }
 }

@@ -1,9 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
+using System.Configuration;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using TreasureRoom.Models;
+using TreasureRoom.Models.DBHandler;
 using TreasureRoom.Models.ViewModel;
 using Umbraco.Web.Mvc;
 
@@ -35,5 +40,14 @@ namespace TreasureRoom.Controllers.Surface
 
             return RedirectToCurrentUmbracoPage(queryString);
         }
+
+        public ActionResult GetItemTypes()
+        {
+            GetItemTypesDBHandler dbHandle = new GetItemTypesDBHandler();
+            ModelState.Clear();
+            return PartialView(dbHandle.GetItemTypes());
+        }
+
+       
     }
 }
