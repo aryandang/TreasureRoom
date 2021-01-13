@@ -27,17 +27,17 @@ namespace TreasureRoom.Models
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<dbo_ItemTypes> dbo_ItemTypes { get; set; }
         public virtual DbSet<dbo_LostItems> dbo_LostItems { get; set; }
-    
-        public virtual ObjectResult<Get_ItemTypes_Result> Get_ItemTypes()
-        {
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Get_ItemTypes_Result>("Get_ItemTypes");
-        }
+        public virtual DbSet<dbo_ItemTypes> dbo_ItemTypes { get; set; }
     
         public virtual ObjectResult<Get_LostItems_Result> Get_LostItems()
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Get_LostItems_Result>("Get_LostItems");
+        }
+    
+        public virtual ObjectResult<Get_ItemTypes_Result> Get_ItemTypes()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Get_ItemTypes_Result>("Get_ItemTypes");
         }
     }
 }
