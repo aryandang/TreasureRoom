@@ -20,8 +20,10 @@ warning 6002: The table/view 'TreasureRoom.dbo.dbo.LostItems' does not have a pr
     <Property Name="Postcode" Type="nvarchar" MaxLength="50" />
     <Property Name="ItemType" Type="nvarchar" MaxLength="50" />
     <Property Name="Image" Type="nvarchar" MaxLength="50" />
+    <Property Name="DatePosted" Type="datetime" />
   </EntityType>
   <Function Name="Get_ItemTypes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="Get_LostItems" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <EntityContainer Name="TreasureRoomModelStoreContainer">
     <EntitySet Name="dbo_ItemTypes" EntityType="Self.dbo_ItemTypes" store:Type="Tables" store:Schema="dbo" store:Name="dbo.ItemTypes">
       <DefiningQuery>SELECT 
@@ -35,7 +37,8 @@ warning 6002: The table/view 'TreasureRoom.dbo.dbo.LostItems' does not have a pr
     [dbo_LostItems].[Description] AS [Description], 
     [dbo_LostItems].[Postcode] AS [Postcode], 
     [dbo_LostItems].[ItemType] AS [ItemType], 
-    [dbo_LostItems].[Image] AS [Image]
+    [dbo_LostItems].[Image] AS [Image], 
+    [dbo_LostItems].[DatePosted] AS [DatePosted]
     FROM [dbo].[dbo.LostItems] AS [dbo_LostItems]</DefiningQuery>
     </EntitySet>
   </EntityContainer>

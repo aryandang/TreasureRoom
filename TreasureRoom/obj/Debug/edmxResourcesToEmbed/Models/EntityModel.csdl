@@ -1,20 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="TreasureRoomModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-  <EntityContainer Name="TreasureRoomEntities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="dbo_LostItems" EntityType="TreasureRoomModel.dbo_LostItems" />
-    <EntitySet Name="dbo_ItemTypes" EntityType="TreasureRoomModel.dbo_ItemTypes" />
-    <FunctionImport Name="Get_ItemTypes" ReturnType="Collection(TreasureRoomModel.Get_ItemTypes_Result)" />
-  </EntityContainer>
-  <EntityType Name="dbo_LostItems">
-    <Key>
-      <PropertyRef Name="ID" />
-    </Key>
-    <Property Name="ID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-    <Property Name="Postcode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="ItemType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="Image" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-  </EntityType>
   <EntityType Name="dbo_ItemTypes">
     <Key>
       <PropertyRef Name="ID" />
@@ -22,8 +7,33 @@
     <Property Name="ID" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="ItemType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
   </EntityType>
+  <EntityType Name="dbo_LostItems">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Postcode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ItemType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DatePosted" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityContainer Name="TreasureRoomEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="dbo_ItemTypes" EntityType="Self.dbo_ItemTypes" />
+    <EntitySet Name="dbo_LostItems" EntityType="Self.dbo_LostItems" />
+    <FunctionImport Name="Get_ItemTypes" ReturnType="Collection(TreasureRoomModel.Get_ItemTypes_Result)" />
+    <FunctionImport Name="Get_LostItems" ReturnType="Collection(TreasureRoomModel.Get_LostItems_Result)" />
+  </EntityContainer>
   <ComplexType Name="Get_ItemTypes_Result">
     <Property Type="Byte" Name="ID" Nullable="false" />
     <Property Type="String" Name="ItemType" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="Get_LostItems_Result">
+    <Property Type="String" Name="ID" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Description" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="Postcode" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ItemType" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Image" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="DatePosted" Nullable="true" Precision="23" />
   </ComplexType>
 </Schema>
