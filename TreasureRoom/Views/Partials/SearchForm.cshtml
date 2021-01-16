@@ -1,6 +1,6 @@
 ﻿@inherits UmbracoViewPage<TreasureRoom.Models.ViewModel.SearchViewModel>
 
-@using (Html.BeginUmbracoForm(null, "SearchSurface", FormMethod.Post))
+@using (Html.BeginUmbracoForm("SubmitForm", "SearchSurface", FormMethod.Post))
 {
     <div id="bannerForContent">
         <div class="container">
@@ -22,12 +22,13 @@
                 <div class="form-group">
                     @Html.LabelFor(m => m.ItemType)
                     <div class="input-group">
-                        @Html.DropDownListFor(m => m.ItemType, new SelectList(Model.ItemTypesList, "ID", "ItemType"), "Select", new {@class="form-control"})
+                        @*@Html.DropDownListFor(m => m.ItemType, new SelectList(Model.ItemTypesList, "ID", "ItemType"), "Select", new {@class="form-control"})*@
                         @Html.EditorFor(m => m.ItemType, new { htmlAttributes = new { @class = "search-field item-tye", placeholder = "Item Type" } })
-                        <button id="Submit" class="search-btn" formaction="SubmitForm">Search</button>
+                        <button id="Submit" class="search-btn">Search</button>
                     </div>
                     @Html.ValidationMessageFor(m => m.ItemType, String.Empty, new { @class = "validation-messages" })
                 </div>
+                @Html.Partial("~/Views/Partials/SearchResults.cshtml")
             </div>
         </div>
     </div>

@@ -41,12 +41,12 @@ namespace TreasureRoom.Controllers.Surface
             return RedirectToCurrentUmbracoPage(queryString);
         }
 
-        public ActionResult GetItemTypes()
-        {
-            GetItemTypesDBHandler dbHandle = new GetItemTypesDBHandler();
-            ModelState.Clear();
-            return PartialView(dbHandle.GetItemTypes());
-        }
+        //public ActionResult GetItemTypes()
+        //{
+        //    GetItemTypesDBHandler dbHandle = new GetItemTypesDBHandler();
+        //    ModelState.Clear();
+        //    return PartialView(dbHandle.GetItemTypes());
+        //}
 
        
     }
