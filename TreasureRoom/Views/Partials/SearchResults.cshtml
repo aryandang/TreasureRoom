@@ -18,7 +18,7 @@
                 <div class="item-card_body">
                     <div class="item-card">
                         <div class="item-card_img">
-                            <img src="images/iPhoneTest.png" alt="">
+                            <img src="/images/iPhoneTest.png" alt="">
                         </div>
                         <div class="item-card_info">
                             <div class="item-card_date">
@@ -27,7 +27,7 @@
                             </div>
                             <h1 class="item-card_title">Lost iPhone Found in Hyde Park</h1>
                             <p class="item-card_text">
-                                @item.Title found at @item.Postcode which is @item.ItemType
+                                @Html.DisplayFor(modelItem => item.Description) found at @Html.DisplayFor(modelItem => item.Postcode) which is @Html.DisplayFor(modelItem => item.ItemType)
                             </p>
                             <a href="#"><button class="item-card_btn" type="button">Read More</button></a>
                         </div>
