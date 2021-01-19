@@ -28,8 +28,8 @@
                     </div>
                     @Html.ValidationMessageFor(m => m.ItemType, String.Empty, new { @class = "validation-messages" })
                 </div>
-                @Html.Partial("~/Views/Partials/SearchResults.cshtml")
             </div>
         </div>
     </div>
+    @Html.Partial("~/Views/Partials/SearchResults.cshtml")
 }

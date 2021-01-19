@@ -490,6 +490,7 @@
       <DependentUpon>EntityModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\SearchContentModel.cs" />
+    <Compile Include="Models\ViewModel\LostItemsViewModel.cs" />
     <Compile Include="Models\ViewModel\SearchViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\ISearchService.cs" />

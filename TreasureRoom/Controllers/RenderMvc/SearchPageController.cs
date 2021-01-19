@@ -19,12 +19,14 @@ namespace TreasureRoom.Controllers
         {
             var searchPageModel = new SearchContentModel(model.Content);
             TreasureRoomEntities db = new TreasureRoomEntities();
+            var data = db.dbo_LostItems.ToList();
+            ViewBag.LostItemsData = data;
 
             var searchViewModel = new SearchViewModel()//passing the search values from query strings to the search view model
             {
                 Keyword = keyword,
                 Postcode = postCode,
-                ItemType = itemType
+                ItemType = itemType,
             };
 
             searchPageModel.SearchViewModel = searchViewModel;

@@ -1,19 +1,9 @@
-﻿@inherits UmbracoViewPage<IEnumerable<TreasureRoom.Models.dbo_LostItems>>
+﻿@inherits UmbracoViewPage<TreasureRoom.Models.ViewModel.SearchViewModel>
 
 @using (Html.BeginUmbracoForm("SubmitForm", "SearchSurface", FormMethod.Get))
 {
-    <table>
-        <thead>
-            <tr>
-
-                <th>Description</th>
-                <th>Postcode
-                <th>
-                <th>Item Type</th>
-            </tr>
-        </thead>
-        <tbody>
-        @if (!Model.Equals(null))
+    <body>
+        @if (Model.Equals(null))
         {
             <tr>
                 <td colspan="3" style="color: red">
@@ -23,15 +13,27 @@
         }
         else
         {
-            foreach (var item in Model)
+            foreach (var item in ViewBag.lostItemsData)
             {
-                <tr>
-                    <td>@item.Description</td>
-                    <td>@item.Postcode</td>
-                    <td>@item.ItemType</td>
-                </tr>
+                <div class="item-card_body">
+                    <div class="item-card">
+                        <div class="item-card_img">
+                            <img src="images/iPhoneTest.png" alt="">
+                        </div>
+                        <div class="item-card_info">
+                            <div class="item-card_date">
+                                <span>Sunday</span>
+                                <span>15 January 2021</span>
+                            </div>
+                            <h1 class="item-card_title">Lost iPhone Found in Hyde Park</h1>
+                            <p class="item-card_text">
+                                @item.Description found at @item.Postcode which is @item.ItemType
+                            </p>
+                            <a href="#"><button class="item-card_btn" type="button">Read More</button></a>
+                        </div>
+                    </div>
+                </div>
             }
         }
-        </tbody>
-    </table>
+    </body>
 }
