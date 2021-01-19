@@ -87,17 +87,13 @@ Umbraco.Core.Migrations.Upgrade.V_8_0_0.VariantsMigration, Umbraco.Core, Version
 Umbraco.Core.Migrations.Upgrade.V_8_0_0.ContentVariationMigration, Umbraco.Core, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Core.Migrations.Upgrade.V_8_0_0.DataTypes.PreValueMigratorComposer, Umbraco.Core, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Core.Services.Implement.KeyValueService+InitializeMigration, Umbraco.Core, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
-Umbraco.ModelsBuilder.Embedded.ModelsBuilderDashboard, Umbraco.ModelsBuilder.Embedded, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
-Umbraco.ModelsBuilder.Embedded.Compose.ModelsBuilderComposer, Umbraco.ModelsBuilder.Embedded, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
-Umbraco.ModelsBuilder.Embedded.BackOffice.MediaTypeModelValidator, Umbraco.ModelsBuilder.Embedded, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
-Umbraco.ModelsBuilder.Embedded.BackOffice.MemberTypeModelValidator, Umbraco.ModelsBuilder.Embedded, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
-Umbraco.ModelsBuilder.Embedded.BackOffice.ModelsBuilderDashboardController, Umbraco.ModelsBuilder.Embedded, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
-Umbraco.ModelsBuilder.Embedded.BackOffice.ContentTypeModelValidator, Umbraco.ModelsBuilder.Embedded, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
+Our.Umbraco.OsmMaps.ValueConverters.OsmMapsValueConverter, Our.Umbraco.OsmMaps, Version=1.2.6992.19752, Culture=neutral, PublicKeyToken=null
 Umbraco.ModelsBuilder.Validation.ContentTypeModelValidator, Umbraco.ModelsBuilder, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.ModelsBuilder.Validation.MediaTypeModelValidator, Umbraco.ModelsBuilder, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.ModelsBuilder.Validation.MemberTypeModelValidator, Umbraco.ModelsBuilder, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.ModelsBuilder.Umbraco.ModelsBuilderComposer, Umbraco.ModelsBuilder, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.ModelsBuilder.Umbraco.ModelsBuilderBackOfficeController, Umbraco.ModelsBuilder, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.ModelsBuilder.Api.ModelsBuilderApiComposer, Umbraco.ModelsBuilder.Api, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Controllers.UmbProfileController, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Controllers.UmbLoginStatusController, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Controllers.UmbRegisterController, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
@@ -301,7 +297,12 @@ Umbraco.Web.Cache.MemberGroupCacheRefresher, Umbraco.Web, Version=8.0.0.0, Cultu
 Umbraco.Web.Cache.PublicAccessCacheRefresher, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Cache.TemplateCacheRefresher, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Cache.UserCacheRefresher, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
-Umbraco.ModelsBuilder.Api.ModelsBuilderApiComposer, Umbraco.ModelsBuilder.Api, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.ModelsBuilder.Embedded.ModelsBuilderDashboard, Umbraco.ModelsBuilder.Embedded, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.ModelsBuilder.Embedded.Compose.ModelsBuilderComposer, Umbraco.ModelsBuilder.Embedded, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.ModelsBuilder.Embedded.BackOffice.MediaTypeModelValidator, Umbraco.ModelsBuilder.Embedded, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.ModelsBuilder.Embedded.BackOffice.MemberTypeModelValidator, Umbraco.ModelsBuilder.Embedded, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.ModelsBuilder.Embedded.BackOffice.ModelsBuilderDashboardController, Umbraco.ModelsBuilder.Embedded, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.ModelsBuilder.Embedded.BackOffice.ContentTypeModelValidator, Umbraco.ModelsBuilder.Embedded, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.SampleSite.InstallPackageAction, Umbraco.SampleSite, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.SampleSite.StarterKitComposer, Umbraco.SampleSite, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.SampleSite.StarterKitInstallComposer, Umbraco.SampleSite, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
@@ -309,7 +310,6 @@ Umbraco.SampleSite.Controllers.LessonsController, Umbraco.SampleSite, Version=4.
 TreasureRoom.Controllers.SearchPageController, TreasureRoom, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 TreasureRoom.Controllers.Surface.SearchSurfaceController, TreasureRoom, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 TreasureRoom.Composing.RegisterServicesComposer, TreasureRoom, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-Our.Umbraco.OsmMaps.ValueConverters.OsmMapsValueConverter, Our.Umbraco.OsmMaps, Version=1.2.6992.19752, Culture=neutral, PublicKeyToken=null
 
 Umbraco.Core.Composing.IComposer
 
@@ -320,8 +320,8 @@ Umbraco.Core.Compose.RelateOnCopyComposer, Umbraco.Core, Version=8.0.0.0, Cultur
 Umbraco.Core.Compose.RelateOnTrashComposer, Umbraco.Core, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Core.Runtime.CoreInitialComposer, Umbraco.Core, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Core.Migrations.Upgrade.V_8_0_0.DataTypes.PreValueMigratorComposer, Umbraco.Core, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
-Umbraco.ModelsBuilder.Embedded.Compose.ModelsBuilderComposer, Umbraco.ModelsBuilder.Embedded, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.ModelsBuilder.Umbraco.ModelsBuilderComposer, Umbraco.ModelsBuilder, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.ModelsBuilder.Api.ModelsBuilderApiComposer, Umbraco.ModelsBuilder.Api, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.SignalR.PreviewHubComposer, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Runtime.WebInitialComposer, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Runtime.WebFinalComposer, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
@@ -339,7 +339,7 @@ Umbraco.Web.Compose.PublicAccessComposer, Umbraco.Web, Version=8.0.0.0, Culture=
 Umbraco.Web.Compose.NestedContentPropertyComposer, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Compose.DatabaseServerRegistrarAndMessengerComposer, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Cache.DistributedCacheBinderComposer, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
-Umbraco.ModelsBuilder.Api.ModelsBuilderApiComposer, Umbraco.ModelsBuilder.Api, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.ModelsBuilder.Embedded.Compose.ModelsBuilderComposer, Umbraco.ModelsBuilder.Embedded, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.SampleSite.StarterKitComposer, Umbraco.SampleSite, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.SampleSite.StarterKitInstallComposer, Umbraco.SampleSite, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
 TreasureRoom.Composing.RegisterServicesComposer, TreasureRoom, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
@@ -367,6 +367,7 @@ Umbraco.Core.PropertyEditors.ValueConverters.TextStringValueConverter, Umbraco.C
 Umbraco.Core.PropertyEditors.ValueConverters.TinyMceValueConverter, Umbraco.Core, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Core.PropertyEditors.ValueConverters.UploadPropertyConverter, Umbraco.Core, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Core.PropertyEditors.ValueConverters.YesNoValueConverter, Umbraco.Core, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
+Our.Umbraco.OsmMaps.ValueConverters.OsmMapsValueConverter, Our.Umbraco.OsmMaps, Version=1.2.6992.19752, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.PropertyEditors.ValueConverters.BlockListPropertyValueConverter, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.PropertyEditors.ValueConverters.MultiUrlPickerValueConverter, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.PropertyEditors.ValueConverters.FlexibleDropdownPropertyValueConverter, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
@@ -379,7 +380,6 @@ Umbraco.Web.PropertyEditors.ValueConverters.ContentPickerValueConverter, Umbraco
 Umbraco.Web.PropertyEditors.ValueConverters.MarkdownEditorValueConverter, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.PropertyEditors.ValueConverters.TextStringValueConverter, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.PropertyEditors.ValueConverters.RteMacroRenderingValueConverter, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
-Our.Umbraco.OsmMaps.ValueConverters.OsmMapsValueConverter, Our.Umbraco.OsmMaps, Version=1.2.6992.19752, Culture=neutral, PublicKeyToken=null
 
 Umbraco.Web.Mvc.PluginController
 
@@ -396,7 +396,6 @@ TreasureRoom.Controllers.SearchPageController, TreasureRoom, Version=1.0.0.0, Cu
 
 Umbraco.Web.WebApi.UmbracoApiController
 
-Umbraco.ModelsBuilder.Embedded.BackOffice.ModelsBuilderDashboardController, Umbraco.ModelsBuilder.Embedded, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.ModelsBuilder.Umbraco.ModelsBuilderBackOfficeController, Umbraco.ModelsBuilder, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Trees.LogViewerTreeController, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Trees.FilesTreeController, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
@@ -470,6 +469,7 @@ Umbraco.Web.Editors.ContentTypeController, Umbraco.Web, Version=8.0.0.0, Culture
 Umbraco.Web.Editors.MediaTypeController, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Editors.SectionController, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Editors.MediaController, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.ModelsBuilder.Embedded.BackOffice.ModelsBuilderDashboardController, Umbraco.ModelsBuilder.Embedded, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.SampleSite.Controllers.LessonsController, Umbraco.SampleSite, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
 
 Umbraco.Web.Mvc.SurfaceController
@@ -483,7 +483,6 @@ TreasureRoom.Controllers.Surface.SearchSurfaceController, TreasureRoom, Version=
 Umbraco.Core.Dashboards.IDashboard
 
 Umbraco.Core.Manifest.ManifestDashboard, Umbraco.Core, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
-Umbraco.ModelsBuilder.Embedded.ModelsBuilderDashboard, Umbraco.ModelsBuilder.Embedded, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Dashboards.ContentDashboard, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Dashboards.ExamineDashboard, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Dashboards.FormsDashboard, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
@@ -494,6 +493,7 @@ Umbraco.Web.Dashboards.ProfilerDashboardDashboard, Umbraco.Web, Version=8.0.0.0,
 Umbraco.Web.Dashboards.PublishedStatusDashboard, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Dashboards.RedirectUrlDashboard, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Dashboards.SettingsDashboard, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.ModelsBuilder.Embedded.ModelsBuilderDashboard, Umbraco.ModelsBuilder.Embedded, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 
 Umbraco.Core.PropertyEditors.IDataEditor
 
@@ -575,12 +575,12 @@ Umbraco.Web.Trees.ContentTreeController, Umbraco.Web, Version=8.0.0.0, Culture=n
 
 Umbraco.Web.Editors.IEditorValidator
 
-Umbraco.ModelsBuilder.Embedded.BackOffice.MediaTypeModelValidator, Umbraco.ModelsBuilder.Embedded, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
-Umbraco.ModelsBuilder.Embedded.BackOffice.MemberTypeModelValidator, Umbraco.ModelsBuilder.Embedded, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
-Umbraco.ModelsBuilder.Embedded.BackOffice.ContentTypeModelValidator, Umbraco.ModelsBuilder.Embedded, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.ModelsBuilder.Validation.ContentTypeModelValidator, Umbraco.ModelsBuilder, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.ModelsBuilder.Validation.MediaTypeModelValidator, Umbraco.ModelsBuilder, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.ModelsBuilder.Validation.MemberTypeModelValidator, Umbraco.ModelsBuilder, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.ModelsBuilder.Embedded.BackOffice.MediaTypeModelValidator, Umbraco.ModelsBuilder.Embedded, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.ModelsBuilder.Embedded.BackOffice.MemberTypeModelValidator, Umbraco.ModelsBuilder.Embedded, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.ModelsBuilder.Embedded.BackOffice.ContentTypeModelValidator, Umbraco.ModelsBuilder.Embedded, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 
 Umbraco.Web.Actions.IAction
 

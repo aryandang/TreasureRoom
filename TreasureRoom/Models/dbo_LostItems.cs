@@ -15,6 +15,7 @@ namespace TreasureRoom.Models
     public partial class dbo_LostItems
     {
         public string ID { get; set; }
+        public string Title { get; set; }
         public string Description { get; set; }
         public string Postcode { get; set; }
         public string ItemType { get; set; }

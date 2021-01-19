@@ -462,6 +462,7 @@
     <Compile Include="Controllers\RenderMvc\SearchPageController.cs" />
     <Compile Include="Controllers\Surface\SearchSurfaceController.cs" />
     <Compile Include="Models\DBHandler\GetItemTypesDBHandler.cs" />
+    <Compile Include="Models\DBHandler\GetLostItemsDBHandler.cs" />
     <Compile Include="Models\dbo_ItemTypes.cs">
       <DependentUpon>EntityModel.tt</DependentUpon>
     </Compile>

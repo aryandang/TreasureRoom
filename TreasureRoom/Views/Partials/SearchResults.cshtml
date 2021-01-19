@@ -13,7 +13,7 @@
         }
         else
         {
-            foreach (var item in ViewBag.lostItemsData)
+            foreach (var item in Model.LostItemsData)
             {
                 <div class="item-card_body">
                     <div class="item-card">
@@ -27,7 +27,7 @@
                             </div>
                             <h1 class="item-card_title">Lost iPhone Found in Hyde Park</h1>
                             <p class="item-card_text">
-                                @item.Description found at @item.Postcode which is @item.ItemType
+                                @item.Title found at @item.Postcode which is @item.ItemType
                             </p>
                             <a href="#"><button class="item-card_btn" type="button">Read More</button></a>
                         </div>
