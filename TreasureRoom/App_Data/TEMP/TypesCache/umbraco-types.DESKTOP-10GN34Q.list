@@ -637,3 +637,6 @@ Umbraco.Web.PublishedModels.ServicesControls, TreasureRoom, Version=1.0.0.0, Cul
 Umbraco.Web.PublishedModels.TestimonialsControls, TreasureRoom, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.PublishedModels.WhyChooseUsControls, TreasureRoom, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 
+Umbraco.Core.Deploy.IServiceConnector
+
+
