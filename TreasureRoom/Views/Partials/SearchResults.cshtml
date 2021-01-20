@@ -5,11 +5,9 @@
     <body>
         @if (Model.Equals(null))
         {
-            <tr>
-                <td colspan="3" style="color: red">
+                <p style="color: red">
                     No match found
-                </td>
-            </tr>
+                </p>
         }
         else
         {
@@ -22,10 +20,10 @@
                         </div>
                         <div class="item-card_info">
                             <div class="item-card_date">
-                                <span>Sunday</span>
-                                <span>15 January 2021</span>
+                                <span>@Html.DisplayFor(modelItem => item.DatePosted.Value.DayOfWeek)</span>
+                                <span>@Convert.ToDateTime(item.DatePosted).ToString("dd/MM/yyyy")</span>
                             </div>
-                            <h1 class="item-card_title">Lost iPhone Found in Hyde Park</h1>
+                            <h1 class="item-card_title">@Html.DisplayFor(modelItem => item.Title)</h1>
                             <p class="item-card_text">
                                 @Html.DisplayFor(modelItem => item.Description) found at @Html.DisplayFor(modelItem => item.Postcode) which is @Html.DisplayFor(modelItem => item.ItemType)
                             </p>

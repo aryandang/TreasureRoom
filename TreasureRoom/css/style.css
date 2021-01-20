@@ -340,10 +340,10 @@ hr {
     padding-bottom: 20px;
     text-align: center;
 }
-.validation-messages {
-    color: red;
-}
+
+
 /* item card section */
+
 .item-card_body::before,
 .item-card_body::after {
     margin: 0;

@@ -16,6 +16,7 @@ namespace TreasureRoom.Controllers
     public class SearchPageController : RenderMvcController//get the search values from the query string and pass it to the view model
     {
         private GetLostItemsDBHandler getLostItemsDbHandler = new GetLostItemsDBHandler();
+        
         public ActionResult Index(ContentModel model, string keyword, string postCode, string itemType)
         {
             var searchPageModel = new SearchContentModel(model.Content);
