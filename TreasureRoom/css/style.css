@@ -340,10 +340,10 @@ hr {
     padding-bottom: 20px;
     text-align: center;
 }
-
-
+.validation-messages {
+    color: red;
+}
 /* item card section */
-
 .item-card_body::before,
 .item-card_body::after {
     margin: 0;
@@ -357,7 +357,7 @@ hr {
 
 .item-card_body {
     width: 100%;
-    min-height: 40vh;
+    margin-bottom: 5vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -369,6 +369,7 @@ hr {
 .item-card {
     width: 100%;
     max-width: 90rem;
+    margin-left: 10vh;
     padding: 1rem;
     background-color: white;
     box-shadow: 0 1.4rem 8rem rgba(0, 0, 0, 0.2);

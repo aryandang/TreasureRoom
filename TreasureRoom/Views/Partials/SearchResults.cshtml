@@ -3,7 +3,7 @@
 @using (Html.BeginUmbracoForm("SubmitForm", "SearchSurface", FormMethod.Get))
 {
     <body>
-        @if (Model.Equals(null))
+        @if (Model.LostItemsData.Equals(null))
         {
                 <p style="color: red">
                     No match found
