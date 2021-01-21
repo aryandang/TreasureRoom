@@ -22,7 +22,7 @@ namespace Umbraco.Web.PublishedModels
 {
 	/// <summary>Search Page</summary>
 	[PublishedModel("searchPage")]
-	public partial class SearchPage : PublishedContentModel, IHomePageControls
+	public partial class SearchPage : PublishedContentModel
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -44,33 +44,5 @@ namespace Umbraco.Web.PublishedModels
 		{ }
 
 		// properties
-
-		///<summary>
-		/// Banner Title
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("bannerTitle")]
-		public string BannerTitle => HomePageControls.GetBannerTitle(this);
-
-		///<summary>
-		/// Search Bar 1
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("searchBar1")]
-		public string SearchBar1 => HomePageControls.GetSearchBar1(this);
-
-		///<summary>
-		/// Search Bar 2
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("searchBar2")]
-		public string SearchBar2 => HomePageControls.GetSearchBar2(this);
-
-		///<summary>
-		/// Search Bar 3
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("searchBar3")]
-		public string SearchBar3 => HomePageControls.GetSearchBar3(this);
 	}
 }
