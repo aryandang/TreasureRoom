@@ -214,10 +214,13 @@ main {
     padding-bottom: 50px;
     padding-top: 50px;
 }
+.testimonials-sub-heading {
+    margin-top: 20px;
+}
 
 .testimonials {
     border-left: 4px solid #101cb9;
-    margin-top: 50px;
+    margin-top: 20px;
     margin-bottom: 50px;
 }
 
@@ -305,38 +308,50 @@ main {
 
 .footer-box {
     padding: 20px;
-    margin-top: -40px;
 }
 
-    .footer-box img {
-        width: 170px;
-        margin-bottom: 20px;
-    }
+.footer-box-contact {
+    margin-left: 300px;
+}
 
-    .footer-box .fa {
-        margin-right: 8px;
-        font-size: 25px;
-        height: 40px;
-        width: 40px;
-        text-align: center;
-        padding-top: 7px;
-        border-radius: 2px;
-        background-image: linear-gradient(to right, #05d5ff, #53f);
-    }
+.footer-box img {
+    width: 250px;
+    height: 70px;
+    margin-bottom: 20px;
+}
 
-    .footer-box .form-control {
-        box-shadow: none !important;
-        border: none;
-        margin-top: 25px;
-        max-width: 250px;
-    }
+.footer-mailto {
+    color: white;
+}
 
-    .footer-box .btn-primary {
-        box-shadow: none;
-        border: none;
-        margin-top: 10px;
-        background-image: linear-gradient(to right, #05d5ff, #53f);
-    }
+.footer-mailto:hover {
+    color:#ffeb3b;
+}
+
+.footer-box-contact .fa {
+    margin-right: 8px;
+    font-size: 25px;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    padding-top: 7px;
+    border-radius: 2px;
+    background-image: linear-gradient(to right, #05d5ff, #53f);
+}
+
+.footer-box .form-control {
+    box-shadow: none !important;
+    border: none;
+    margin-top: 25px;
+    max-width: 250px;
+}
+
+.footer-box .btn-primary {
+    box-shadow: none;
+    border: none;
+    margin-top: 10px;
+    background-image: linear-gradient(to right, #05d5ff, #53f);
+}
 
 hr {
     background-color: white;
@@ -347,6 +362,7 @@ hr {
     padding-bottom: 20px;
     text-align: center;
 }
+
 .validation-messages {
     color: red;
 }

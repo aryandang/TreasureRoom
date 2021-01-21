@@ -27,6 +27,14 @@ namespace Umbraco.Web.PublishedModels
 		/// <summary>Aryan Dang Text</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		IHtmlString AryanDangText { get; }
+
+		/// <summary>Testimonials Header</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		IHtmlString TestimonialsHeader { get; }
+
+		/// <summary>Testimonials Sub Heading</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		IHtmlString TestimonialsSubHeading { get; }
 	}
 
 	/// <summary>Testimonials Controls</summary>
@@ -64,5 +72,27 @@ namespace Umbraco.Web.PublishedModels
 		/// <summary>Static getter for Aryan Dang Text</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		public static IHtmlString GetAryanDangText(ITestimonialsControls that) => that.Value<IHtmlString>("aryanDangText");
+
+		///<summary>
+		/// Testimonials Header
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("testimonialsHeader")]
+		public IHtmlString TestimonialsHeader => GetTestimonialsHeader(this);
+
+		/// <summary>Static getter for Testimonials Header</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		public static IHtmlString GetTestimonialsHeader(ITestimonialsControls that) => that.Value<IHtmlString>("testimonialsHeader");
+
+		///<summary>
+		/// Testimonials Sub Heading
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("testimonialsSubHeading")]
+		public IHtmlString TestimonialsSubHeading => GetTestimonialsSubHeading(this);
+
+		/// <summary>Static getter for Testimonials Sub Heading</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		public static IHtmlString GetTestimonialsSubHeading(ITestimonialsControls that) => that.Value<IHtmlString>("testimonialsSubHeading");
 	}
 }

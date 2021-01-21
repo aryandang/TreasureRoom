@@ -74,6 +74,13 @@ namespace Umbraco.Web.PublishedModels
 		public string SearchBar3 => HomePageControls.GetSearchBar3(this);
 
 		///<summary>
+		/// First Column Heading
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("firstColumnHeading")]
+		public IHtmlString FirstColumnHeading => ServicesControls.GetFirstColumnHeading(this);
+
+		///<summary>
 		/// First Column Image
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
@@ -86,6 +93,13 @@ namespace Umbraco.Web.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		[ImplementPropertyType("firstColumnText")]
 		public IHtmlString FirstColumnText => ServicesControls.GetFirstColumnText(this);
+
+		///<summary>
+		/// Second Column Heading
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("secondColumnHeading")]
+		public IHtmlString SecondColumnHeading => ServicesControls.GetSecondColumnHeading(this);
 
 		///<summary>
 		/// Second Column Image
@@ -109,6 +123,13 @@ namespace Umbraco.Web.PublishedModels
 		public IHtmlString ServicesHeader => ServicesControls.GetServicesHeader(this);
 
 		///<summary>
+		/// Third Column Heading
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("thirdColumnHeading")]
+		public IHtmlString ThirdColumnHeading => ServicesControls.GetThirdColumnHeading(this);
+
+		///<summary>
 		/// Third Column Image
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
@@ -128,6 +149,20 @@ namespace Umbraco.Web.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		[ImplementPropertyType("aryanDangText")]
 		public IHtmlString AryanDangText => TestimonialsControls.GetAryanDangText(this);
+
+		///<summary>
+		/// Testimonials Header
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("testimonialsHeader")]
+		public IHtmlString TestimonialsHeader => TestimonialsControls.GetTestimonialsHeader(this);
+
+		///<summary>
+		/// Testimonials Sub Heading
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("testimonialsSubHeading")]
+		public IHtmlString TestimonialsSubHeading => TestimonialsControls.GetTestimonialsSubHeading(this);
 
 		///<summary>
 		/// About Us Header

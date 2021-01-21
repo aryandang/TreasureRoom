@@ -24,6 +24,10 @@ namespace Umbraco.Web.PublishedModels
 	/// <summary>Services Controls</summary>
 	public partial interface IServicesControls : IPublishedContent
 	{
+		/// <summary>First Column Heading</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		IHtmlString FirstColumnHeading { get; }
+
 		/// <summary>First Column Image</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		IPublishedContent FirstColumnImage { get; }
@@ -31,6 +35,10 @@ namespace Umbraco.Web.PublishedModels
 		/// <summary>First Column Text</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		IHtmlString FirstColumnText { get; }
+
+		/// <summary>Second Column Heading</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		IHtmlString SecondColumnHeading { get; }
 
 		/// <summary>Second Column Image</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
@@ -43,6 +51,10 @@ namespace Umbraco.Web.PublishedModels
 		/// <summary>Services Header</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		IHtmlString ServicesHeader { get; }
+
+		/// <summary>Third Column Heading</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		IHtmlString ThirdColumnHeading { get; }
 
 		/// <summary>Third Column Image</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
@@ -79,6 +91,17 @@ namespace Umbraco.Web.PublishedModels
 		// properties
 
 		///<summary>
+		/// First Column Heading
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("firstColumnHeading")]
+		public IHtmlString FirstColumnHeading => GetFirstColumnHeading(this);
+
+		/// <summary>Static getter for First Column Heading</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		public static IHtmlString GetFirstColumnHeading(IServicesControls that) => that.Value<IHtmlString>("firstColumnHeading");
+
+		///<summary>
 		/// First Column Image
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
@@ -99,6 +122,17 @@ namespace Umbraco.Web.PublishedModels
 		/// <summary>Static getter for First Column Text</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		public static IHtmlString GetFirstColumnText(IServicesControls that) => that.Value<IHtmlString>("firstColumnText");
+
+		///<summary>
+		/// Second Column Heading
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("secondColumnHeading")]
+		public IHtmlString SecondColumnHeading => GetSecondColumnHeading(this);
+
+		/// <summary>Static getter for Second Column Heading</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		public static IHtmlString GetSecondColumnHeading(IServicesControls that) => that.Value<IHtmlString>("secondColumnHeading");
 
 		///<summary>
 		/// Second Column Image
@@ -132,6 +166,17 @@ namespace Umbraco.Web.PublishedModels
 		/// <summary>Static getter for Services Header</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		public static IHtmlString GetServicesHeader(IServicesControls that) => that.Value<IHtmlString>("servicesHeader");
+
+		///<summary>
+		/// Third Column Heading
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("thirdColumnHeading")]
+		public IHtmlString ThirdColumnHeading => GetThirdColumnHeading(this);
+
+		/// <summary>Static getter for Third Column Heading</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		public static IHtmlString GetThirdColumnHeading(IServicesControls that) => that.Value<IHtmlString>("thirdColumnHeading");
 
 		///<summary>
 		/// Third Column Image
