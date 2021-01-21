@@ -27,8 +27,8 @@ namespace TreasureRoom.Models
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<dbo_ItemTypes> dbo_ItemTypes { get; set; }
         public virtual DbSet<dbo_LostItems> dbo_LostItems { get; set; }
+        public virtual DbSet<dbo_ItemTypes> dbo_ItemTypes { get; set; }
     
         public virtual ObjectResult<Get_LostItems_Result> Get_LostItems()
         {

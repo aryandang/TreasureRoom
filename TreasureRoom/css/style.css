@@ -106,6 +106,13 @@ main {
     width: 200px;
 }
 
+.item-types_dropdown {
+    padding: 08px;
+    margin-right: 15px;
+    border: none;
+    border-radius: 25px;
+}
+
 .search-btn {
     height: 40px;
     width: 140px;

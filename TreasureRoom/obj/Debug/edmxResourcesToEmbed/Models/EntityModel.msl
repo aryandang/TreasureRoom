@@ -13,14 +13,6 @@
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
-    <EntitySetMapping Name="dbo_ItemTypes">
-      <EntityTypeMapping TypeName="TreasureRoomModel.dbo_ItemTypes">
-        <MappingFragment StoreEntitySet="dbo_ItemTypes">
-          <ScalarProperty Name="ItemType" ColumnName="ItemType" />
-          <ScalarProperty Name="ID" ColumnName="ID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <FunctionImportMapping FunctionImportName="Get_ItemTypes" FunctionName="TreasureRoomModel.Store.Get_ItemTypes">
       <ResultMapping>
         <ComplexTypeMapping TypeName="TreasureRoomModel.Get_ItemTypes_Result">
@@ -38,6 +30,14 @@
           <ScalarProperty Name="Postcode" ColumnName="Postcode" />
           <ScalarProperty Name="Description" ColumnName="Description" />
           <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dbo_ItemTypes">
+      <EntityTypeMapping TypeName="TreasureRoomModel.dbo_ItemTypes">
+        <MappingFragment StoreEntitySet="dbo_ItemTypes">
+          <ScalarProperty Name="ItemType" ColumnName="ItemType" />
           <ScalarProperty Name="ID" ColumnName="ID" />
         </MappingFragment>
       </EntityTypeMapping>

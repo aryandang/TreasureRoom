@@ -12,35 +12,19 @@ namespace TreasureRoom.Models.DBHandler
 {
     public class GetItemTypesDBHandler
     {
-        private SqlConnection con;
-
-        private void connection()
+        public List<ItemTypesViewModel> GetItemTypes()
         {
-            string conString = ConfigurationManager.ConnectionStrings["TreasureRoomEntities"].ToString();
-            con = new SqlConnection(conString);
-        }
-
-        public List<SearchViewModel> GetItemTypes()
-        {
-            connection();
-            List<SearchViewModel> ItemTypes = new List<SearchViewModel>();
-
-            SqlCommand cmd = new SqlCommand("EXEC Get_ItemTypes", con);
-            cmd.CommandType = CommandType.StoredProcedure;
-            SqlDataAdapter sd = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            con.Open();
-            sd.Fill(dt);
-            con.Close();
-            foreach (DataRow dr in dt.Rows)
+            var getItemTypes = new List<ItemTypesViewModel>();
+            using (var db = new TreasureRoomEntities())
             {
-                ItemTypes.Add(
-                    new SearchViewModel
+                getItemTypes = db.dbo_ItemTypes.Select(m => new ItemTypesViewModel()
                     {
-                        ItemType = Convert.ToString(dr["ItemType"])
-                    });
+                        ID = m.ID,
+                        ItemType = m.ItemType
+                    }
+                ).ToList();
+                return getItemTypes;
             }
-            return ItemTypes;
         }
     }
 }

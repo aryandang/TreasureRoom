@@ -18,6 +18,7 @@ namespace TreasureRoom.Models.ViewModel
         [Display(Name = "Item Type")]
         [Required(ErrorMessage = "Must select the item type*")]
         public string ItemType { get; set; }
+        public List<ItemTypesViewModel> ItemTypesData { get; set; }
         public List<LostItemsViewModel> LostItemsData { get; set; }
     }
 }

@@ -16,6 +16,5 @@ namespace TreasureRoom.Models
         }
 
         public SearchViewModel SearchViewModel { get; set; }
-        public List<LostItemsViewModel> LostItemsSearchResults { get; set; }
     }
 }

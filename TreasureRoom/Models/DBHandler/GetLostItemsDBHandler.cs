@@ -9,7 +9,6 @@ namespace TreasureRoom.Models.DBHandler
 {
     public class GetLostItemsDBHandler
     {
-        SearchViewModel searchViewModel = new SearchViewModel();
         public List<LostItemsViewModel> GetLostItems(string searchTerm, string postCode, string itemType)
         {
             var lostItems = new List<LostItemsViewModel>();

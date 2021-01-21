@@ -11,7 +11,7 @@ warning 6002: The table/view 'TreasureRoom.dbo.dbo.ItemTypes' does not have a pr
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ID" Type="int" Nullable="false" />
           <Property Name="ItemType" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <!--Errors Found During Generation:
@@ -55,9 +55,9 @@ warning 6002: The table/view 'TreasureRoom.dbo.dbo.LostItems' does not have a pr
       <Schema Namespace="TreasureRoomModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityContainer Name="TreasureRoomEntities" annotation:LazyLoadingEnabled="true">
           <FunctionImport Name="Get_LostItems" ReturnType="Collection(TreasureRoomModel.Get_LostItems_Result)" />
-          <EntitySet Name="dbo_ItemTypes" EntityType="TreasureRoomModel.dbo_ItemTypes" />
           <FunctionImport Name="Get_ItemTypes" ReturnType="Collection(TreasureRoomModel.Get_ItemTypes_Result)" />
           <EntitySet Name="dbo_LostItems" EntityType="TreasureRoomModel.dbo_LostItems" />
+          <EntitySet Name="dbo_ItemTypes" EntityType="TreasureRoomModel.dbo_ItemTypes" />
         </EntityContainer>
         <ComplexType Name="Get_LostItems_Result">
           <Property Type="String" Name="ID" Nullable="false" MaxLength="50" />
@@ -67,13 +67,6 @@ warning 6002: The table/view 'TreasureRoom.dbo.dbo.LostItems' does not have a pr
           <Property Type="String" Name="Image" Nullable="true" MaxLength="50" />
           <Property Type="DateTime" Name="DatePosted" Nullable="true" Precision="23" />
         </ComplexType>
-        <EntityType Name="dbo_ItemTypes">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="ItemType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-        </EntityType>
         <ComplexType Name="Get_ItemTypes_Result">
           <Property Type="Byte" Name="ID" Nullable="false" />
           <Property Type="String" Name="ItemType" Nullable="true" MaxLength="50" />
@@ -89,6 +82,13 @@ warning 6002: The table/view 'TreasureRoom.dbo.dbo.LostItems' does not have a pr
           <Property Name="ItemType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Image" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="DatePosted" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="dbo_ItemTypes">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="ItemType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -108,14 +108,6 @@ warning 6002: The table/view 'TreasureRoom.dbo.dbo.LostItems' does not have a pr
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
-          <EntitySetMapping Name="dbo_ItemTypes">
-            <EntityTypeMapping TypeName="TreasureRoomModel.dbo_ItemTypes">
-              <MappingFragment StoreEntitySet="dbo_ItemTypes">
-                <ScalarProperty Name="ItemType" ColumnName="ItemType" />
-                <ScalarProperty Name="ID" ColumnName="ID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <FunctionImportMapping FunctionImportName="Get_ItemTypes" FunctionName="TreasureRoomModel.Store.Get_ItemTypes">
             <ResultMapping>
               <ComplexTypeMapping TypeName="TreasureRoomModel.Get_ItemTypes_Result">
@@ -133,6 +125,14 @@ warning 6002: The table/view 'TreasureRoom.dbo.dbo.LostItems' does not have a pr
                 <ScalarProperty Name="Postcode" ColumnName="Postcode" />
                 <ScalarProperty Name="Description" ColumnName="Description" />
                 <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="dbo_ItemTypes">
+            <EntityTypeMapping TypeName="TreasureRoomModel.dbo_ItemTypes">
+              <MappingFragment StoreEntitySet="dbo_ItemTypes">
+                <ScalarProperty Name="ItemType" ColumnName="ItemType" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>

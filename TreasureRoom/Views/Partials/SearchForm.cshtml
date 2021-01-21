@@ -22,8 +22,7 @@
                 <div class="form-group">
                     @Html.LabelFor(m => m.ItemType)
                     <div class="input-group">
-                        @*@Html.DropDownListFor(m => m.ItemType, new SelectList(Model.ItemTypesList, "ID", "ItemType"), "Select", new {@class="form-control"})*@
-                        @Html.EditorFor(m => m.ItemType, new { htmlAttributes = new { @class = "search-field item-tye", placeholder = "Item Type" } })
+                        @Html.DropDownListFor(m => m.ItemType, new SelectList(Model.ItemTypesData, "ItemType", "ItemType"), "Select...", new {@class="item-types_dropdown"})
                         <button id="Submit" class="search-btn">Search</button>
                     </div>
                     @Html.ValidationMessageFor(m => m.ItemType, String.Empty, new { @class = "validation-messages" })

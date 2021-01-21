@@ -3,10 +3,10 @@
 @using (Html.BeginUmbracoForm("SubmitForm", "SearchSurface", FormMethod.Get))
 {
     <body>
-        @if (Model.LostItemsData.Equals(null))
+        @if (Model.LostItemsData.Capacity==0)
         {
                 <p style="color: red">
-                    No match found
+                    No match found. Please search again.
                 </p>
         }
         else
