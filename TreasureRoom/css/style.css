@@ -189,7 +189,6 @@ main {
 
 #about {
     background: #f8f9fa;
-    padding-bottom: 50px;
     padding-top: 50px;
 }
 
@@ -206,7 +205,10 @@ main {
 #about ul {
     margin-left: 20px;
 }
-
+.image-fluid {
+    width: 614px;
+    height: 463px;
+}
 
 /* testimonials section */
 
@@ -295,7 +297,7 @@ main {
 /* footer section */
 
 #footer {
-    background-image: linear-gradient(to right, #05d5ff, #53f);
+    background-image: linear-gradient(to right, #20BDFF, blue);
     color: white;
     bottom: 0;
     width: 100%;

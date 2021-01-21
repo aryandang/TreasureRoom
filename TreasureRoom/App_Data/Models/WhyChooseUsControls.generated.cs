@@ -28,6 +28,10 @@ namespace Umbraco.Web.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		IHtmlString AboutUsHeader { get; }
 
+		/// <summary>About Us Image</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		IPublishedContent AboutUsImage { get; }
+
 		/// <summary>Bullet Point 1</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		IHtmlString BulletPoint1 { get; }
@@ -84,6 +88,17 @@ namespace Umbraco.Web.PublishedModels
 		/// <summary>Static getter for About Us Header</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		public static IHtmlString GetAboutUsHeader(IWhyChooseUsControls that) => that.Value<IHtmlString>("aboutUsHeader");
+
+		///<summary>
+		/// About Us Image
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("aboutUsImage")]
+		public IPublishedContent AboutUsImage => GetAboutUsImage(this);
+
+		/// <summary>Static getter for About Us Image</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		public static IPublishedContent GetAboutUsImage(IWhyChooseUsControls that) => that.Value<IPublishedContent>("aboutUsImage");
 
 		///<summary>
 		/// Bullet Point 1

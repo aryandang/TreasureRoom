@@ -172,6 +172,13 @@ namespace Umbraco.Web.PublishedModels
 		public IHtmlString AboutUsHeader => WhyChooseUsControls.GetAboutUsHeader(this);
 
 		///<summary>
+		/// About Us Image
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("aboutUsImage")]
+		public IPublishedContent AboutUsImage => WhyChooseUsControls.GetAboutUsImage(this);
+
+		///<summary>
 		/// Bullet Point 1
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
