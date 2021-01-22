@@ -158,11 +158,11 @@ namespace Umbraco.Web.PublishedModels
 		public IHtmlString TestimonialsHeader => TestimonialsControls.GetTestimonialsHeader(this);
 
 		///<summary>
-		/// Testimonials Sub Heading
+		/// Testimonials Image
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("testimonialsSubHeading")]
-		public IHtmlString TestimonialsSubHeading => TestimonialsControls.GetTestimonialsSubHeading(this);
+		[ImplementPropertyType("testimonialsImage")]
+		public IPublishedContent TestimonialsImage => TestimonialsControls.GetTestimonialsImage(this);
 
 		///<summary>
 		/// About Us Header

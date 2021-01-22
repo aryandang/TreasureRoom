@@ -205,6 +205,7 @@ main {
 #about ul {
     margin-left: 20px;
 }
+
 .image-fluid {
     width: 614px;
     height: 463px;
@@ -216,22 +217,29 @@ main {
     padding-bottom: 50px;
     padding-top: 50px;
 }
+
 .testimonials-sub-heading {
     margin-top: 20px;
 }
 
 .testimonials {
     border-left: 4px solid #101cb9;
-    margin-top: 20px;
+    margin-top: 50px;
     margin-bottom: 50px;
+    margin-left: 280px;
 }
 
-    .testimonials img {
-        height: 100px;
-        widows: 1000px;
-        border-radius: 100%;
-        margin: 0 10px;
-    }
+.testimonials-image-fluid {
+    height: 90%;
+    margin-left: -90px;
+}
+
+.testimonials img {
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    margin: 0 10px;
+}
 
 .user-details {
     display: inline-block;
@@ -326,9 +334,9 @@ main {
     color: white;
 }
 
-.footer-mailto:hover {
-    color:#ffeb3b;
-}
+    .footer-mailto:hover {
+        color: #ffeb3b;
+    }
 
 .footer-box-contact .fa {
     margin-right: 8px;

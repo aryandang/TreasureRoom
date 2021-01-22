@@ -32,9 +32,9 @@ namespace Umbraco.Web.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		IHtmlString TestimonialsHeader { get; }
 
-		/// <summary>Testimonials Sub Heading</summary>
+		/// <summary>Testimonials Image</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		IHtmlString TestimonialsSubHeading { get; }
+		IPublishedContent TestimonialsImage { get; }
 	}
 
 	/// <summary>Testimonials Controls</summary>
@@ -85,14 +85,14 @@ namespace Umbraco.Web.PublishedModels
 		public static IHtmlString GetTestimonialsHeader(ITestimonialsControls that) => that.Value<IHtmlString>("testimonialsHeader");
 
 		///<summary>
-		/// Testimonials Sub Heading
+		/// Testimonials Image
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("testimonialsSubHeading")]
-		public IHtmlString TestimonialsSubHeading => GetTestimonialsSubHeading(this);
+		[ImplementPropertyType("testimonialsImage")]
+		public IPublishedContent TestimonialsImage => GetTestimonialsImage(this);
 
-		/// <summary>Static getter for Testimonials Sub Heading</summary>
+		/// <summary>Static getter for Testimonials Image</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		public static IHtmlString GetTestimonialsSubHeading(ITestimonialsControls that) => that.Value<IHtmlString>("testimonialsSubHeading");
+		public static IPublishedContent GetTestimonialsImage(ITestimonialsControls that) => that.Value<IPublishedContent>("testimonialsImage");
 	}
 }
