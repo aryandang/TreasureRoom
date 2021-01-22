@@ -459,9 +459,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Composing\RegisterServicesComposer.cs" />
-    <Compile Include="Controllers\RenderMvc\HomeController.cs" />
     <Compile Include="Controllers\RenderMvc\SearchPageController.cs" />
-    <Compile Include="Controllers\Surface\HomeSurfaceController.cs" />
     <Compile Include="Controllers\Surface\SearchSurfaceController.cs" />
     <Compile Include="Models\DBHandler\GetItemTypesDBHandler.cs" />
     <Compile Include="Models\DBHandler\GetLostItemsDBHandler.cs" />
