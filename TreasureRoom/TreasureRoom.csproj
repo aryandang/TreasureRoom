@@ -454,6 +454,7 @@
     <Compile Include="App_Data\Models\PostPage.generated.cs" />
     <Compile Include="App_Data\Models\SearchPage.generated.cs" />
     <Compile Include="App_Data\Models\ServicesControls.generated.cs" />
+    <Compile Include="App_Data\Models\SuccessPage.generated.cs" />
     <Compile Include="App_Data\Models\TestimonialsControls.generated.cs" />
     <Compile Include="App_Data\Models\WhyChooseUsControls.generated.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -3524,6 +3525,7 @@
     <None Include="Views\Partials\SearchForm.cshtml" />
     <Content Include="Views\SearchPage.cshtml" />
     <Content Include="Views\PostPage.cshtml" />
+    <Content Include="Views\SuccessPage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\TEMP\FileUploads\" />

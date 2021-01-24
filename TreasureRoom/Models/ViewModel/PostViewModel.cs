@@ -34,8 +34,8 @@ namespace TreasureRoom.Models.ViewModel
 
 
         [Display(Name = "Upload Image")]
-        [Required(ErrorMessage = "Must select an image*")]
         public string ImagePath { get; set; }
+        [Required(ErrorMessage = "Must select an image*")]
         public HttpPostedFileBase ImageFile { get; set; }
 
 
