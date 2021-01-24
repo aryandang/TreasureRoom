@@ -451,6 +451,7 @@
     <Compile Include="App_Data\Models\HomePageControls.generated.cs" />
     <Compile Include="App_Data\Models\Image.generated.cs" />
     <Compile Include="App_Data\Models\Member.generated.cs" />
+    <Compile Include="App_Data\Models\PostPage.generated.cs" />
     <Compile Include="App_Data\Models\SearchPage.generated.cs" />
     <Compile Include="App_Data\Models\ServicesControls.generated.cs" />
     <Compile Include="App_Data\Models\TestimonialsControls.generated.cs" />
@@ -490,6 +491,7 @@
     <Compile Include="Models\Get_LostItems_Result.cs">
       <DependentUpon>EntityModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\PostContentModel.cs" />
     <Compile Include="Models\SearchContentModel.cs" />
     <Compile Include="Models\ViewModel\ItemTypesViewModel.cs" />
     <Compile Include="Models\ViewModel\LostItemsViewModel.cs" />
@@ -3511,6 +3513,7 @@
     <Content Include="Views\Partials\SearchResults.cshtml" />
     <None Include="Views\Partials\SearchForm.cshtml" />
     <Content Include="Views\SearchPage.cshtml" />
+    <Content Include="Views\PostPage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\TEMP\FileUploads\" />

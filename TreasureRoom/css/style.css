@@ -25,6 +25,13 @@ main {
     padding: 0 !important;
 }
 
+#action-navlink {
+    border: 1px solid yellow !important;
+    border-radius: 25px !important;
+    color: black !important;
+    background: #ffeb3b;
+}
+
 .navbar-brand img {
     height: 70px;
     padding-left: 10px;
