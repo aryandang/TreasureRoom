@@ -10,46 +10,58 @@ namespace TreasureRoom.Models.ViewModel
 
         public string ID { get; set; }
 
-        [Required(ErrorMessage = "Must enter the lost item title")]
+        [Required(ErrorMessage = "Must enter the lost item title*")]
         [StringLength(20)]
+        [Display(Name = "Post Title")]
         public string Title { get; set; }
 
 
-        [Required(ErrorMessage = "Must enter a description")]
+        [Required(ErrorMessage = "Must enter a description*")]
         [StringLength(55)]
         public string Description { get; set; }
 
 
         [Required(ErrorMessage = "Must select the item type*")]
+        [Display(Name = "Item Type")]
         public string ItemType { get; set; }
         public List<ItemTypesViewModel> ItemTypesData { get; set; }
 
 
-        [Display(Name = "Item Type")]
-        [Required(ErrorMessage = "Must enter a valid postcode")]
+        [Display(Name = "Postcode where lost item was found:")]
+        [Required(ErrorMessage = "Must enter a valid postcode*")]
         [StringLength(10)]
         public string Postcode { get; set; }
 
 
         [Display(Name = "Upload Image")]
+        [Required(ErrorMessage = "Must select an image*")]
         public string ImagePath { get; set; }
         public HttpPostedFileBase ImageFile { get; set; }
 
-        public DateTime DatePosted { get; set; }
+
+        [Display(Name = "Date when the lost item was found:")]
+        [Required(ErrorMessage = "Must enter a date")]
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
+        public DateTime? DatePosted { get; set; }
 
 
-        [Required(ErrorMessage = "Must select a title")]
+        [Required(ErrorMessage = "Must select a title*")]
+        [Display(Name = "Title")]
         public string UserTitle { get; set; }
         public List<TitlesViewModel> TitlesData { get; set; }
 
-        [Required(ErrorMessage = "Must enter your full name")]
+
+        [Required(ErrorMessage = "Must enter your full name*")]
         [StringLength(50)]
+        [Display(Name = "Full Name")]
         public string FullName { get; set; }
 
 
         [EmailAddress]
-        [Required(ErrorMessage = "Must enter a valid email address")]
+        [Required(ErrorMessage = "Must enter a valid email address*")]
         [StringLength(100)]
+        [Display(Name = "Email Address")]
         public string EmailAddress { get; set; }
     }
 }

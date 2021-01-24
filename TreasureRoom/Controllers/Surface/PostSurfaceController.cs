@@ -22,10 +22,17 @@ namespace TreasureRoom.Controllers.Surface
         {
             if (ModelState.IsValid)
             {
+                model.ID = GuidGenerator();
                 postLostItemsDbHandler.PostLostItemsData(model);
                 return RedirectToCurrentUmbracoPage();
             }
             return CurrentUmbracoPage();
+        }
+
+        public string GuidGenerator()
+        {
+            var obj = Guid.NewGuid();
+            return obj.ToString();
         }
     }
 }

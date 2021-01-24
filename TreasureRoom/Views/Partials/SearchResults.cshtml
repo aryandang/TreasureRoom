@@ -3,11 +3,11 @@
 @using (Html.BeginUmbracoForm("SubmitForm", "SearchSurface", FormMethod.Get))
 {
     <body>
-        @if (Model.LostItemsData.Capacity==0)
+        @if (Model.LostItemsData.Capacity == 0)
         {
-                <p style="color: red">
-                    No match found. Please search again.
-                </p>
+            <p style="color: red">
+                No match found. Please search again.
+            </p>
         }
         else
         {
@@ -33,5 +33,7 @@
                 </div>
             }
         }
+        <div class="container post-form_body">
+        </div>
     </body>
 }
