@@ -1,6 +1,8 @@
-﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<Umbraco.Web.PublishedModels.Home>
-
-<input type="text" class="search-field keyword" placeholder="Keywords or Image">
-<input type="text" class="search-field location" placeholder="Postcode">
-<input type="text" class="search-field location" placeholder="Item Type">
-<a href="searchResult.html"><button class="search-btn" type="button">Search</button></a>
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.Home>
+@using ContentModels = Umbraco.Web.PublishedModels;
+<form action="/search/">
+    <input type="text" class="search-field keyword" name="Keyword" placeholder="Keywords">
+    <input type="text" class="search-field location" name="Postcode" placeholder="Postcode">
+    <input type="text" class="search-field item-type" name="ItemType" placeholder="Item Type">
+    <button class="search-btn" type="button">Search</button>
+</form>

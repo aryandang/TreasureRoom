@@ -1,0 +1,34 @@
+﻿@inherits UmbracoViewPage<TreasureRoom.Models.ViewModel.SearchViewModel>
+
+@using (Html.BeginUmbracoForm("SubmitForm", "SearchSurface", FormMethod.Post))
+{
+    <div id="bannerForContent">
+        <div class="container">
+            <div class="row">
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Keyword)
+                    <div class="input-group">
+                        @Html.EditorFor(m => m.Keyword, new { htmlAttributes = new { @class = "search-field keyword", placeholder = "Keywords" } })
+                    </div>
+                    @Html.ValidationMessageFor(m => m.Keyword, String.Empty, new { @class = "validation-messages" })
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Postcode)
+                    <div class="input-group">
+                        @Html.EditorFor(m => m.Postcode, new { htmlAttributes = new { @class = "search-field location", placeholder = "Postcode" } })
+                    </div>
+                    @Html.ValidationMessageFor(m => m.Postcode, String.Empty, new { @class = "validation-messages" })
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.ItemType)
+                    <div class="input-group">
+                        @Html.DropDownListFor(m => m.ItemType, new SelectList(Model.ItemTypesData, "ItemType", "ItemType"), "Select...", new {@class="item-types_dropdown"})
+                        <button id="Submit" class="search-btn">Search</button>
+                    </div>
+                    @Html.ValidationMessageFor(m => m.ItemType, String.Empty, new { @class = "validation-messages" })
+                </div>
+            </div>
+        </div>
+    </div>
+    @Html.Partial("~/Views/Partials/SearchResults.cshtml")
+}

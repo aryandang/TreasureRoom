@@ -1,32 +1,32 @@
-﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.Home>
+@using ContentModels = Umbraco.Web.PublishedModels;
 
-<!-- About us -->
 <section id="about">
     <div class="container">
-        <h1 class="title text-center">WHY CHOOSE US?</h1>
+        <h1 class="title text-center">@Model.AboutUsHeader</h1>
         <div class="row">
             <div class="col-md-6 about">
                 <p class="about-title">
-                    Why we are different than other websites
+                    @Model.MainTextHeading
                 </p>
                 <ul>
                     <li>
-                        Believe in doing business with honesty
+                        @Model.BulletPoint1
                     </li>
                     <li>
-                        Believe in doing business with honesty
+                        @Model.BulletPoint2
                     </li>
                     <li>
-                        Believe in doing business with honesty
+                        @Model.BulletPoint3
                     </li>
                     <li>
-                        Believe in doing business with honesty
+                        @Model.BulletPoint4
                     </li>
                 </ul>
             </div>
-            <div class="col-md-6">
-                <img src="" class="image-fluid">
-            </div>
+            <div class="col-md-4">
+            <img src="@Model.AboutUsImage.GetCropUrl()" class="image-fluid">
+        </div>
         </div>
     </div>
 </section>

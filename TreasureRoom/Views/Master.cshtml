@@ -1,25 +1,28 @@
-﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage
+﻿@using ClientDependency.Core.Mvc
+@inherits Umbraco.Web.Mvc.UmbracoViewPage
 @{
-	Layout = null;
+    Layout = null;
+
+    Html.RequiresCss("/css/style.css");
+    Html.RequiresCss("https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css");
+    Html.RequiresCss("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+
+    Html.RequiresJs("https://code.jquery.com/jquery-3.3.1.slim.min.js");
+    Html.RequiresJs("https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js");
+    Html.RequiresJs("/js/smooth-scroll.js");
+
 }
 <html>
-
 <head>
-    <title>Treasure Room Website Template</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    @Html.RenderCssHere()
 </head>
-
 <body>
-    @Html.Partial("~/Views/Partials/Navigation.cshtml")
+@Html.Partial("~/Views/Partials/Navigation.cshtml")
 
-    @RenderBody()
-    @Html.Partial("~/Views/Partials/Footer.cshtml")
-    <!-- smooth scroll -->
-    <script src="js/smooth-scroll.js"></script>
-    <script>var scroll = new SmoothScroll('a[href*="#"]');</script>
+@RenderBody()
+@Html.Partial("~/Views/Partials/Footer.cshtml")
+@Html.RenderJsHere()
+<!-- smooth scroll -->
+<script>var scroll = new SmoothScroll('a[href*="#"]');</script>
 </body>
 </html>
