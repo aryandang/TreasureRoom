@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using TreasureRoom.Models.ViewModel;
+﻿using TreasureRoom.Models.ViewModel;
 using Umbraco.Core.Models.PublishedContent;
 using Umbraco.Web.Models;
 

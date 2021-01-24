@@ -12,17 +12,9 @@ namespace TreasureRoom.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class dbo_LostItems
+    public partial class dbo_Titles
     {
-        public string ID { get; set; }
+        public int ID { get; set; }
         public string Title { get; set; }
-        public string Description { get; set; }
-        public string Postcode { get; set; }
-        public string ItemType { get; set; }
-        public string ImagePath { get; set; }
-        public Nullable<System.DateTime> DatePosted { get; set; }
-        public string UserTitle { get; set; }
-        public string UserFullName { get; set; }
-        public string UserEmailAddress { get; set; }
     }
 }

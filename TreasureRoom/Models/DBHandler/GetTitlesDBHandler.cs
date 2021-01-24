@@ -4,20 +4,20 @@ using TreasureRoom.Models.ViewModel;
 
 namespace TreasureRoom.Models.DBHandler
 {
-    public class GetItemTypesDBHandler
+    public class GetTitlesDBHandler
     {
-        public List<ItemTypesViewModel> GetItemTypes()
+        public List<TitlesViewModel> GetTitles()
         {
-            var getItemTypes = new List<ItemTypesViewModel>();
+            var getTitles = new List<TitlesViewModel>();
             using (var db = new TreasureRoomEntities())
             {
-                getItemTypes = db.dbo_ItemTypes.Select(m => new ItemTypesViewModel()
+                getTitles = db.dbo_Titles.Select(m => new TitlesViewModel()
                 {
                     ID = m.ID,
-                    ItemType = m.ItemType
+                    Title = m.Title
                 }
                 ).ToList();
-                return getItemTypes;
+                return getTitles;
             }
         }
     }

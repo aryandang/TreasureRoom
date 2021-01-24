@@ -15,10 +15,6 @@ namespace TreasureRoom.Controllers
         public ActionResult Index(ContentModel model, string keyword, string postCode, string itemType)
         {
             var searchPageModel = new SearchContentModel(model.Content);
-            TreasureRoomEntities db = new TreasureRoomEntities();
-            //var data = db.dbo_LostItems.ToList();
-            //ViewBag.LostItemsData = data;
-
 
             var getLostItems = getLostItemsDbHandler.GetLostItems(keyword, postCode, itemType);
             var getItemTypes = getItemTypesDbHandler.GetItemTypes();

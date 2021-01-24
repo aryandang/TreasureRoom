@@ -27,8 +27,9 @@ namespace TreasureRoom.Models
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<dbo_LostItems> dbo_LostItems { get; set; }
         public virtual DbSet<dbo_ItemTypes> dbo_ItemTypes { get; set; }
+        public virtual DbSet<dbo_LostItems> dbo_LostItems { get; set; }
+        public virtual DbSet<dbo_Titles> dbo_Titles { get; set; }
     
         public virtual ObjectResult<Get_LostItems_Result> Get_LostItems()
         {
@@ -38,6 +39,51 @@ namespace TreasureRoom.Models
         public virtual ObjectResult<Get_ItemTypes_Result> Get_ItemTypes()
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Get_ItemTypes_Result>("Get_ItemTypes");
+        }
+    
+        public virtual int Post_LostItems(string iD, string title, string description, string postcode, string itemType, string imagePath, Nullable<System.DateTime> datePosted, string userTitle, string userFullName, string userEmailAddress)
+        {
+            var iDParameter = iD != null ?
+                new ObjectParameter("ID", iD) :
+                new ObjectParameter("ID", typeof(string));
+    
+            var titleParameter = title != null ?
+                new ObjectParameter("Title", title) :
+                new ObjectParameter("Title", typeof(string));
+    
+            var descriptionParameter = description != null ?
+                new ObjectParameter("Description", description) :
+                new ObjectParameter("Description", typeof(string));
+    
+            var postcodeParameter = postcode != null ?
+                new ObjectParameter("Postcode", postcode) :
+                new ObjectParameter("Postcode", typeof(string));
+    
+            var itemTypeParameter = itemType != null ?
+                new ObjectParameter("ItemType", itemType) :
+                new ObjectParameter("ItemType", typeof(string));
+    
+            var imagePathParameter = imagePath != null ?
+                new ObjectParameter("ImagePath", imagePath) :
+                new ObjectParameter("ImagePath", typeof(string));
+    
+            var datePostedParameter = datePosted.HasValue ?
+                new ObjectParameter("DatePosted", datePosted) :
+                new ObjectParameter("DatePosted", typeof(System.DateTime));
+    
+            var userTitleParameter = userTitle != null ?
+                new ObjectParameter("UserTitle", userTitle) :
+                new ObjectParameter("UserTitle", typeof(string));
+    
+            var userFullNameParameter = userFullName != null ?
+                new ObjectParameter("UserFullName", userFullName) :
+                new ObjectParameter("UserFullName", typeof(string));
+    
+            var userEmailAddressParameter = userEmailAddress != null ?
+                new ObjectParameter("UserEmailAddress", userEmailAddress) :
+                new ObjectParameter("UserEmailAddress", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("Post_LostItems", iDParameter, titleParameter, descriptionParameter, postcodeParameter, itemTypeParameter, imagePathParameter, datePostedParameter, userTitleParameter, userFullNameParameter, userEmailAddressParameter);
         }
     }
 }

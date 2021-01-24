@@ -1,7 +1,7 @@
 USE [TreasureRoom]
 GO
 
-/****** Object:  Table [dbo].[dbo.LostItems]    Script Date: 19/01/2021 14:14:34 ******/
+/****** Object:  Table [dbo].[dbo.LostItems]    Script Date: 24/01/2021 10:40:30 ******/
 SET ANSI_NULLS ON
 GO
 
@@ -14,8 +14,11 @@ CREATE TABLE [dbo].[dbo.LostItems](
 	[Description] [nvarchar](255) NULL,
 	[Postcode] [nvarchar](50) NULL,
 	[ItemType] [nvarchar](50) NULL,
-	[Image] [nvarchar](50) NULL,
-	[DatePosted] [datetime] NULL
+	[ImagePath] [nvarchar](500) NULL,
+	[DatePosted] [datetime] NULL,
+	[UserTitle] [nvarchar](50) NULL,
+	[UserFullName] [nvarchar](100) NULL,
+	[UserEmailAddress] [nvarchar](50) NULL
 ) ON [PRIMARY]
 GO
 
