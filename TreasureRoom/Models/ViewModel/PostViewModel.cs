@@ -40,10 +40,37 @@ namespace TreasureRoom.Models.ViewModel
 
 
         [Display(Name = "Date when the lost item was found:")]
-        [Required(ErrorMessage = "Must enter a date")]
+        [Required(ErrorMessage = "Must enter a date*")]
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         public DateTime? DatePosted { get; set; }
+
+
+        [Required(ErrorMessage = "Must select one question*")]
+        public string Question1 { get; set; }
+        public List<QuestionsViewModel> Question1Data { get; set; }
+
+
+        [Required(ErrorMessage = "Must answer the question")]
+        public string Answer1 { get; set; }
+
+
+        [Required(ErrorMessage = "Must select one question*")]
+        public string Question2 { get; set; }
+        public List<QuestionsViewModel> Question2Data { get; set; }
+
+
+        [Required(ErrorMessage = "Must answer the question")]
+        public string Answer2 { get; set; }
+
+
+        [Required(ErrorMessage = "Must select one question*")]
+        public string Question3 { get; set; }
+        public List<QuestionsViewModel> Question3Data { get; set; }
+
+
+        [Required(ErrorMessage = "Must answer the question")]
+        public string Answer3 { get; set; }
 
 
         [Required(ErrorMessage = "Must select a title*")]

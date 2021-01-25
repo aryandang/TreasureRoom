@@ -4,8 +4,12 @@
     <FunctionImport Name="Get_LostItems" ReturnType="Collection(TreasureRoomModel.Get_LostItems_Result)" />
     <FunctionImport Name="Get_ItemTypes" ReturnType="Collection(TreasureRoomModel.Get_ItemTypes_Result)" />
     <EntitySet Name="dbo_ItemTypes" EntityType="TreasureRoomModel.dbo_ItemTypes" />
-    <EntitySet Name="dbo_LostItems" EntityType="TreasureRoomModel.dbo_LostItems" />
     <EntitySet Name="dbo_Titles" EntityType="TreasureRoomModel.dbo_Titles" />
+    <EntitySet Name="dbo_Questions_Electronics" EntityType="TreasureRoomModel.dbo_Questions_Electronics" />
+    <EntitySet Name="dbo_Questions_FashionAccessory" EntityType="TreasureRoomModel.dbo_Questions_FashionAccessory" />
+    <EntitySet Name="dbo_Questions_Keys" EntityType="TreasureRoomModel.dbo_Questions_Keys" />
+    <EntitySet Name="dbo_Questions_WalletsOrPurses" EntityType="TreasureRoomModel.dbo_Questions_WalletsOrPurses" />
+    <EntitySet Name="dbo_LostItems" EntityType="TreasureRoomModel.dbo_LostItems" />
     <FunctionImport Name="Post_LostItems">
       <Parameter Name="ID" Mode="In" Type="String" />
       <Parameter Name="Title" Mode="In" Type="String" />
@@ -17,6 +21,12 @@
       <Parameter Name="UserTitle" Mode="In" Type="String" />
       <Parameter Name="UserFullName" Mode="In" Type="String" />
       <Parameter Name="UserEmailAddress" Mode="In" Type="String" />
+      <Parameter Name="Question1" Mode="In" Type="String" />
+      <Parameter Name="Answer1" Mode="In" Type="String" />
+      <Parameter Name="Question2" Mode="In" Type="String" />
+      <Parameter Name="Answer2" Mode="In" Type="String" />
+      <Parameter Name="Question3" Mode="In" Type="String" />
+      <Parameter Name="Answer3" Mode="In" Type="String" />
     </FunctionImport>
   </EntityContainer>
   <ComplexType Name="Get_LostItems_Result">
@@ -38,6 +48,41 @@
     <Property Name="ID" Type="Int32" Nullable="false" />
     <Property Name="ItemType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
   </EntityType>
+  <EntityType Name="dbo_Titles">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="dbo_Questions_Electronics">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Question" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="dbo_Questions_FashionAccessory">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Question" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="dbo_Questions_Keys">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Question" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="dbo_Questions_WalletsOrPurses">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Question" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
   <EntityType Name="dbo_LostItems">
     <Key>
       <PropertyRef Name="ID" />
@@ -52,12 +97,11 @@
     <Property Name="UserTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="UserFullName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="UserEmailAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-  </EntityType>
-  <EntityType Name="dbo_Titles">
-    <Key>
-      <PropertyRef Name="ID" />
-    </Key>
-    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Question1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Answer1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Question2" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Answer2" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Question3" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Answer3" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
   </EntityType>
 </Schema>

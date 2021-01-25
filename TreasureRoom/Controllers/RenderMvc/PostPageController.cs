@@ -15,17 +15,23 @@ namespace TreasureRoom.Controllers.RenderMvc
     {
         private GetTitlesDBHandler getTitlesDbHandler = new GetTitlesDBHandler();
         private GetItemTypesDBHandler getItemTypesDbHandler = new GetItemTypesDBHandler();
+        private GetQuestionsElectronicDBHandler getQuestionsElectronicDbHandler = new GetQuestionsElectronicDBHandler();
         public ActionResult Index(ContentModel model)
         {
             var postPageModel = new PostContentModel(model.Content);
 
             var getTitlesData = getTitlesDbHandler.GetTitles();
             var getItemTypesData = getItemTypesDbHandler.GetItemTypes();
+            var getQuestionsData =
+                getQuestionsElectronicDbHandler.GetElectronicQuestions(postPageModel.PostViewModel.ItemType);
 
             var postViewModel = new PostViewModel()
             {
                 TitlesData = getTitlesData,
-                ItemTypesData = getItemTypesData
+                ItemTypesData = getItemTypesData,
+                Question1Data = getQuestionsData,
+                Question2Data = getQuestionsData,
+                Question3Data = getQuestionsData
             };
 
             postPageModel.PostViewModel = postViewModel;

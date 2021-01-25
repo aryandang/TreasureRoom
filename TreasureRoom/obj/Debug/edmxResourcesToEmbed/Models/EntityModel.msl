@@ -29,9 +29,55 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="dbo_Titles">
+      <EntityTypeMapping TypeName="TreasureRoomModel.dbo_Titles">
+        <MappingFragment StoreEntitySet="dbo_Titles">
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dbo_Questions_Electronics">
+      <EntityTypeMapping TypeName="TreasureRoomModel.dbo_Questions_Electronics">
+        <MappingFragment StoreEntitySet="dbo_Questions_Electronics">
+          <ScalarProperty Name="Question" ColumnName="Question" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dbo_Questions_FashionAccessory">
+      <EntityTypeMapping TypeName="TreasureRoomModel.dbo_Questions_FashionAccessory">
+        <MappingFragment StoreEntitySet="dbo_Questions_FashionAccessory">
+          <ScalarProperty Name="Question" ColumnName="Question" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dbo_Questions_Keys">
+      <EntityTypeMapping TypeName="TreasureRoomModel.dbo_Questions_Keys">
+        <MappingFragment StoreEntitySet="dbo_Questions_Keys">
+          <ScalarProperty Name="Question" ColumnName="Question" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dbo_Questions_WalletsOrPurses">
+      <EntityTypeMapping TypeName="TreasureRoomModel.dbo_Questions_WalletsOrPurses">
+        <MappingFragment StoreEntitySet="dbo_Questions_WalletsOrPurses">
+          <ScalarProperty Name="Question" ColumnName="Question" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="dbo_LostItems">
       <EntityTypeMapping TypeName="TreasureRoomModel.dbo_LostItems">
         <MappingFragment StoreEntitySet="dbo_LostItems">
+          <ScalarProperty Name="Answer3" ColumnName="Answer3" />
+          <ScalarProperty Name="Question3" ColumnName="Question3" />
+          <ScalarProperty Name="Answer2" ColumnName="Answer2" />
+          <ScalarProperty Name="Question2" ColumnName="Question2" />
+          <ScalarProperty Name="Answer1" ColumnName="Answer1" />
+          <ScalarProperty Name="Question1" ColumnName="Question1" />
           <ScalarProperty Name="UserEmailAddress" ColumnName="UserEmailAddress" />
           <ScalarProperty Name="UserFullName" ColumnName="UserFullName" />
           <ScalarProperty Name="UserTitle" ColumnName="UserTitle" />
@@ -40,14 +86,6 @@
           <ScalarProperty Name="ItemType" ColumnName="ItemType" />
           <ScalarProperty Name="Postcode" ColumnName="Postcode" />
           <ScalarProperty Name="Description" ColumnName="Description" />
-          <ScalarProperty Name="Title" ColumnName="Title" />
-          <ScalarProperty Name="ID" ColumnName="ID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="dbo_Titles">
-      <EntityTypeMapping TypeName="TreasureRoomModel.dbo_Titles">
-        <MappingFragment StoreEntitySet="dbo_Titles">
           <ScalarProperty Name="Title" ColumnName="Title" />
           <ScalarProperty Name="ID" ColumnName="ID" />
         </MappingFragment>

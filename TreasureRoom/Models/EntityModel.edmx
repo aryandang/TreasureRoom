@@ -30,6 +30,48 @@ warning 6002: The table/view 'TreasureRoom.dbo.dbo.LostItems' does not have a pr
           <Property Name="UserTitle" Type="nvarchar" MaxLength="50" />
           <Property Name="UserFullName" Type="nvarchar" MaxLength="100" />
           <Property Name="UserEmailAddress" Type="nvarchar" MaxLength="50" />
+          <Property Name="Question1" Type="nvarchar" MaxLength="100" />
+          <Property Name="Answer1" Type="nvarchar" MaxLength="100" />
+          <Property Name="Question2" Type="nvarchar" MaxLength="100" />
+          <Property Name="Answer2" Type="nvarchar" MaxLength="100" />
+          <Property Name="Question3" Type="nvarchar" MaxLength="100" />
+          <Property Name="Answer3" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'TreasureRoom.dbo.dbo.Questions.Electronics' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="dbo_Questions_Electronics">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Question" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'TreasureRoom.dbo.dbo.Questions.FashionAccessory' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="dbo_Questions_FashionAccessory">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Question" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'TreasureRoom.dbo.dbo.Questions.Keys' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="dbo_Questions_Keys">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Question" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'TreasureRoom.dbo.dbo.Questions.WalletsOrPurses' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="dbo_Questions_WalletsOrPurses">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Question" Type="nvarchar" MaxLength="100" />
         </EntityType>
         <!--Errors Found During Generation:
 warning 6002: The table/view 'TreasureRoom.dbo.dbo.Titles' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
@@ -53,6 +95,12 @@ warning 6002: The table/view 'TreasureRoom.dbo.dbo.Titles' does not have a prima
           <Parameter Name="UserTitle" Type="nvarchar" Mode="In" />
           <Parameter Name="UserFullName" Type="nvarchar" Mode="In" />
           <Parameter Name="UserEmailAddress" Type="nvarchar" Mode="In" />
+          <Parameter Name="Question1" Type="nvarchar" Mode="In" />
+          <Parameter Name="Answer1" Type="nvarchar" Mode="In" />
+          <Parameter Name="Question2" Type="nvarchar" Mode="In" />
+          <Parameter Name="Answer2" Type="nvarchar" Mode="In" />
+          <Parameter Name="Question3" Type="nvarchar" Mode="In" />
+          <Parameter Name="Answer3" Type="nvarchar" Mode="In" />
         </Function>
         <EntityContainer Name="TreasureRoomModelStoreContainer">
           <EntitySet Name="dbo_ItemTypes" EntityType="Self.dbo_ItemTypes" store:Type="Tables" store:Schema="dbo" store:Name="dbo.ItemTypes">
@@ -72,8 +120,38 @@ warning 6002: The table/view 'TreasureRoom.dbo.dbo.Titles' does not have a prima
     [dbo_LostItems].[DatePosted] AS [DatePosted], 
     [dbo_LostItems].[UserTitle] AS [UserTitle], 
     [dbo_LostItems].[UserFullName] AS [UserFullName], 
-    [dbo_LostItems].[UserEmailAddress] AS [UserEmailAddress]
+    [dbo_LostItems].[UserEmailAddress] AS [UserEmailAddress], 
+    [dbo_LostItems].[Question1] AS [Question1], 
+    [dbo_LostItems].[Answer1] AS [Answer1], 
+    [dbo_LostItems].[Question2] AS [Question2], 
+    [dbo_LostItems].[Answer2] AS [Answer2], 
+    [dbo_LostItems].[Question3] AS [Question3], 
+    [dbo_LostItems].[Answer3] AS [Answer3]
     FROM [dbo].[dbo.LostItems] AS [dbo_LostItems]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="dbo_Questions_Electronics" EntityType="Self.dbo_Questions_Electronics" store:Type="Tables" store:Schema="dbo" store:Name="dbo.Questions.Electronics">
+            <DefiningQuery>SELECT 
+    [dbo_Questions_Electronics].[ID] AS [ID], 
+    [dbo_Questions_Electronics].[Question] AS [Question]
+    FROM [dbo].[dbo.Questions.Electronics] AS [dbo_Questions_Electronics]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="dbo_Questions_FashionAccessory" EntityType="Self.dbo_Questions_FashionAccessory" store:Type="Tables" store:Schema="dbo" store:Name="dbo.Questions.FashionAccessory">
+            <DefiningQuery>SELECT 
+    [dbo_Questions_FashionAccessory].[ID] AS [ID], 
+    [dbo_Questions_FashionAccessory].[Question] AS [Question]
+    FROM [dbo].[dbo.Questions.FashionAccessory] AS [dbo_Questions_FashionAccessory]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="dbo_Questions_Keys" EntityType="Self.dbo_Questions_Keys" store:Type="Tables" store:Schema="dbo" store:Name="dbo.Questions.Keys">
+            <DefiningQuery>SELECT 
+    [dbo_Questions_Keys].[ID] AS [ID], 
+    [dbo_Questions_Keys].[Question] AS [Question]
+    FROM [dbo].[dbo.Questions.Keys] AS [dbo_Questions_Keys]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="dbo_Questions_WalletsOrPurses" EntityType="Self.dbo_Questions_WalletsOrPurses" store:Type="Tables" store:Schema="dbo" store:Name="dbo.Questions.WalletsOrPurses">
+            <DefiningQuery>SELECT 
+    [dbo_Questions_WalletsOrPurses].[ID] AS [ID], 
+    [dbo_Questions_WalletsOrPurses].[Question] AS [Question]
+    FROM [dbo].[dbo.Questions.WalletsOrPurses] AS [dbo_Questions_WalletsOrPurses]</DefiningQuery>
           </EntitySet>
           <EntitySet Name="dbo_Titles" EntityType="Self.dbo_Titles" store:Type="Tables" store:Schema="dbo" store:Name="dbo.Titles">
             <DefiningQuery>SELECT 
@@ -90,8 +168,12 @@ warning 6002: The table/view 'TreasureRoom.dbo.dbo.Titles' does not have a prima
           <FunctionImport Name="Get_LostItems" ReturnType="Collection(TreasureRoomModel.Get_LostItems_Result)" />
           <FunctionImport Name="Get_ItemTypes" ReturnType="Collection(TreasureRoomModel.Get_ItemTypes_Result)" />
           <EntitySet Name="dbo_ItemTypes" EntityType="TreasureRoomModel.dbo_ItemTypes" />
-          <EntitySet Name="dbo_LostItems" EntityType="TreasureRoomModel.dbo_LostItems" />
           <EntitySet Name="dbo_Titles" EntityType="TreasureRoomModel.dbo_Titles" />
+          <EntitySet Name="dbo_Questions_Electronics" EntityType="TreasureRoomModel.dbo_Questions_Electronics" />
+          <EntitySet Name="dbo_Questions_FashionAccessory" EntityType="TreasureRoomModel.dbo_Questions_FashionAccessory" />
+          <EntitySet Name="dbo_Questions_Keys" EntityType="TreasureRoomModel.dbo_Questions_Keys" />
+          <EntitySet Name="dbo_Questions_WalletsOrPurses" EntityType="TreasureRoomModel.dbo_Questions_WalletsOrPurses" />
+          <EntitySet Name="dbo_LostItems" EntityType="TreasureRoomModel.dbo_LostItems" />
           <FunctionImport Name="Post_LostItems">
             <Parameter Name="ID" Mode="In" Type="String" />
             <Parameter Name="Title" Mode="In" Type="String" />
@@ -103,6 +185,12 @@ warning 6002: The table/view 'TreasureRoom.dbo.dbo.Titles' does not have a prima
             <Parameter Name="UserTitle" Mode="In" Type="String" />
             <Parameter Name="UserFullName" Mode="In" Type="String" />
             <Parameter Name="UserEmailAddress" Mode="In" Type="String" />
+            <Parameter Name="Question1" Mode="In" Type="String" />
+            <Parameter Name="Answer1" Mode="In" Type="String" />
+            <Parameter Name="Question2" Mode="In" Type="String" />
+            <Parameter Name="Answer2" Mode="In" Type="String" />
+            <Parameter Name="Question3" Mode="In" Type="String" />
+            <Parameter Name="Answer3" Mode="In" Type="String" />
           </FunctionImport>
         </EntityContainer>
         <ComplexType Name="Get_LostItems_Result">
@@ -124,6 +212,41 @@ warning 6002: The table/view 'TreasureRoom.dbo.dbo.Titles' does not have a prima
           <Property Name="ID" Type="Int32" Nullable="false" />
           <Property Name="ItemType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
+        <EntityType Name="dbo_Titles">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="dbo_Questions_Electronics">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Question" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="dbo_Questions_FashionAccessory">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Question" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="dbo_Questions_Keys">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Question" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="dbo_Questions_WalletsOrPurses">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Question" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
         <EntityType Name="dbo_LostItems">
           <Key>
             <PropertyRef Name="ID" />
@@ -138,13 +261,12 @@ warning 6002: The table/view 'TreasureRoom.dbo.dbo.Titles' does not have a prima
           <Property Name="UserTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="UserFullName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="UserEmailAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-        </EntityType>
-        <EntityType Name="dbo_Titles">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Question1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Answer1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Question2" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Answer2" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Question3" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Answer3" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -180,9 +302,55 @@ warning 6002: The table/view 'TreasureRoom.dbo.dbo.Titles' does not have a prima
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="dbo_Titles">
+            <EntityTypeMapping TypeName="TreasureRoomModel.dbo_Titles">
+              <MappingFragment StoreEntitySet="dbo_Titles">
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="dbo_Questions_Electronics">
+            <EntityTypeMapping TypeName="TreasureRoomModel.dbo_Questions_Electronics">
+              <MappingFragment StoreEntitySet="dbo_Questions_Electronics">
+                <ScalarProperty Name="Question" ColumnName="Question" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="dbo_Questions_FashionAccessory">
+            <EntityTypeMapping TypeName="TreasureRoomModel.dbo_Questions_FashionAccessory">
+              <MappingFragment StoreEntitySet="dbo_Questions_FashionAccessory">
+                <ScalarProperty Name="Question" ColumnName="Question" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="dbo_Questions_Keys">
+            <EntityTypeMapping TypeName="TreasureRoomModel.dbo_Questions_Keys">
+              <MappingFragment StoreEntitySet="dbo_Questions_Keys">
+                <ScalarProperty Name="Question" ColumnName="Question" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="dbo_Questions_WalletsOrPurses">
+            <EntityTypeMapping TypeName="TreasureRoomModel.dbo_Questions_WalletsOrPurses">
+              <MappingFragment StoreEntitySet="dbo_Questions_WalletsOrPurses">
+                <ScalarProperty Name="Question" ColumnName="Question" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="dbo_LostItems">
             <EntityTypeMapping TypeName="TreasureRoomModel.dbo_LostItems">
               <MappingFragment StoreEntitySet="dbo_LostItems">
+                <ScalarProperty Name="Answer3" ColumnName="Answer3" />
+                <ScalarProperty Name="Question3" ColumnName="Question3" />
+                <ScalarProperty Name="Answer2" ColumnName="Answer2" />
+                <ScalarProperty Name="Question2" ColumnName="Question2" />
+                <ScalarProperty Name="Answer1" ColumnName="Answer1" />
+                <ScalarProperty Name="Question1" ColumnName="Question1" />
                 <ScalarProperty Name="UserEmailAddress" ColumnName="UserEmailAddress" />
                 <ScalarProperty Name="UserFullName" ColumnName="UserFullName" />
                 <ScalarProperty Name="UserTitle" ColumnName="UserTitle" />
@@ -191,14 +359,6 @@ warning 6002: The table/view 'TreasureRoom.dbo.dbo.Titles' does not have a prima
                 <ScalarProperty Name="ItemType" ColumnName="ItemType" />
                 <ScalarProperty Name="Postcode" ColumnName="Postcode" />
                 <ScalarProperty Name="Description" ColumnName="Description" />
-                <ScalarProperty Name="Title" ColumnName="Title" />
-                <ScalarProperty Name="ID" ColumnName="ID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="dbo_Titles">
-            <EntityTypeMapping TypeName="TreasureRoomModel.dbo_Titles">
-              <MappingFragment StoreEntitySet="dbo_Titles">
                 <ScalarProperty Name="Title" ColumnName="Title" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
