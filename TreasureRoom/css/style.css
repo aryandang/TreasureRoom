@@ -431,6 +431,7 @@ hr {
     border-radius: 0.8rem;
 }
 
+
 .item-card_img {
     min-width: 18rem;
     max-width: 18rem;
@@ -461,14 +462,14 @@ hr {
 .item-card_date span {
     display: block;
     color: rgba(0, 0, 0, 0.5);
-    font-size: 1.3rem;
+    font-size: 1.25rem;
     font-weight: 600;
     margin: 0.543m 0;
 }
 
 .item-card_title {
     font-size: 1.8rem;
-    margin: 1.5rem 0 1rem;
+    margin: 1rem 0 1rem;
     text-transform: uppercase;
     color: #4facfe;
 }
@@ -477,6 +478,11 @@ hr {
     margin-bottom: 2rem;
     font-size: 1.1rem;
     color: rgba(0, 0, 0, .7)
+}
+.item-card-item_type{
+    color: black;
+    margin-bottom: -15px;
+    font-size: 1.25rem;
 }
 
 .item-card_btn {
