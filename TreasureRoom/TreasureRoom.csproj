@@ -3535,6 +3535,7 @@
     <Folder Include="App_Plugins\uSync8\lang\" />
     <Folder Include="App_Plugins\uSync8\settings\" />
     <Folder Include="Interfaces\" />
+    <Folder Include="Items-Images\" />
     <Folder Include="Views\AccountSurface\" />
     <Folder Include="Views\HomeSurface\" />
     <Folder Include="Views\Home\" />
