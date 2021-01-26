@@ -37,38 +37,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="dbo_Questions_Electronics">
-      <EntityTypeMapping TypeName="TreasureRoomModel.dbo_Questions_Electronics">
-        <MappingFragment StoreEntitySet="dbo_Questions_Electronics">
-          <ScalarProperty Name="Question" ColumnName="Question" />
-          <ScalarProperty Name="ID" ColumnName="ID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="dbo_Questions_FashionAccessory">
-      <EntityTypeMapping TypeName="TreasureRoomModel.dbo_Questions_FashionAccessory">
-        <MappingFragment StoreEntitySet="dbo_Questions_FashionAccessory">
-          <ScalarProperty Name="Question" ColumnName="Question" />
-          <ScalarProperty Name="ID" ColumnName="ID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="dbo_Questions_Keys">
-      <EntityTypeMapping TypeName="TreasureRoomModel.dbo_Questions_Keys">
-        <MappingFragment StoreEntitySet="dbo_Questions_Keys">
-          <ScalarProperty Name="Question" ColumnName="Question" />
-          <ScalarProperty Name="ID" ColumnName="ID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="dbo_Questions_WalletsOrPurses">
-      <EntityTypeMapping TypeName="TreasureRoomModel.dbo_Questions_WalletsOrPurses">
-        <MappingFragment StoreEntitySet="dbo_Questions_WalletsOrPurses">
-          <ScalarProperty Name="Question" ColumnName="Question" />
-          <ScalarProperty Name="ID" ColumnName="ID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="dbo_LostItems">
       <EntityTypeMapping TypeName="TreasureRoomModel.dbo_LostItems">
         <MappingFragment StoreEntitySet="dbo_LostItems">
@@ -92,5 +60,13 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <FunctionImportMapping FunctionImportName="Post_LostItems" FunctionName="TreasureRoomModel.Store.Post_LostItems" />
+    <EntitySetMapping Name="dbo_Questions">
+      <EntityTypeMapping TypeName="TreasureRoomModel.dbo_Questions">
+        <MappingFragment StoreEntitySet="dbo_Questions">
+          <ScalarProperty Name="Question" ColumnName="Question" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

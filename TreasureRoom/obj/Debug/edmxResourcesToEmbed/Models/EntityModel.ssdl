@@ -33,35 +33,8 @@ warning 6002: The table/view 'TreasureRoom.dbo.dbo.LostItems' does not have a pr
     <Property Name="Answer3" Type="nvarchar" MaxLength="100" />
   </EntityType>
   <!--Errors Found During Generation:
-warning 6002: The table/view 'TreasureRoom.dbo.dbo.Questions.Electronics' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-  <EntityType Name="dbo_Questions_Electronics">
-    <Key>
-      <PropertyRef Name="ID" />
-    </Key>
-    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Question" Type="nvarchar" MaxLength="100" />
-  </EntityType>
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'TreasureRoom.dbo.dbo.Questions.FashionAccessory' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-  <EntityType Name="dbo_Questions_FashionAccessory">
-    <Key>
-      <PropertyRef Name="ID" />
-    </Key>
-    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Question" Type="nvarchar" MaxLength="100" />
-  </EntityType>
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'TreasureRoom.dbo.dbo.Questions.Keys' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-  <EntityType Name="dbo_Questions_Keys">
-    <Key>
-      <PropertyRef Name="ID" />
-    </Key>
-    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Question" Type="nvarchar" MaxLength="100" />
-  </EntityType>
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'TreasureRoom.dbo.dbo.Questions.WalletsOrPurses' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-  <EntityType Name="dbo_Questions_WalletsOrPurses">
+warning 6002: The table/view 'TreasureRoom.dbo.dbo.Questions' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="dbo_Questions">
     <Key>
       <PropertyRef Name="ID" />
     </Key>
@@ -124,29 +97,11 @@ warning 6002: The table/view 'TreasureRoom.dbo.dbo.Titles' does not have a prima
     [dbo_LostItems].[Answer3] AS [Answer3]
     FROM [dbo].[dbo.LostItems] AS [dbo_LostItems]</DefiningQuery>
     </EntitySet>
-    <EntitySet Name="dbo_Questions_Electronics" EntityType="Self.dbo_Questions_Electronics" store:Type="Tables" store:Schema="dbo" store:Name="dbo.Questions.Electronics">
+    <EntitySet Name="dbo_Questions" EntityType="Self.dbo_Questions" store:Type="Tables" store:Schema="dbo" store:Name="dbo.Questions">
       <DefiningQuery>SELECT 
-    [dbo_Questions_Electronics].[ID] AS [ID], 
-    [dbo_Questions_Electronics].[Question] AS [Question]
-    FROM [dbo].[dbo.Questions.Electronics] AS [dbo_Questions_Electronics]</DefiningQuery>
-    </EntitySet>
-    <EntitySet Name="dbo_Questions_FashionAccessory" EntityType="Self.dbo_Questions_FashionAccessory" store:Type="Tables" store:Schema="dbo" store:Name="dbo.Questions.FashionAccessory">
-      <DefiningQuery>SELECT 
-    [dbo_Questions_FashionAccessory].[ID] AS [ID], 
-    [dbo_Questions_FashionAccessory].[Question] AS [Question]
-    FROM [dbo].[dbo.Questions.FashionAccessory] AS [dbo_Questions_FashionAccessory]</DefiningQuery>
-    </EntitySet>
-    <EntitySet Name="dbo_Questions_Keys" EntityType="Self.dbo_Questions_Keys" store:Type="Tables" store:Schema="dbo" store:Name="dbo.Questions.Keys">
-      <DefiningQuery>SELECT 
-    [dbo_Questions_Keys].[ID] AS [ID], 
-    [dbo_Questions_Keys].[Question] AS [Question]
-    FROM [dbo].[dbo.Questions.Keys] AS [dbo_Questions_Keys]</DefiningQuery>
-    </EntitySet>
-    <EntitySet Name="dbo_Questions_WalletsOrPurses" EntityType="Self.dbo_Questions_WalletsOrPurses" store:Type="Tables" store:Schema="dbo" store:Name="dbo.Questions.WalletsOrPurses">
-      <DefiningQuery>SELECT 
-    [dbo_Questions_WalletsOrPurses].[ID] AS [ID], 
-    [dbo_Questions_WalletsOrPurses].[Question] AS [Question]
-    FROM [dbo].[dbo.Questions.WalletsOrPurses] AS [dbo_Questions_WalletsOrPurses]</DefiningQuery>
+    [dbo_Questions].[ID] AS [ID], 
+    [dbo_Questions].[Question] AS [Question]
+    FROM [dbo].[dbo.Questions] AS [dbo_Questions]</DefiningQuery>
     </EntitySet>
     <EntitySet Name="dbo_Titles" EntityType="Self.dbo_Titles" store:Type="Tables" store:Schema="dbo" store:Name="dbo.Titles">
       <DefiningQuery>SELECT 

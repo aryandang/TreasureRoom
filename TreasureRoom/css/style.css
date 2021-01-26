@@ -554,3 +554,9 @@ hr {
 .post-title-show {
     font-weight: 590;
 }
+.post-question {
+    width: 700px;
+}
+.post-answer {
+    width: 500px;
+}

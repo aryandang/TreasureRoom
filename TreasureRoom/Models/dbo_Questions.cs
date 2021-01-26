@@ -12,7 +12,7 @@ namespace TreasureRoom.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class dbo_Questions_WalletsOrPurses
+    public partial class dbo_Questions
     {
         public int ID { get; set; }
         public string Question { get; set; }

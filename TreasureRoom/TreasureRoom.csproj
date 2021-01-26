@@ -467,10 +467,7 @@
     <Compile Include="Controllers\Surface\SearchSurfaceController.cs" />
     <Compile Include="Models\DBHandler\GetItemTypesDBHandler.cs" />
     <Compile Include="Models\DBHandler\GetLostItemsDBHandler.cs" />
-    <Compile Include="Models\DBHandler\GetQuestionsKeysDBHandler.cs" />
-    <Compile Include="Models\DBHandler\GetQuestionsFashionAccessoryDBHandler.cs" />
-    <Compile Include="Models\DBHandler\GetQuestionsWalletsOrPursesDBHandler.cs" />
-    <Compile Include="Models\DBHandler\GetQuestionsElectronicDBHandler.cs" />
+    <Compile Include="Models\DBHandler\GetQuestionsDBHandler.cs" />
     <Compile Include="Models\DBHandler\GetTitlesDBHandler.cs" />
     <Compile Include="Models\DBHandler\PostLostItemsDBHandler.cs" />
     <Compile Include="Models\dbo_ItemTypes.cs">
@@ -479,16 +476,7 @@
     <Compile Include="Models\dbo_LostItems.cs">
       <DependentUpon>EntityModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\dbo_Questions_Electronics.cs">
-      <DependentUpon>EntityModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\dbo_Questions_FashionAccessory.cs">
-      <DependentUpon>EntityModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\dbo_Questions_Keys.cs">
-      <DependentUpon>EntityModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\dbo_Questions_WalletsOrPurses.cs">
+    <Compile Include="Models\dbo_Questions.cs">
       <DependentUpon>EntityModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\dbo_Titles.cs">

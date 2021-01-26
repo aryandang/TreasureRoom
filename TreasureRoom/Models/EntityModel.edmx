@@ -38,35 +38,8 @@ warning 6002: The table/view 'TreasureRoom.dbo.dbo.LostItems' does not have a pr
           <Property Name="Answer3" Type="nvarchar" MaxLength="100" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'TreasureRoom.dbo.dbo.Questions.Electronics' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-        <EntityType Name="dbo_Questions_Electronics">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Question" Type="nvarchar" MaxLength="100" />
-        </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'TreasureRoom.dbo.dbo.Questions.FashionAccessory' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-        <EntityType Name="dbo_Questions_FashionAccessory">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Question" Type="nvarchar" MaxLength="100" />
-        </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'TreasureRoom.dbo.dbo.Questions.Keys' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-        <EntityType Name="dbo_Questions_Keys">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Question" Type="nvarchar" MaxLength="100" />
-        </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'TreasureRoom.dbo.dbo.Questions.WalletsOrPurses' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-        <EntityType Name="dbo_Questions_WalletsOrPurses">
+warning 6002: The table/view 'TreasureRoom.dbo.dbo.Questions' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="dbo_Questions">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
@@ -129,29 +102,11 @@ warning 6002: The table/view 'TreasureRoom.dbo.dbo.Titles' does not have a prima
     [dbo_LostItems].[Answer3] AS [Answer3]
     FROM [dbo].[dbo.LostItems] AS [dbo_LostItems]</DefiningQuery>
           </EntitySet>
-          <EntitySet Name="dbo_Questions_Electronics" EntityType="Self.dbo_Questions_Electronics" store:Type="Tables" store:Schema="dbo" store:Name="dbo.Questions.Electronics">
+          <EntitySet Name="dbo_Questions" EntityType="Self.dbo_Questions" store:Type="Tables" store:Schema="dbo" store:Name="dbo.Questions">
             <DefiningQuery>SELECT 
-    [dbo_Questions_Electronics].[ID] AS [ID], 
-    [dbo_Questions_Electronics].[Question] AS [Question]
-    FROM [dbo].[dbo.Questions.Electronics] AS [dbo_Questions_Electronics]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="dbo_Questions_FashionAccessory" EntityType="Self.dbo_Questions_FashionAccessory" store:Type="Tables" store:Schema="dbo" store:Name="dbo.Questions.FashionAccessory">
-            <DefiningQuery>SELECT 
-    [dbo_Questions_FashionAccessory].[ID] AS [ID], 
-    [dbo_Questions_FashionAccessory].[Question] AS [Question]
-    FROM [dbo].[dbo.Questions.FashionAccessory] AS [dbo_Questions_FashionAccessory]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="dbo_Questions_Keys" EntityType="Self.dbo_Questions_Keys" store:Type="Tables" store:Schema="dbo" store:Name="dbo.Questions.Keys">
-            <DefiningQuery>SELECT 
-    [dbo_Questions_Keys].[ID] AS [ID], 
-    [dbo_Questions_Keys].[Question] AS [Question]
-    FROM [dbo].[dbo.Questions.Keys] AS [dbo_Questions_Keys]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="dbo_Questions_WalletsOrPurses" EntityType="Self.dbo_Questions_WalletsOrPurses" store:Type="Tables" store:Schema="dbo" store:Name="dbo.Questions.WalletsOrPurses">
-            <DefiningQuery>SELECT 
-    [dbo_Questions_WalletsOrPurses].[ID] AS [ID], 
-    [dbo_Questions_WalletsOrPurses].[Question] AS [Question]
-    FROM [dbo].[dbo.Questions.WalletsOrPurses] AS [dbo_Questions_WalletsOrPurses]</DefiningQuery>
+    [dbo_Questions].[ID] AS [ID], 
+    [dbo_Questions].[Question] AS [Question]
+    FROM [dbo].[dbo.Questions] AS [dbo_Questions]</DefiningQuery>
           </EntitySet>
           <EntitySet Name="dbo_Titles" EntityType="Self.dbo_Titles" store:Type="Tables" store:Schema="dbo" store:Name="dbo.Titles">
             <DefiningQuery>SELECT 
@@ -169,10 +124,6 @@ warning 6002: The table/view 'TreasureRoom.dbo.dbo.Titles' does not have a prima
           <FunctionImport Name="Get_ItemTypes" ReturnType="Collection(TreasureRoomModel.Get_ItemTypes_Result)" />
           <EntitySet Name="dbo_ItemTypes" EntityType="TreasureRoomModel.dbo_ItemTypes" />
           <EntitySet Name="dbo_Titles" EntityType="TreasureRoomModel.dbo_Titles" />
-          <EntitySet Name="dbo_Questions_Electronics" EntityType="TreasureRoomModel.dbo_Questions_Electronics" />
-          <EntitySet Name="dbo_Questions_FashionAccessory" EntityType="TreasureRoomModel.dbo_Questions_FashionAccessory" />
-          <EntitySet Name="dbo_Questions_Keys" EntityType="TreasureRoomModel.dbo_Questions_Keys" />
-          <EntitySet Name="dbo_Questions_WalletsOrPurses" EntityType="TreasureRoomModel.dbo_Questions_WalletsOrPurses" />
           <EntitySet Name="dbo_LostItems" EntityType="TreasureRoomModel.dbo_LostItems" />
           <FunctionImport Name="Post_LostItems">
             <Parameter Name="ID" Mode="In" Type="String" />
@@ -192,6 +143,7 @@ warning 6002: The table/view 'TreasureRoom.dbo.dbo.Titles' does not have a prima
             <Parameter Name="Question3" Mode="In" Type="String" />
             <Parameter Name="Answer3" Mode="In" Type="String" />
           </FunctionImport>
+          <EntitySet Name="dbo_Questions" EntityType="TreasureRoomModel.dbo_Questions" />
         </EntityContainer>
         <ComplexType Name="Get_LostItems_Result">
           <Property Type="String" Name="ID" Nullable="false" MaxLength="50" />
@@ -219,34 +171,6 @@ warning 6002: The table/view 'TreasureRoom.dbo.dbo.Titles' does not have a prima
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
-        <EntityType Name="dbo_Questions_Electronics">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Question" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-        </EntityType>
-        <EntityType Name="dbo_Questions_FashionAccessory">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Question" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-        </EntityType>
-        <EntityType Name="dbo_Questions_Keys">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Question" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-        </EntityType>
-        <EntityType Name="dbo_Questions_WalletsOrPurses">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Question" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-        </EntityType>
         <EntityType Name="dbo_LostItems">
           <Key>
             <PropertyRef Name="ID" />
@@ -267,6 +191,13 @@ warning 6002: The table/view 'TreasureRoom.dbo.dbo.Titles' does not have a prima
           <Property Name="Answer2" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="Question3" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="Answer3" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="dbo_Questions">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Question" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -310,38 +241,6 @@ warning 6002: The table/view 'TreasureRoom.dbo.dbo.Titles' does not have a prima
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="dbo_Questions_Electronics">
-            <EntityTypeMapping TypeName="TreasureRoomModel.dbo_Questions_Electronics">
-              <MappingFragment StoreEntitySet="dbo_Questions_Electronics">
-                <ScalarProperty Name="Question" ColumnName="Question" />
-                <ScalarProperty Name="ID" ColumnName="ID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="dbo_Questions_FashionAccessory">
-            <EntityTypeMapping TypeName="TreasureRoomModel.dbo_Questions_FashionAccessory">
-              <MappingFragment StoreEntitySet="dbo_Questions_FashionAccessory">
-                <ScalarProperty Name="Question" ColumnName="Question" />
-                <ScalarProperty Name="ID" ColumnName="ID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="dbo_Questions_Keys">
-            <EntityTypeMapping TypeName="TreasureRoomModel.dbo_Questions_Keys">
-              <MappingFragment StoreEntitySet="dbo_Questions_Keys">
-                <ScalarProperty Name="Question" ColumnName="Question" />
-                <ScalarProperty Name="ID" ColumnName="ID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="dbo_Questions_WalletsOrPurses">
-            <EntityTypeMapping TypeName="TreasureRoomModel.dbo_Questions_WalletsOrPurses">
-              <MappingFragment StoreEntitySet="dbo_Questions_WalletsOrPurses">
-                <ScalarProperty Name="Question" ColumnName="Question" />
-                <ScalarProperty Name="ID" ColumnName="ID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="dbo_LostItems">
             <EntityTypeMapping TypeName="TreasureRoomModel.dbo_LostItems">
               <MappingFragment StoreEntitySet="dbo_LostItems">
@@ -365,6 +264,14 @@ warning 6002: The table/view 'TreasureRoom.dbo.dbo.Titles' does not have a prima
             </EntityTypeMapping>
           </EntitySetMapping>
           <FunctionImportMapping FunctionImportName="Post_LostItems" FunctionName="TreasureRoomModel.Store.Post_LostItems" />
+          <EntitySetMapping Name="dbo_Questions">
+            <EntityTypeMapping TypeName="TreasureRoomModel.dbo_Questions">
+              <MappingFragment StoreEntitySet="dbo_Questions">
+                <ScalarProperty Name="Question" ColumnName="Question" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

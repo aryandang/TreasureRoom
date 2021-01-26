@@ -45,31 +45,36 @@ namespace TreasureRoom.Models.ViewModel
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         public DateTime? DatePosted { get; set; }
 
-
+        
+        [Display(Name = "Question 1")]
         [Required(ErrorMessage = "Must select one question*")]
         public string Question1 { get; set; }
         public List<QuestionsViewModel> Question1Data { get; set; }
 
 
+        [Display(Name = "Answer 1")]
         [Required(ErrorMessage = "Must answer the question")]
         public string Answer1 { get; set; }
 
 
+        [Display(Name = "Question 2")]
         [Required(ErrorMessage = "Must select one question*")]
         public string Question2 { get; set; }
         public List<QuestionsViewModel> Question2Data { get; set; }
 
 
+        [Display(Name = "Answer 2")]
         [Required(ErrorMessage = "Must answer the question")]
         public string Answer2 { get; set; }
 
 
-        [Required(ErrorMessage = "Must select one question*")]
+        [Display(Name = "Question 3")]
         public string Question3 { get; set; }
         public List<QuestionsViewModel> Question3Data { get; set; }
 
 
-        [Required(ErrorMessage = "Must answer the question")]
+
+        [Display(Name = "Answer 3")]
         public string Answer3 { get; set; }
 
 

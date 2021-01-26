@@ -6,16 +6,14 @@ using TreasureRoom.Models.ViewModel;
 
 namespace TreasureRoom.Models.DBHandler
 {
-    public class GetQuestionsElectronicDBHandler
+    public class GetQuestionsDBHandler
     {
-        public List<QuestionsViewModel> GetElectronicQuestions(string itemType)
+        public List<QuestionsViewModel> GetQuestions()
         {
             var getElectronicQuestions = new List<QuestionsViewModel>();
-            if (itemType.Contains("Electronic"))
-            {
                 using (var db = new TreasureRoomEntities())
                 {
-                    getElectronicQuestions = db.dbo_Questions_Electronics.Select(m => new QuestionsViewModel()
+                    getElectronicQuestions = db.dbo_Questions.Select(m => new QuestionsViewModel()
                         {
                             ID = m.ID,
                             Question = m.Question
@@ -23,11 +21,6 @@ namespace TreasureRoom.Models.DBHandler
                     ).ToList();
                     return getElectronicQuestions;
                 }
-            }
-            else
-            {
-                return null;
-            }
         }
     }
 }
