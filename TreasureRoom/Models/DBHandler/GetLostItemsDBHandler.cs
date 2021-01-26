@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using Microsoft.Ajax.Utilities;
 using TreasureRoom.Models.ViewModel;
 
@@ -22,7 +20,7 @@ namespace TreasureRoom.Models.DBHandler
                         Title = m.Title,
                         Description = m.Description,
                         ItemType = m.ItemType,
-                        Image = m.Image,
+                        Image = m.ImagePath,
                         Postcode = m.Postcode,
                         DatePosted = m.DatePosted.Value
                     }).ToList();
@@ -35,7 +33,7 @@ namespace TreasureRoom.Models.DBHandler
                         Title = m.Title,
                         Description = m.Description,
                         ItemType = m.ItemType,
-                        Image = m.Image,
+                        Image = m.ImagePath,
                         Postcode = m.Postcode,
                         DatePosted = m.DatePosted.Value
                     }).Where(m => (m.Description.Contains(searchTerm) || m.Title.Contains(searchTerm)) &&

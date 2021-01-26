@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
-using System.Data.SqlClient;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Web;
-using AngleSharp;
 using TreasureRoom.Models.ViewModel;
 
 namespace TreasureRoom.Models.DBHandler
@@ -18,10 +12,10 @@ namespace TreasureRoom.Models.DBHandler
             using (var db = new TreasureRoomEntities())
             {
                 getItemTypes = db.dbo_ItemTypes.Select(m => new ItemTypesViewModel()
-                    {
-                        ID = m.ID,
-                        ItemType = m.ItemType
-                    }
+                {
+                    ID = m.ID,
+                    ItemType = m.ItemType
+                }
                 ).ToList();
                 return getItemTypes;
             }

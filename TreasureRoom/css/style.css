@@ -25,17 +25,28 @@ main {
     padding: 0 !important;
 }
 
-#action-navlink {
-    border: 1px solid yellow !important;
-    border-radius: 25px !important;
+#action-navlink:not(.navbar-nav li a:hover) {
+    border: 1px solid yellow;
+    border-radius: 15px !important;
+    color: white !important;
+    width: 80px;
+    text-align: center;
+    box-shadow: 1px 2px 2px gray;
+}
+#action-navlink:hover {
+    border: 1px solid yellow;
+    border-radius: 15px !important;
     color: black !important;
     background: #ffeb3b;
+    width: 80px;
+    text-align: center;
+    text-shadow: none;
 }
 
-.navbar-brand img {
-    height: 70px;
-    padding-left: 10px;
-}
+    .navbar-brand img {
+        height: 70px;
+        padding-left: 10px;
+    }
 
 .navbar-nav li {
     padding: 0 10px;
@@ -317,6 +328,7 @@ main {
     color: white;
     bottom: 0;
     width: 100%;
+    margin-top: 100px;
     position: absolute;
 }
 
@@ -419,6 +431,7 @@ hr {
     border-radius: 0.8rem;
 }
 
+
 .item-card_img {
     min-width: 18rem;
     max-width: 18rem;
@@ -449,14 +462,14 @@ hr {
 .item-card_date span {
     display: block;
     color: rgba(0, 0, 0, 0.5);
-    font-size: 1.3rem;
+    font-size: 1.25rem;
     font-weight: 600;
     margin: 0.543m 0;
 }
 
 .item-card_title {
     font-size: 1.8rem;
-    margin: 1.5rem 0 1rem;
+    margin: 1rem 0 1rem;
     text-transform: uppercase;
     color: #4facfe;
 }
@@ -465,6 +478,11 @@ hr {
     margin-bottom: 2rem;
     font-size: 1.1rem;
     color: rgba(0, 0, 0, .7)
+}
+.item-card-item_type{
+    color: black;
+    margin-bottom: -15px;
+    font-size: 1.25rem;
 }
 
 .item-card_btn {
@@ -500,4 +518,53 @@ hr {
         max-width: 100%;
         transform: translate(0, -8rem);
     }
+}
+
+/*Post page*/
+.post-searchfield {
+    height: 40px;
+    padding: 20px;
+    margin-right: 15px;
+    border: 1px solid black;
+    outline: none;
+    border-radius: 25px;
+    resize: both !important;
+    overflow: auto !important;
+}
+.item-types_dropdown-post {
+    padding: 08px;
+    margin-right: 15px;
+    border: 1px solid black;
+    border-radius: 25px;
+}
+.post-title {
+    width: 400px;
+    height: 70px;
+}
+.post-description {
+    width: 500px;
+    height: 70px;
+}
+.post-form_body {
+    margin-bottom: 80px;
+}
+.post-date {
+    height: 70px;
+}
+.post-title-show {
+    font-weight: 590;
+}
+.post-question {
+    width: 700px;
+}
+.post-answer {
+    width: 500px;
+}
+.answer {
+    width: 400px;
+}
+/*Success page*/
+.success-page {
+    align-content: center;
+    text-align: center;
 }

@@ -1,0 +1,5 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<TreasureRoom.Models.LostWalletContentModel>
+@{
+    Layout = "Master.cshtml";
+}
+@Html.Partial("~/Views/Partials/LostWalletForm.cshtml", Model.LostWalletViewModel)

@@ -3,11 +3,11 @@
 @using (Html.BeginUmbracoForm("SubmitForm", "SearchSurface", FormMethod.Get))
 {
     <body>
-        @if (Model.LostItemsData.Capacity==0)
+        @if (Model.LostItemsData.Capacity == 0)
         {
-                <p style="color: red">
-                    No match found. Please search again.
-                </p>
+            <p style="color: red">
+                No match found. Please search again.
+            </p>
         }
         else
         {
@@ -16,22 +16,29 @@
                 <div class="item-card_body">
                     <div class="item-card">
                         <div class="item-card_img">
-                            <img src="/images/iPhoneTest.png" alt="">
+                            <img src="@Url.Content(item.Image)" alt="">
                         </div>
                         <div class="item-card_info">
                             <div class="item-card_date">
-                                <span>@Html.DisplayFor(modelItem => item.DatePosted.Value.DayOfWeek)</span>
-                                <span>@Convert.ToDateTime(item.DatePosted).ToString("dd/MM/yyyy")</span>
+                                <span>
+                                    <div class="item-card-item_type"><p>@Html.DisplayFor(modelItem => item.Postcode), @Html.DisplayFor(modelItem => item.ItemType)</p></div>
+                                    @Html.DisplayFor(modelItem => item.DatePosted.Value.DayOfWeek)
+                                </span>
+                                <span>
+                                    @Convert.ToDateTime(item.DatePosted).ToString("dd/MM/yyyy")
+                                </span>
                             </div>
                             <h1 class="item-card_title">@Html.DisplayFor(modelItem => item.Title)</h1>
                             <p class="item-card_text">
-                                @Html.DisplayFor(modelItem => item.Description) found at @Html.DisplayFor(modelItem => item.Postcode) which is @Html.DisplayFor(modelItem => item.ItemType)
+                                @Html.DisplayFor(modelItem => item.Description) found at @Html.DisplayFor(modelItem => item.Postcode) which is
                             </p>
-                            <a href="#"><button class="item-card_btn" type="button">Read More</button></a>
+                            <a href="#"><button class="item-card_btn" type= "button">Read More</button></a>
                         </div>
                     </div>
                 </div>
             }
         }
+        <div class="container post-form_body">
+        </div>
     </body>
 }

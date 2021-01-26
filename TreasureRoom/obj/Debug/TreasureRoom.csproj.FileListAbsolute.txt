@@ -1,3 +1,4 @@
+C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom\obj\Debug\TreasureRoom.csproj.CoreCompileInputs.cache
 C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom\bin\amd64\Microsoft.VC90.CRT\Microsoft.VC90.CRT.manifest
 C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom\bin\amd64\Microsoft.VC90.CRT\msvcr90.dll
 C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom\bin\amd64\sqlceca40.dll
@@ -50,7 +51,7 @@ C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom\bin\System.C
 C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom\bin\System.Reflection.Metadata.dll
 C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom\bin\System.Text.Encoding.CodePages.dll
 C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom\bin\System.Threading.Tasks.Extensions.dll
-C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom\obj\Debug\TreasureRoom.csproj.CoreCompileInputs.cache
+C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom\obj\Debug\TreasureRoom.csprojAssemblyReference.cache
 C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom\obj\Debug\TreasureRoom.csproj.CopyComplete
 C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom\obj\Debug\TreasureRoom.dll
 C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom\obj\Debug\TreasureRoom.pdb

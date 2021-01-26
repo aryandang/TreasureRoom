@@ -5,8 +5,13 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="a1006d85db9e4aa18a1653171f4ff442" Name="Diagram1">
-        <EntityTypeShape EntityType="TreasureRoomModel.dbo_LostItems" Width="1.5" PointX="3.375" PointY="0.75" />
         <EntityTypeShape EntityType="TreasureRoomModel.dbo_ItemTypes" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="TreasureRoomModel.dbo_Titles" Width="1.5" PointX="0.75" PointY="3.75" />
+        <EntityTypeShape EntityType="TreasureRoomModel.dbo_LostItems" Width="1.5" PointX="2.875" PointY="0.5" />
+        <EntityTypeShape EntityType="TreasureRoomModel.dbo_Questions_Electronic" Width="1.5" PointX="5.75" PointY="0.75" />
+        <EntityTypeShape EntityType="TreasureRoomModel.dbo_Questions_FashionAccessory" Width="1.5" PointX="5.75" PointY="3.75" />
+        <EntityTypeShape EntityType="TreasureRoomModel.dbo_Questions_Keys" Width="1.5" PointX="0.75" PointY="6.75" />
+        <EntityTypeShape EntityType="TreasureRoomModel.dbo_Questions_WalletOrPurse" Width="1.5" PointX="2.75" PointY="6.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
