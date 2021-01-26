@@ -22,7 +22,7 @@ namespace Umbraco.Web.PublishedModels
 {
 	/// <summary>Success Page</summary>
 	[PublishedModel("successPage")]
-	public partial class SuccessPage : PublishedContentModel
+	public partial class SuccessPage : PublishedContentModel, ISuccessPageControls
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -44,5 +44,19 @@ namespace Umbraco.Web.PublishedModels
 		{ }
 
 		// properties
+
+		///<summary>
+		/// First Line Text
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("firstLineText")]
+		public IHtmlString FirstLineText => SuccessPageControls.GetFirstLineText(this);
+
+		///<summary>
+		/// Second Line Text
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("secondLineText")]
+		public IHtmlString SecondLineText => SuccessPageControls.GetSecondLineText(this);
 	}
 }

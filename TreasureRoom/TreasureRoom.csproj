@@ -460,6 +460,7 @@
     <Compile Include="App_Data\Models\SearchPage.generated.cs" />
     <Compile Include="App_Data\Models\ServicesControls.generated.cs" />
     <Compile Include="App_Data\Models\SuccessPage.generated.cs" />
+    <Compile Include="App_Data\Models\SuccessPageControls.generated.cs" />
     <Compile Include="App_Data\Models\TestimonialsControls.generated.cs" />
     <Compile Include="App_Data\Models\WhyChooseUsControls.generated.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -904,6 +905,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="css\RTE-Styles.css" />
     <Content Include="css\style.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />

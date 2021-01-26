@@ -563,3 +563,8 @@ hr {
 .answer {
     width: 400px;
 }
+/*Success page*/
+.success-page {
+    align-content: center;
+    text-align: center;
+}
