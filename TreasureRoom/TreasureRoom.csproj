@@ -452,11 +452,13 @@
     <Compile Include="App_Data\Models\Image.generated.cs" />
     <Compile Include="App_Data\Models\LostElectronicPage.generated.cs" />
     <Compile Include="App_Data\Models\LostFashionAccessoryPage.generated.cs" />
+    <Compile Include="App_Data\Models\LostItemsDetailsPage.generated.cs" />
     <Compile Include="App_Data\Models\LostKeysPage.generated.cs" />
     <Compile Include="App_Data\Models\LostPursePage.generated.cs" />
     <Compile Include="App_Data\Models\LostWalletPage.generated.cs" />
     <Compile Include="App_Data\Models\Member.generated.cs" />
     <Compile Include="App_Data\Models\PostPage.generated.cs" />
+    <Compile Include="App_Data\Models\RetrievePage.generated.cs" />
     <Compile Include="App_Data\Models\SearchPage.generated.cs" />
     <Compile Include="App_Data\Models\ServicesControls.generated.cs" />
     <Compile Include="App_Data\Models\SuccessPage.generated.cs" />
@@ -467,6 +469,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Composing\RegisterServicesComposer.cs" />
+    <Compile Include="Controllers\RenderMvc\LostItemDetailsPageController.cs" />
     <Compile Include="Controllers\RenderMvc\LostPursePageController.cs" />
     <Compile Include="Controllers\RenderMvc\LostWalletPageController.cs" />
     <Compile Include="Controllers\RenderMvc\LostFashionAccessoryPageController.cs" />
@@ -482,6 +485,7 @@
     <Compile Include="Controllers\Surface\PostSurfaceController.cs" />
     <Compile Include="Controllers\Surface\SearchSurfaceController.cs" />
     <Compile Include="Models\DBHandler\GetItemTypesDBHandler.cs" />
+    <Compile Include="Models\DBHandler\GetLostItemsByIdDBHandler.cs" />
     <Compile Include="Models\DBHandler\GetLostItemsDBHandler.cs" />
     <Compile Include="Models\DBHandler\GetQuestionsFashionAccessoryDBHandler.cs" />
     <Compile Include="Models\DBHandler\GetQuestionsWalletOrPurseElectronicDBHandler.cs" />
@@ -542,7 +546,9 @@
     <Compile Include="Models\LostElectronicContentModel.cs" />
     <Compile Include="Models\PostContentModel.cs" />
     <Compile Include="Models\SearchContentModel.cs" />
+    <Compile Include="Models\LostItemDetailsContentModel.cs" />
     <Compile Include="Models\ViewModel\ItemTypesViewModel.cs" />
+    <Compile Include="Models\ViewModel\LostItemDetailsViewModel.cs" />
     <Compile Include="Models\ViewModel\LostKeysViewModel.cs" />
     <Compile Include="Models\ViewModel\LostFashionAccessoryViewModel.cs" />
     <Compile Include="Models\ViewModel\LostPurseViewModel.cs" />
@@ -555,6 +561,7 @@
     <Compile Include="Models\ViewModel\QuestionsKeysViewModel.cs" />
     <Compile Include="Models\ViewModel\QuestionsElectronicViewModel.cs" />
     <Compile Include="Models\ViewModel\QuestionsViewModel.cs" />
+    <Compile Include="Models\ViewModel\RetrieveViewModel.cs" />
     <Compile Include="Models\ViewModel\SearchViewModel.cs" />
     <Compile Include="Models\ViewModel\TitlesViewModel.cs" />
     <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
@@ -3604,10 +3611,13 @@
     <Content Include="Views\Partials\LostKeysForm.cshtml" />
     <Content Include="Views\Partials\LostPurseForm.cshtml" />
     <Content Include="Views\Partials\LostFashionAccessoryForm.cshtml" />
+    <Content Include="Views\LostItemsDetailsPage.cshtml" />
+    <Content Include="Views\Partials\LostItemDetailsPage.cshtml" />
     <None Include="Views\Partials\SearchForm.cshtml" />
     <Content Include="Views\SearchPage.cshtml" />
     <Content Include="Views\PostPage.cshtml" />
     <Content Include="Views\SuccessPage.cshtml" />
+    <Content Include="Views\RetrievePage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\TEMP\FileUploads\" />

@@ -1,0 +1,18 @@
+﻿
+@inherits UmbracoViewPage<TreasureRoom.Models.ViewModel.LostItemDetailsViewModel>
+
+@using (Html.BeginUmbracoForm("SubmitForm", "LostElectronicSurface", FormMethod.Post))
+{
+    foreach (var item in Model.LostItemsData)
+    {
+        <div class="container post-form_body">
+            <br />
+            <h3>@Html.Raw("Lost Item Details:")</h3>
+            <hr />
+            @Html.DisplayFor(m => item.DatePosted)
+            <img src="@Url.Content(item.Image)" alt="">
+            @Html.DisplayFor(m => item.Title)
+            @Html.DisplayFor(m => item.Description)
+        </div>
+    }
+}
