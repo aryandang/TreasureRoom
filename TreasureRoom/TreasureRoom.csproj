@@ -451,6 +451,10 @@
     <Compile Include="App_Data\Models\HomePageControls.generated.cs" />
     <Compile Include="App_Data\Models\Image.generated.cs" />
     <Compile Include="App_Data\Models\LostElectronicPage.generated.cs" />
+    <Compile Include="App_Data\Models\LostFashionAccessoryPage.generated.cs" />
+    <Compile Include="App_Data\Models\LostKeysPage.generated.cs" />
+    <Compile Include="App_Data\Models\LostPursePage.generated.cs" />
+    <Compile Include="App_Data\Models\LostWalletPage.generated.cs" />
     <Compile Include="App_Data\Models\Member.generated.cs" />
     <Compile Include="App_Data\Models\PostPage.generated.cs" />
     <Compile Include="App_Data\Models\SearchPage.generated.cs" />
@@ -462,24 +466,48 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Composing\RegisterServicesComposer.cs" />
-    <Compile Include="Controllers\RenderMvc\PostPageController - Copy.cs" />
+    <Compile Include="Controllers\RenderMvc\LostPursePageController.cs" />
+    <Compile Include="Controllers\RenderMvc\LostWalletPageController.cs" />
+    <Compile Include="Controllers\RenderMvc\LostFashionAccessoryPageController.cs" />
+    <Compile Include="Controllers\RenderMvc\LostKeysPageController.cs" />
+    <Compile Include="Controllers\RenderMvc\LostElectronicPageController.cs" />
     <Compile Include="Controllers\RenderMvc\PostPageController.cs" />
     <Compile Include="Controllers\RenderMvc\SearchPageController.cs" />
-    <Compile Include="Controllers\Surface\PostSurfaceController - Copy.cs" />
+    <Compile Include="Controllers\Surface\LostFashionAccessorySurfaceController.cs" />
+    <Compile Include="Controllers\Surface\LostPurseSurfaceController.cs" />
+    <Compile Include="Controllers\Surface\LostWalletSurfaceController.cs" />
+    <Compile Include="Controllers\Surface\LostKeysSurfaceController.cs" />
+    <Compile Include="Controllers\Surface\LostElectronicSurfaceController.cs" />
     <Compile Include="Controllers\Surface\PostSurfaceController.cs" />
     <Compile Include="Controllers\Surface\SearchSurfaceController.cs" />
     <Compile Include="Models\DBHandler\GetItemTypesDBHandler.cs" />
     <Compile Include="Models\DBHandler\GetLostItemsDBHandler.cs" />
-    <Compile Include="Models\DBHandler\GetQuestionsDBHandler.cs" />
+    <Compile Include="Models\DBHandler\GetQuestionsFashionAccessoryDBHandler.cs" />
+    <Compile Include="Models\DBHandler\GetQuestionsWalletOrPurseElectronicDBHandler.cs" />
+    <Compile Include="Models\DBHandler\GetQuestionsKeysDBHandler.cs" />
+    <Compile Include="Models\DBHandler\GetQuestionsElectronicDBHandler.cs" />
     <Compile Include="Models\DBHandler\GetTitlesDBHandler.cs" />
-    <Compile Include="Models\DBHandler\PostLostItemsDBHandler.cs" />
+    <Compile Include="Models\DBHandler\PostLostPurseDBHandler.cs" />
+    <Compile Include="Models\DBHandler\PostLostWalletDBHandler.cs" />
+    <Compile Include="Models\DBHandler\PostLostFashionAccessoryItemsDBHandler.cs" />
+    <Compile Include="Models\DBHandler\PostLostKeysDBHandler.cs" />
+    <Compile Include="Models\DBHandler\PostLostElectronicItemsDBHandler.cs" />
     <Compile Include="Models\dbo_ItemTypes.cs">
       <DependentUpon>EntityModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\dbo_LostItems.cs">
       <DependentUpon>EntityModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\dbo_Questions.cs">
+    <Compile Include="Models\dbo_Questions_Electronic.cs">
+      <DependentUpon>EntityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\dbo_Questions_FashionAccessory.cs">
+      <DependentUpon>EntityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\dbo_Questions_Keys.cs">
+      <DependentUpon>EntityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\dbo_Questions_WalletOrPurse.cs">
       <DependentUpon>EntityModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\dbo_Titles.cs">
@@ -506,15 +534,29 @@
     <Compile Include="Models\Get_LostItems_Result.cs">
       <DependentUpon>EntityModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\LostFashionAccessoryContentModel.cs" />
+    <Compile Include="Models\LostPurseContentModel.cs" />
+    <Compile Include="Models\LostWalletContentModel.cs" />
+    <Compile Include="Models\LostKeysContentModel.cs" />
+    <Compile Include="Models\LostElectronicContentModel.cs" />
     <Compile Include="Models\PostContentModel.cs" />
     <Compile Include="Models\SearchContentModel.cs" />
     <Compile Include="Models\ViewModel\ItemTypesViewModel.cs" />
+    <Compile Include="Models\ViewModel\LostKeysViewModel.cs" />
+    <Compile Include="Models\ViewModel\LostFashionAccessoryViewModel.cs" />
+    <Compile Include="Models\ViewModel\LostPurseViewModel.cs" />
+    <Compile Include="Models\ViewModel\LostWalletViewModel.cs" />
     <Compile Include="Models\ViewModel\LostItemsViewModel.cs" />
-    <Compile Include="Models\ViewModel\PostViewModel - Copy.cs" />
+    <Compile Include="Models\ViewModel\LostElectronicViewModel.cs" />
     <Compile Include="Models\ViewModel\PostViewModel.cs" />
+    <Compile Include="Models\ViewModel\QuestionsWalletOrPurseViewModel.cs" />
+    <Compile Include="Models\ViewModel\QuestionsFashionAccessoryViewModel.cs" />
+    <Compile Include="Models\ViewModel\QuestionsKeysViewModel.cs" />
+    <Compile Include="Models\ViewModel\QuestionsElectronicViewModel.cs" />
     <Compile Include="Models\ViewModel\QuestionsViewModel.cs" />
     <Compile Include="Models\ViewModel\SearchViewModel.cs" />
     <Compile Include="Models\ViewModel\TitlesViewModel.cs" />
+    <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\ISearchService.cs" />
     <Compile Include="Services\SearchService.cs" />
@@ -887,6 +929,14 @@
       <DependentUpon>EntityModel.edmx</DependentUpon>
       <LastGenOutput>EntityModel.cs</LastGenOutput>
     </Content>
+    <Content Include="obj\Debug\TempPE\Models.EntityModel.Context.cs.dll" />
+    <Content Include="obj\Debug\TempPE\Models.EntityModel.cs.dll" />
+    <Content Include="obj\Debug\TempPE\Models.EntityModel.Designer.cs.dll" />
+    <Content Include="obj\Debug\TempPE\Models.Model1.Context.cs.dll" />
+    <Content Include="obj\Debug\TempPE\Models.Model1.cs.dll" />
+    <Content Include="obj\Debug\TempPE\Models.Model1.Designer.cs.dll" />
+    <Content Include="obj\Debug\TreasureRoom.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\TreasureRoom.Web.csproj.FileListAbsolute.txt" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="config\imageprocessor\security.config" />
@@ -973,6 +1023,17 @@
     <Content Include="Models\EntityModel.edmx.diagram">
       <DependentUpon>EntityModel.edmx</DependentUpon>
     </Content>
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="obj\Debug\edmxResourcesToEmbed\Models\EntityModel.csdl" />
+    <Content Include="obj\Debug\edmxResourcesToEmbed\Models\EntityModel.msl" />
+    <Content Include="obj\Debug\edmxResourcesToEmbed\Models\EntityModel.ssdl" />
+    <Content Include="obj\Debug\edmxResourcesToEmbed\Models\Model1.csdl" />
+    <Content Include="obj\Debug\edmxResourcesToEmbed\Models\Model1.msl" />
+    <Content Include="obj\Debug\edmxResourcesToEmbed\Models\Model1.ssdl" />
+    <Content Include="obj\Debug\TreasureRoom.csproj.CoreCompileInputs.cache" />
+    <Content Include="obj\Debug\TreasureRoom.Web.csproj.CopyComplete" />
+    <Content Include="obj\Debug\TreasureRoom.Web.csproj.CoreCompileInputs.cache" />
+    <Content Include="obj\Debug\TreasureRoom.Web.csprojAssemblyReference.cache" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -3531,8 +3592,16 @@
     <Content Include="Views\Partials\BlockList\Default.cshtml" />
     <Content Include="Views\Partials\SearchResults.cshtml" />
     <Content Include="Views\Partials\PostForm.cshtml" />
-    <Content Include="Views\Partials\PostForm - Copy.cshtml" />
+    <Content Include="Views\Partials\LostElectronicForm.cshtml" />
     <Content Include="Views\LostElectronicPage.cshtml" />
+    <Content Include="Views\LostFashionAccessoryPage.cshtml" />
+    <Content Include="Views\LostKeysPage.cshtml" />
+    <Content Include="Views\LostPursePage.cshtml" />
+    <Content Include="Views\LostWalletPage.cshtml" />
+    <Content Include="Views\Partials\LostWalletForm.cshtml" />
+    <Content Include="Views\Partials\LostKeysForm.cshtml" />
+    <Content Include="Views\Partials\LostPurseForm.cshtml" />
+    <Content Include="Views\Partials\LostFashionAccessoryForm.cshtml" />
     <None Include="Views\Partials\SearchForm.cshtml" />
     <Content Include="Views\SearchPage.cshtml" />
     <Content Include="Views\PostPage.cshtml" />

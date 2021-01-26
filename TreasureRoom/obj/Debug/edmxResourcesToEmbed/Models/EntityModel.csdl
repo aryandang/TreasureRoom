@@ -24,7 +24,10 @@
       <Parameter Name="Question3" Mode="In" Type="String" />
       <Parameter Name="Answer3" Mode="In" Type="String" />
     </FunctionImport>
-    <EntitySet Name="dbo_Questions" EntityType="TreasureRoomModel.dbo_Questions" />
+    <EntitySet Name="dbo_Questions_Electronic" EntityType="TreasureRoomModel.dbo_Questions_Electronic" />
+    <EntitySet Name="dbo_Questions_FashionAccessory" EntityType="TreasureRoomModel.dbo_Questions_FashionAccessory" />
+    <EntitySet Name="dbo_Questions_Keys" EntityType="TreasureRoomModel.dbo_Questions_Keys" />
+    <EntitySet Name="dbo_Questions_WalletOrPurse" EntityType="TreasureRoomModel.dbo_Questions_WalletOrPurse" />
   </EntityContainer>
   <ComplexType Name="Get_LostItems_Result">
     <Property Type="String" Name="ID" Nullable="false" MaxLength="50" />
@@ -73,7 +76,28 @@
     <Property Name="Question3" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="Answer3" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
   </EntityType>
-  <EntityType Name="dbo_Questions">
+  <EntityType Name="dbo_Questions_Electronic">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Question" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="dbo_Questions_FashionAccessory">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Question" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="dbo_Questions_Keys">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Question" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="dbo_Questions_WalletOrPurse">
     <Key>
       <PropertyRef Name="ID" />
     </Key>

@@ -30,7 +30,10 @@ namespace TreasureRoom.Models
         public virtual DbSet<dbo_ItemTypes> dbo_ItemTypes { get; set; }
         public virtual DbSet<dbo_Titles> dbo_Titles { get; set; }
         public virtual DbSet<dbo_LostItems> dbo_LostItems { get; set; }
-        public virtual DbSet<dbo_Questions> dbo_Questions { get; set; }
+        public virtual DbSet<dbo_Questions_Electronic> dbo_Questions_Electronic { get; set; }
+        public virtual DbSet<dbo_Questions_FashionAccessory> dbo_Questions_FashionAccessory { get; set; }
+        public virtual DbSet<dbo_Questions_Keys> dbo_Questions_Keys { get; set; }
+        public virtual DbSet<dbo_Questions_WalletOrPurse> dbo_Questions_WalletOrPurse { get; set; }
     
         public virtual ObjectResult<Get_LostItems_Result> Get_LostItems()
         {

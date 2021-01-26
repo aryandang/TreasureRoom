@@ -14,7 +14,7 @@ namespace TreasureRoom.Controllers.RenderMvc
     public class PostPageController : RenderMvcController
     {
         private GetItemTypesDBHandler getItemTypesDbHandler = new GetItemTypesDBHandler();
-        public ActionResult Index(ContentModel model, string itemType)
+        public ActionResult Index(ContentModel model)
         {
             var postPageModel = new PostContentModel(model.Content);
 

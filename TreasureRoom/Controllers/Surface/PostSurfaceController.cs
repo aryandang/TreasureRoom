@@ -21,6 +21,24 @@ namespace TreasureRoom.Controllers.Surface
                 {
                     return Redirect("/lost-electronic/");
                 }
+                if (model.ItemType.Contains("Keys"))
+                {
+                    return Redirect("/lost-keys/");
+                }
+                if (model.ItemType.Contains("Fashion Accessory"))
+                {
+                    return Redirect("/lost-fashion-accessory/");
+                }
+                if (model.ItemType.Contains("Wallet"))
+                {
+                    return Redirect("/lost-wallet/");
+                }
+                if (model.ItemType.Contains("Purse"))
+                {
+                    return Redirect("/lost-purse/");
+                }
+
+
             }
             return CurrentUmbracoPage();
         }

@@ -1,7 +1,7 @@
 USE [TreasureRoom]
 GO
 
-/****** Object:  Table [dbo].[dbo.Questions.FashionAccessory]    Script Date: 25/01/2021 14:35:57 ******/
+/****** Object:  Table [dbo].[dbo.Questions.FashionAccessory]    Script Date: 26/01/2021 14:06:28 ******/
 SET ANSI_NULLS ON
 GO
 

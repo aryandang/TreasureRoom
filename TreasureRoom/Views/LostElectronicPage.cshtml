@@ -1,5 +1,5 @@
-﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.LostElectronicPage>
-@using ContentModels = Umbraco.Web.PublishedModels;
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<TreasureRoom.Models.LostElectronicContentModel>
 @{
-	Layout = "Master.cshtml";
+    Layout = "Master.cshtml";
 }
+@Html.Partial("~/Views/Partials/LostElectronicForm.cshtml", Model.LostElectronicViewModel)

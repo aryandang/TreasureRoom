@@ -1,6 +1,4 @@
-﻿@using System.Globalization
-@using Umbraco.Core.Composing
-@inherits UmbracoViewPage<TreasureRoom.Models.ViewModel.PostViewModel>
+﻿@inherits UmbracoViewPage<TreasureRoom.Models.ViewModel.PostViewModel>
 
 @using (Html.BeginUmbracoForm("SubmitForm", "PostSurface", FormMethod.Post))
 {
@@ -10,7 +8,7 @@
         <hr />
     </div>
     <div class="form-group col-md-3">
-        <div class="post-title-show">@Html.LabelFor(m => m.ItemType)</div>
+        <div class="post-title-show"><h5>@Html.LabelFor(m => m.ItemType)</h5></div>
         <div class="input-group">
             @Html.DropDownListFor(m => m.ItemType, new SelectList(Model.ItemTypesData, "ItemType", "ItemType"), "Select...", new { @class = "item-types_dropdown-post", @id = "item-type-dropdown" })
         </div>
