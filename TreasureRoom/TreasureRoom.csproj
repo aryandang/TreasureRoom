@@ -450,6 +450,7 @@
     <Compile Include="App_Data\Models\Home.generated.cs" />
     <Compile Include="App_Data\Models\HomePageControls.generated.cs" />
     <Compile Include="App_Data\Models\Image.generated.cs" />
+    <Compile Include="App_Data\Models\LostElectronicPage.generated.cs" />
     <Compile Include="App_Data\Models\Member.generated.cs" />
     <Compile Include="App_Data\Models\PostPage.generated.cs" />
     <Compile Include="App_Data\Models\SearchPage.generated.cs" />
@@ -461,8 +462,10 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Composing\RegisterServicesComposer.cs" />
+    <Compile Include="Controllers\RenderMvc\PostPageController - Copy.cs" />
     <Compile Include="Controllers\RenderMvc\PostPageController.cs" />
     <Compile Include="Controllers\RenderMvc\SearchPageController.cs" />
+    <Compile Include="Controllers\Surface\PostSurfaceController - Copy.cs" />
     <Compile Include="Controllers\Surface\PostSurfaceController.cs" />
     <Compile Include="Controllers\Surface\SearchSurfaceController.cs" />
     <Compile Include="Models\DBHandler\GetItemTypesDBHandler.cs" />
@@ -507,6 +510,7 @@
     <Compile Include="Models\SearchContentModel.cs" />
     <Compile Include="Models\ViewModel\ItemTypesViewModel.cs" />
     <Compile Include="Models\ViewModel\LostItemsViewModel.cs" />
+    <Compile Include="Models\ViewModel\PostViewModel - Copy.cs" />
     <Compile Include="Models\ViewModel\PostViewModel.cs" />
     <Compile Include="Models\ViewModel\QuestionsViewModel.cs" />
     <Compile Include="Models\ViewModel\SearchViewModel.cs" />
@@ -3527,6 +3531,8 @@
     <Content Include="Views\Partials\BlockList\Default.cshtml" />
     <Content Include="Views\Partials\SearchResults.cshtml" />
     <Content Include="Views\Partials\PostForm.cshtml" />
+    <Content Include="Views\Partials\PostForm - Copy.cshtml" />
+    <Content Include="Views\LostElectronicPage.cshtml" />
     <None Include="Views\Partials\SearchForm.cshtml" />
     <Content Include="Views\SearchPage.cshtml" />
     <Content Include="Views\PostPage.cshtml" />
