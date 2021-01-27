@@ -6,6 +6,7 @@ using System.Web;
 using System.Web.Mvc;
 using TreasureRoom.Models.DBHandler;
 using TreasureRoom.Models.ViewModel;
+using TreasureRoom.Services;
 using Umbraco.Web.Mvc;
 
 namespace TreasureRoom.Controllers.Surface
@@ -13,7 +14,7 @@ namespace TreasureRoom.Controllers.Surface
     public class RetrieveSurfaceController : SurfaceController
     {
         private PostRetrieveItemsUsersDBHandler postRetrieveItemsUsersDbHandler = new PostRetrieveItemsUsersDBHandler();
-
+        private SendEmailService sendEmailService = new SendEmailService();
         public ActionResult LoadForm(RetrieveViewModel model)
         {
             var queryString = new NameValueCollection();
@@ -30,6 +31,7 @@ namespace TreasureRoom.Controllers.Surface
         {
             if (ModelState.IsValid)
             {
+                sendEmailService.SendEmail(model.EmailAddress, model.FullName, model.PhoneNumber);
                 postRetrieveItemsUsersDbHandler.PostRetrieveItemsUsersData(model);
                 return Redirect("/retrieve-success-page");
             }
