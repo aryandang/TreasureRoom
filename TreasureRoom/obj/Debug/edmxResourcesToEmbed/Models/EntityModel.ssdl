@@ -69,6 +69,17 @@ warning 6002: The table/view 'TreasureRoom.dbo.dbo.Questions.WalletOrPurse' does
     <Property Name="Question" Type="nvarchar" MaxLength="100" />
   </EntityType>
   <!--Errors Found During Generation:
+warning 6002: The table/view 'TreasureRoom.dbo.dbo.RetrieveItemsUsers' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="dbo_RetrieveItemsUsers">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="100" />
+    <Property Name="EmailAddress" Type="nvarchar" MaxLength="100" />
+    <Property Name="PhoneNumber" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
 warning 6002: The table/view 'TreasureRoom.dbo.dbo.Titles' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="dbo_Titles">
     <Key>
@@ -96,6 +107,12 @@ warning 6002: The table/view 'TreasureRoom.dbo.dbo.Titles' does not have a prima
     <Parameter Name="Answer2" Type="nvarchar" Mode="In" />
     <Parameter Name="Question3" Type="nvarchar" Mode="In" />
     <Parameter Name="Answer3" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="Post_RetrieveItemsUsers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID" Type="nvarchar" Mode="In" />
+    <Parameter Name="FullName" Type="nvarchar" Mode="In" />
+    <Parameter Name="EmailAddress" Type="nvarchar" Mode="In" />
+    <Parameter Name="PhoneNumber" Type="nvarchar" Mode="In" />
   </Function>
   <EntityContainer Name="TreasureRoomModelStoreContainer">
     <EntitySet Name="dbo_ItemTypes" EntityType="Self.dbo_ItemTypes" store:Type="Tables" store:Schema="dbo" store:Name="dbo.ItemTypes">
@@ -147,6 +164,14 @@ warning 6002: The table/view 'TreasureRoom.dbo.dbo.Titles' does not have a prima
     [dbo_Questions_WalletOrPurse].[ID] AS [ID], 
     [dbo_Questions_WalletOrPurse].[Question] AS [Question]
     FROM [dbo].[dbo.Questions.WalletOrPurse] AS [dbo_Questions_WalletOrPurse]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="dbo_RetrieveItemsUsers" EntityType="Self.dbo_RetrieveItemsUsers" store:Type="Tables" store:Schema="dbo" store:Name="dbo.RetrieveItemsUsers">
+      <DefiningQuery>SELECT 
+    [dbo_RetrieveItemsUsers].[ID] AS [ID], 
+    [dbo_RetrieveItemsUsers].[FullName] AS [FullName], 
+    [dbo_RetrieveItemsUsers].[EmailAddress] AS [EmailAddress], 
+    [dbo_RetrieveItemsUsers].[PhoneNumber] AS [PhoneNumber]
+    FROM [dbo].[dbo.RetrieveItemsUsers] AS [dbo_RetrieveItemsUsers]</DefiningQuery>
     </EntitySet>
     <EntitySet Name="dbo_Titles" EntityType="Self.dbo_Titles" store:Type="Tables" store:Schema="dbo" store:Name="dbo.Titles">
       <DefiningQuery>SELECT 

@@ -32,7 +32,7 @@
                             <p class="item-card_text">
                                 @Html.DisplayFor(modelItem => item.Description) found at @Html.DisplayFor(modelItem => item.Postcode) which is
                             </p>
-                            <a href='@Url.Action()'><button class="item-card_btn" type= "button">Read More</button></a>
+                            @Html.ActionLink("Read more", "LoadForm", "LostItemDetailsSurface", new {id = item.ID}, new{@class="item-card_btn" })
                         </div>
                     </div>
                 </div>

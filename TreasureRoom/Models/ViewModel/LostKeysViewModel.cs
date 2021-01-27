@@ -83,7 +83,7 @@ namespace TreasureRoom.Models.ViewModel
 
 
         [Required(ErrorMessage = "Must enter your full name*")]
-        [StringLength(50)]
+        [StringLength(100)]
         [Display(Name = "Full Name")]
         public string FullName { get; set; }
 

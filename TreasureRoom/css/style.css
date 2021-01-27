@@ -494,6 +494,7 @@ hr {
     background: #101cb9;
     margin-bottom: 1rem;
     font-size: 1rem;
+    padding: 12px;
 }
 
     .item-card_btn:hover {
@@ -567,4 +568,13 @@ hr {
 .success-page {
     align-content: center;
     text-align: center;
+}
+/*Item Details Page*/
+.img-details-page {
+    height: 300px;
+}
+.details-title-show {
+    font-size: 1.1rem;
+    font-weight: 590;
+
 }
