@@ -15,6 +15,8 @@ namespace TreasureRoom.Controllers.Surface
     {
         private PostRetrieveItemsUsersDBHandler postRetrieveItemsUsersDbHandler = new PostRetrieveItemsUsersDBHandler();
         private SendEmailService sendEmailService = new SendEmailService();
+        private GetLostItemsByIdDBHandler getLostItemsByIdDbHandler = new GetLostItemsByIdDBHandler();
+
         public ActionResult LoadForm(RetrieveViewModel model)
         {
             var queryString = new NameValueCollection();
@@ -31,7 +33,13 @@ namespace TreasureRoom.Controllers.Surface
         {
             if (ModelState.IsValid)
             {
-                sendEmailService.SendEmail(model.EmailAddress, model.FullName, model.PhoneNumber);
+                var data = getLostItemsByIdDbHandler.GetLostItemsById(model.ID);
+                foreach (var value in data)
+                {
+                    sendEmailService.SendEmail(value.EmailAddress, value.FullName, value.ItemType, model.FullName, model.EmailAddress, model.PhoneNumber,
+                                                value.Question1, model.Answer1Input, value.Question2, model.Answer2Input,
+                                                value.Question3, model.Answer3Input);
+                }
                 postRetrieveItemsUsersDbHandler.PostRetrieveItemsUsersData(model);
                 return Redirect("/retrieve-success-page");
             }

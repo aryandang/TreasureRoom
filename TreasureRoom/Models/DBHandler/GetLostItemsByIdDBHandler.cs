@@ -27,8 +27,10 @@ namespace TreasureRoom.Models.DBHandler
                     Question2 = m.Question2,
                     Answer2 = m.Answer2,
                     Question3 = m.Question3,
-                    Answer3 = m.Answer3
-                    
+                    Answer3 = m.Answer3,
+                    FullName = m.UserFullName,
+                    EmailAddress = m.UserEmailAddress
+
                 }).Where(m => (m.ID.Contains(id))).ToList();
                 return lostItems;
             }

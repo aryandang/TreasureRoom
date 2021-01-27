@@ -23,7 +23,6 @@ namespace TreasureRoom.Models.ViewModel
 
 
         [Display(Name = "Answer 3")]
-        [Required(ErrorMessage = "Must answer the question")]
         public string Answer3Input { get; set; }
 
 

@@ -44,5 +44,14 @@ namespace TreasureRoom.Models.ViewModel
         [Display(Name = "Question 3:")]
         public string Question3 { get; set; }
         public string Answer3 { get; set; }
+
+
+        [Display(Name = "Full Name:")]
+        public string FullName { get; set; }
+
+
+        [Display(Name = "Email Address:")]
+        public string EmailAddress { get; set; }
+
     }
 }
