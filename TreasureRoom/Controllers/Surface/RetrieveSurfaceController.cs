@@ -36,9 +36,14 @@ namespace TreasureRoom.Controllers.Surface
                 var data = getLostItemsByIdDbHandler.GetLostItemsById(model.ID);
                 foreach (var value in data)
                 {
-                    sendEmailService.SendEmail(value.EmailAddress, value.FullName, value.ItemType, model.FullName, model.EmailAddress, model.PhoneNumber,
-                                                value.Question1, model.Answer1Input, value.Question2, model.Answer2Input,
-                                                value.Question3, model.Answer3Input);
+                    if (value.Answer1.Contains(model.Answer1Input) && (value.Answer2.Contains(model.Answer2Input) &&
+                                                                       (value.Answer3.Contains(model.Answer3Input))))
+                    {
+                        sendEmailService.SendEmail(value.EmailAddress, value.FullName, value.ItemType, model.FullName, model.EmailAddress, model.PhoneNumber,
+                            value.Question1, model.Answer1Input, value.Question2, model.Answer2Input,
+                            value.Question3, model.Answer3Input);
+                    }
+                    
                 }
                 postRetrieveItemsUsersDbHandler.PostRetrieveItemsUsersData(model);
                 return Redirect("/retrieve-success-page");
