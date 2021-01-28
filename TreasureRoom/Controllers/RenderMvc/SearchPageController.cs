@@ -1,4 +1,5 @@
-﻿using System.Web.Mvc;
+﻿using System;
+using System.Web.Mvc;
 using TreasureRoom.Models;
 using TreasureRoom.Models.DBHandler;
 using TreasureRoom.Models.ViewModel;
@@ -11,6 +12,7 @@ namespace TreasureRoom.Controllers
     {
         private GetLostItemsDBHandler getLostItemsDbHandler = new GetLostItemsDBHandler();
         private GetItemTypesDBHandler getItemTypesDbHandler = new GetItemTypesDBHandler();
+        private GetLostItemsByIdDBHandler getLostItemsByIdDbHandler = new GetLostItemsByIdDBHandler();
 
         public ActionResult Index(ContentModel model, string keyword, string postCode, string itemType)
         {
@@ -32,6 +34,23 @@ namespace TreasureRoom.Controllers
             searchPageModel.SearchViewModel = searchViewModel;
             
             return CurrentTemplate(searchPageModel);
+        }
+
+        [HttpPost]
+        public ActionResult GetDetails(ContentModel model, string id)
+        {
+            var lostItemDetailsPageModel = new LostItemDetailsContentModel(model.Content);
+
+            var getLostItemsDataById = getLostItemsByIdDbHandler.GetLostItemsById(id);
+
+            var lostItemDetailsViewModel = new LostItemDetailsViewModel()
+            {
+                LostItemsData = getLostItemsDataById
+            };
+
+            lostItemDetailsPageModel.LostItemDetailsViewModel = lostItemDetailsViewModel;
+
+            return CurrentTemplate(lostItemDetailsPageModel);
         }
     }
 }

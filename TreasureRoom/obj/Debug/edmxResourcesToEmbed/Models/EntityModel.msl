@@ -92,5 +92,16 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="dbo_RetrieveItemsUsers">
+      <EntityTypeMapping TypeName="TreasureRoomModel.dbo_RetrieveItemsUsers">
+        <MappingFragment StoreEntitySet="dbo_RetrieveItemsUsers">
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="Post_RetrieveItemsUsers" FunctionName="TreasureRoomModel.Store.Post_RetrieveItemsUsers" />
   </EntityContainerMapping>
 </Mapping>

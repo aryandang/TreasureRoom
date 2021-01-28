@@ -1,0 +1,5 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<TreasureRoom.Models.RetrieveItemContentModel>
+@{
+    Layout = "Master.cshtml";
+}
+@Html.Partial("~/Views/Partials/RetrieveForm.cshtml", Model.RetrieveViewModel)

@@ -28,6 +28,13 @@
     <EntitySet Name="dbo_Questions_FashionAccessory" EntityType="TreasureRoomModel.dbo_Questions_FashionAccessory" />
     <EntitySet Name="dbo_Questions_Keys" EntityType="TreasureRoomModel.dbo_Questions_Keys" />
     <EntitySet Name="dbo_Questions_WalletOrPurse" EntityType="TreasureRoomModel.dbo_Questions_WalletOrPurse" />
+    <EntitySet Name="dbo_RetrieveItemsUsers" EntityType="TreasureRoomModel.dbo_RetrieveItemsUsers" />
+    <FunctionImport Name="Post_RetrieveItemsUsers">
+      <Parameter Name="ID" Mode="In" Type="String" />
+      <Parameter Name="FullName" Mode="In" Type="String" />
+      <Parameter Name="EmailAddress" Mode="In" Type="String" />
+      <Parameter Name="PhoneNumber" Mode="In" Type="String" />
+    </FunctionImport>
   </EntityContainer>
   <ComplexType Name="Get_LostItems_Result">
     <Property Type="String" Name="ID" Nullable="false" MaxLength="50" />
@@ -103,5 +110,14 @@
     </Key>
     <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Question" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="dbo_RetrieveItemsUsers">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FullName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="EmailAddress" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
   </EntityType>
 </Schema>

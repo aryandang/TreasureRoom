@@ -34,6 +34,7 @@ namespace TreasureRoom.Models
         public virtual DbSet<dbo_Questions_FashionAccessory> dbo_Questions_FashionAccessory { get; set; }
         public virtual DbSet<dbo_Questions_Keys> dbo_Questions_Keys { get; set; }
         public virtual DbSet<dbo_Questions_WalletOrPurse> dbo_Questions_WalletOrPurse { get; set; }
+        public virtual DbSet<dbo_RetrieveItemsUsers> dbo_RetrieveItemsUsers { get; set; }
     
         public virtual ObjectResult<Get_LostItems_Result> Get_LostItems()
         {
@@ -112,6 +113,27 @@ namespace TreasureRoom.Models
                 new ObjectParameter("Answer3", typeof(string));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("Post_LostItems", iDParameter, titleParameter, descriptionParameter, postcodeParameter, itemTypeParameter, imagePathParameter, datePostedParameter, userTitleParameter, userFullNameParameter, userEmailAddressParameter, question1Parameter, answer1Parameter, question2Parameter, answer2Parameter, question3Parameter, answer3Parameter);
+        }
+    
+        public virtual int Post_RetrieveItemsUsers(string iD, string fullName, string emailAddress, string phoneNumber)
+        {
+            var iDParameter = iD != null ?
+                new ObjectParameter("ID", iD) :
+                new ObjectParameter("ID", typeof(string));
+    
+            var fullNameParameter = fullName != null ?
+                new ObjectParameter("FullName", fullName) :
+                new ObjectParameter("FullName", typeof(string));
+    
+            var emailAddressParameter = emailAddress != null ?
+                new ObjectParameter("EmailAddress", emailAddress) :
+                new ObjectParameter("EmailAddress", typeof(string));
+    
+            var phoneNumberParameter = phoneNumber != null ?
+                new ObjectParameter("PhoneNumber", phoneNumber) :
+                new ObjectParameter("PhoneNumber", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("Post_RetrieveItemsUsers", iDParameter, fullNameParameter, emailAddressParameter, phoneNumberParameter);
         }
     }
 }
