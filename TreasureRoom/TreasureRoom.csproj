@@ -532,6 +532,7 @@
     <Compile Include="Controllers\RenderMvc\LostElectronicPageController.cs" />
     <Compile Include="Controllers\RenderMvc\PostPageController.cs" />
     <Compile Include="Controllers\RenderMvc\SearchPageController.cs" />
+    <Compile Include="Controllers\Surface\EditOrDeleteItemSurfaceController.cs" />
     <Compile Include="Controllers\Surface\EditOrDeletePostSurfaceController.cs" />
     <Compile Include="Controllers\Surface\LostFashionAccessorySurfaceController.cs" />
     <Compile Include="Controllers\Surface\RetrieveSurfaceController.cs" />
@@ -551,6 +552,7 @@
     <Compile Include="Models\DBHandler\GetQuestionsKeysDBHandler.cs" />
     <Compile Include="Models\DBHandler\GetQuestionsElectronicDBHandler.cs" />
     <Compile Include="Models\DBHandler\GetTitlesDBHandler.cs" />
+    <Compile Include="Models\DBHandler\PostLostItemsDBHandler.cs" />
     <Compile Include="Models\DBHandler\PostRetrieveItemsUsersDBHandler.cs" />
     <Compile Include="Models\DBHandler\PostLostPurseDBHandler.cs" />
     <Compile Include="Models\DBHandler\PostLostWalletDBHandler.cs" />

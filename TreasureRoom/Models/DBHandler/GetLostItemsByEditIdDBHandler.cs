@@ -29,6 +29,7 @@ namespace TreasureRoom.Models.DBHandler
                     Answer2 = m.Answer2,
                     Question3 = m.Question3,
                     Answer3 = m.Answer3,
+                    UserTitle = m.UserTitle,
                     FullName = m.UserFullName,
                     EmailAddress = m.UserEmailAddress
 

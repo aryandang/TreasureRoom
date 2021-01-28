@@ -31,11 +31,11 @@
                 @Html.ValidationMessageFor(m => item.ItemType, String.Empty, new {@class = "validation-messages"})
             </div>
             <div class="form-group">
-                <div class="post-title-show">@Html.LabelFor(m => item.Image)</div>
+                <div class="post-title-show">@Html.LabelFor(m => item.ImagePath)</div>
                 <div class="col-md-10">
                     <input type="file" name="ImageFile"/>
                 </div>
-                @Html.ValidationMessageFor(m => item.Image, String.Empty, new {@class = "validation-messages"})
+                @Html.ValidationMessageFor(m => item.ImagePath, String.Empty, new {@class = "validation-messages"})
             </div>
             <div class="form-group">
                 <div class="post-title-show">@Html.LabelFor(m => item.Postcode)</div>
@@ -58,8 +58,8 @@
             <div class="form-group">
                 <div class="post-title-show">@Html.LabelFor(m => item.Question1)</div>
                 <div class="input-group">
-                    @Html.DropDownListFor(m => item.Question1, new SelectList(Model.Question1Data, "Question", "Question"), "Select...", new {@class = "item-types_dropdown-post"})
-                </div>
+                    @Html.DropDownListFor(m => item.Question1, new SelectList(Model.Question1Data, "Question", "Question"), "Select...", new { @class = "item-types_dropdown-post" })
+                    </div>
                 @Html.ValidationMessageFor(m => item.Question1, String.Empty, new {@class = "validation-messages"})
             </div>
             <div class="form-group">
@@ -72,7 +72,7 @@
             <div class="form-group">
                 <div class="post-title-show">@Html.LabelFor(m => item.Question2)</div>
                 <div class="input-group">
-                    @Html.DropDownListFor(m => item.Question2, new SelectList(Model.Question2Data, "Question", "Question"), "Select...", new {@class = "item-types_dropdown-post"})
+                    @Html.DropDownListFor(m => item.Question2, new SelectList(Model.Question2Data, "Question", "Question"), "Select...", new { @class = "item-types_dropdown-post" })
                 </div>
                 @Html.ValidationMessageFor(m => item.Question2, String.Empty, new {@class = "validation-messages"})
             </div>
@@ -86,7 +86,7 @@
             <div class="form-group">
                 <div class="post-title-show">@Html.LabelFor(m => item.Question3)</div>
                 <div class="input-group">
-                    @Html.DropDownListFor(m => item.Question3, new SelectList(Model.Question3Data, "Question", "Question"), "Select...", new {@class = "item-types_dropdown-post"})
+                    @Html.DropDownListFor(m => item.Question3, new SelectList(Model.Question3Data, "Question", "Question"), "Select...", new { @class = "item-types_dropdown-post" })
                 </div>
                 @Html.ValidationMessageFor(m => item.Question3, String.Empty, new {@class = "validation-messages"})
             </div>
@@ -101,11 +101,11 @@
             <h3>@Html.Raw("Your Details:")</h3>
             <hr/>
             <div class="form-group">
-                <div class="post-title-show">@Html.LabelFor(m => item.Title)</div>
+                <div class="post-title-show">@Html.LabelFor(m => item.UserTitle)</div>
                 <div class="input-group">
-                    @Html.DropDownListFor(m => item.Title, new SelectList(Model.TitlesData, "Title", "Title"), "Select...", new {@class = "item-types_dropdown-post"})
+                    @Html.DropDownListFor(m => item.UserTitle, new SelectList(Model.TitlesData, "Title", "Title"), "Select...", new { @class = "item-types_dropdown-post" })
                 </div>
-                @Html.ValidationMessageFor(m => m.Title, String.Empty, new {@class = "validation-messages"})
+                @Html.ValidationMessageFor(m => item.UserTitle, String.Empty, new {@class = "validation-messages"})
             </div>
             <div class="form-group">
                 <div class="post-title-show">@Html.LabelFor(m => item.FullName)</div>

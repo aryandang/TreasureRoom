@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -15,6 +16,11 @@ namespace TreasureRoom.Controllers.Surface
 
         public ActionResult SubmitForm(EditOrDeletePostViewModel model)
         {
+            var queryString = new NameValueCollection();
+            if (!string.IsNullOrWhiteSpace(model.EditID))
+            {
+                queryString.Add("editId", model.EditID);
+            }
             if (ModelState.IsValid)
             {
                 var getItemsByEditId = getLostItemsByEditIdDbHandler.GetLostItemsById(model.EditID);
@@ -23,12 +29,17 @@ namespace TreasureRoom.Controllers.Surface
                 {
                     if (model.EditID.Equals(value.EditID))
                     {
-                        return RedirectToUmbracoPage(1246, model.EditID);
+                        return RedirectToUmbracoPage(1246, queryString);
                     }
                     return CurrentUmbracoPage();
                 }
             }
             return CurrentUmbracoPage();
+        }
+
+        public ActionResult EditRecords(LostItemsViewModel model)
+        {
+
         }
     }
 }

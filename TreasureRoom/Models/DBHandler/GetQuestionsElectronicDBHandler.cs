@@ -8,12 +8,12 @@ namespace TreasureRoom.Models.DBHandler
 {
     public class GetQuestionsElectronicDBHandler
     {
-        public List<QuestionsElectronicViewModel> GetQuestions()
+        public List<QuestionsViewModel> GetQuestions()
         {
-            var getQuestions = new List<QuestionsElectronicViewModel>();
+            var getQuestions = new List<QuestionsViewModel>();
                 using (var db = new TreasureRoomEntities())
                 {
-                    getQuestions = db.dbo_Questions_Electronic.Select(m => new QuestionsElectronicViewModel()
+                    getQuestions = db.dbo_Questions_Electronic.Select(m => new QuestionsViewModel()
                         {
                             ID = m.ID,
                             Question = m.Question
