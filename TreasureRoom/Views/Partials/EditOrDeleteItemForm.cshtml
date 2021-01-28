@@ -1,0 +1,129 @@
+﻿
+@inherits UmbracoViewPage<TreasureRoom.Models.ViewModel.EditOrDeleteItemViewModel>
+
+@using (Html.BeginUmbracoForm("SubmitForm", "LostFashionAccessorySurface", FormMethod.Post))
+{
+    foreach (var item in Model.LostItemsData)
+    {
+        <div class="container post-form_body">
+            <br/>
+            <h3>@Html.Raw("Item Details:")</h3>
+            <hr/>
+            <div class="form-group">
+                <div class="post-title-show">@Html.LabelFor(m => item.Title)</div>
+                <div class="input-group">
+                    @Html.TextAreaFor(m => item.Title, new {@class = "post-searchfield post-title", placeholder = "Title of the post"})
+                </div>
+                @Html.ValidationMessageFor(m => item.Title, String.Empty, new {@class = "validation-messages"})
+            </div>
+            <div class="form-group">
+                <div class="post-title-show">@Html.LabelFor(m => item.Description)</div>
+                <div class="input-group">
+                    @Html.TextAreaFor(m => item.Description, new {@class = "post-searchfield post-description", placeholder = "Description of the lost item you've found"})
+                </div>
+                @Html.ValidationMessageFor(m => item.Description, String.Empty, new {@class = "validation-messages"})
+            </div>
+            <div class="form-group">
+                <div class="post-title-show">@Html.LabelFor(m => item.ItemType)</div>
+                <div class="input-group">
+                    <p>Fashion Accessory</p>
+                </div>
+                @Html.ValidationMessageFor(m => item.ItemType, String.Empty, new {@class = "validation-messages"})
+            </div>
+            <div class="form-group">
+                <div class="post-title-show">@Html.LabelFor(m => item.Image)</div>
+                <div class="col-md-10">
+                    <input type="file" name="ImageFile"/>
+                </div>
+                @Html.ValidationMessageFor(m => item.Image, String.Empty, new {@class = "validation-messages"})
+            </div>
+            <div class="form-group">
+                <div class="post-title-show">@Html.LabelFor(m => item.Postcode)</div>
+                <div class="input-group">
+                    @Html.EditorFor(m => item.Postcode, new {htmlAttributes = new {@class = "post-searchfield", placeholder = "Postcode"}})
+                </div>
+                @Html.ValidationMessageFor(m => item.Postcode, String.Empty, new {@class = "validation-messages"})
+            </div>
+            <div class="form-group">
+                <div class="post-title-show">@Html.LabelFor(m => item.DatePosted)</div>
+                <div class="input-group">
+                    @Html.EditorFor(m => item.DatePosted, new {htmlAttributes = new {@class = "post-searchfield post-date", placeholder = "Date found"}})
+                </div>
+                @Html.ValidationMessageFor(m => item.DatePosted, String.Empty, new {type = "date", @class = "validation-messages"})
+            </div>
+            <br/>
+            <h3>@Html.Raw("Security Questions:")</h3>
+            <hr/>
+            <p><i>@Html.Raw("You must answer atleast two questions*")</i></p>
+            <div class="form-group">
+                <div class="post-title-show">@Html.LabelFor(m => item.Question1)</div>
+                <div class="input-group">
+                    @Html.DropDownListFor(m => item.Question1, new SelectList(Model.Question1Data, "Question", "Question"), "Select...", new {@class = "item-types_dropdown-post"})
+                </div>
+                @Html.ValidationMessageFor(m => item.Question1, String.Empty, new {@class = "validation-messages"})
+            </div>
+            <div class="form-group">
+                <div class="post-title-show">@Html.LabelFor(m => item.Answer1)</div>
+                <div class="input-group">
+                    @Html.EditorFor(m => item.Answer1, new {htmlAttributes = new {@class = "post-searchfield answer", placeholder = "Answer 1"}})
+                </div>
+                @Html.ValidationMessageFor(m => item.Answer1, String.Empty, new {@class = "validation-messages"})
+            </div>
+            <div class="form-group">
+                <div class="post-title-show">@Html.LabelFor(m => item.Question2)</div>
+                <div class="input-group">
+                    @Html.DropDownListFor(m => item.Question2, new SelectList(Model.Question2Data, "Question", "Question"), "Select...", new {@class = "item-types_dropdown-post"})
+                </div>
+                @Html.ValidationMessageFor(m => item.Question2, String.Empty, new {@class = "validation-messages"})
+            </div>
+            <div class="form-group">
+                <div class="post-title-show">@Html.LabelFor(m => item.Answer2)</div>
+                <div class="input-group">
+                    @Html.EditorFor(m => item.Answer2, new {htmlAttributes = new {@class = "post-searchfield answer", placeholder = "Answer 2"}})
+                </div>
+                @Html.ValidationMessageFor(m => item.Answer2, String.Empty, new {@class = "validation-messages"})
+            </div>
+            <div class="form-group">
+                <div class="post-title-show">@Html.LabelFor(m => item.Question3)</div>
+                <div class="input-group">
+                    @Html.DropDownListFor(m => item.Question3, new SelectList(Model.Question3Data, "Question", "Question"), "Select...", new {@class = "item-types_dropdown-post"})
+                </div>
+                @Html.ValidationMessageFor(m => item.Question3, String.Empty, new {@class = "validation-messages"})
+            </div>
+            <div class="form-group">
+                <div class="post-title-show">@Html.LabelFor(m => item.Answer3)</div>
+                <div class="input-group">
+                    @Html.EditorFor(m => item.Answer3, new {htmlAttributes = new {@class = "post-searchfield answer", placeholder = "Answer 3"}})
+                </div>
+                @Html.ValidationMessageFor(m => item.Answer3, String.Empty, new {@class = "validation-messages"})
+            </div>
+            <br/>
+            <h3>@Html.Raw("Your Details:")</h3>
+            <hr/>
+            <div class="form-group">
+                <div class="post-title-show">@Html.LabelFor(m => item.Title)</div>
+                <div class="input-group">
+                    @Html.DropDownListFor(m => item.Title, new SelectList(Model.TitlesData, "Title", "Title"), "Select...", new {@class = "item-types_dropdown-post"})
+                </div>
+                @Html.ValidationMessageFor(m => m.Title, String.Empty, new {@class = "validation-messages"})
+            </div>
+            <div class="form-group">
+                <div class="post-title-show">@Html.LabelFor(m => item.FullName)</div>
+                <div class="input-group">
+                    @Html.EditorFor(m => item.FullName, new {htmlAttributes = new {@class = "post-searchfield", placeholder = "Full Name"}})
+                </div>
+                @Html.ValidationMessageFor(m => item.FullName, String.Empty, new {@class = "validation-messages"})
+            </div>
+            <div class="form-group">
+                <div class="post-title-show">@Html.LabelFor(m => item.EmailAddress)</div>
+                <div class="input-group">
+                    @Html.EditorFor(m => item.EmailAddress, new {htmlAttributes = new {@class = "post-searchfield", placeholder = "Email Address"}})
+                </div>
+                @Html.ValidationMessageFor(m => item.EmailAddress, String.Empty, new {@class = "validation-messages"})
+                <br/>
+                <i>@Html.Raw("All fields are mandatory*")</i>
+            </div>
+            <button id="Submit" class="search-btn">Submit</button>
+        </div>
+    }
+}

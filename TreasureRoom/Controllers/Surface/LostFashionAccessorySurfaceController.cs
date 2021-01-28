@@ -16,6 +16,7 @@ namespace TreasureRoom.Controllers.Surface
             {
                 SaveImage(model);
                 model.ID = GuidGenerator();
+                model.EditID = GuidGenerator();
                 model.ItemType = "Fashion Accessory";
                 postLostFashionAccessoryItemsDbHandler.PostLostItemsData(model);
                 return Redirect("/success");

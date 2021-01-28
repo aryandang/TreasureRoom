@@ -10,6 +10,8 @@ namespace TreasureRoom.Models.ViewModel
 
         public string ID { get; set; }
 
+        public string EditID { get; set; }
+
         [Required(ErrorMessage = "Must enter the lost item title*")]
         [StringLength(20)]
         [Display(Name = "Post Title")]

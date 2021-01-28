@@ -494,6 +494,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Data\Models\EditOrDeleteItemPage.generated.cs" />
+    <Compile Include="App_Data\Models\EditOrDeletePostPage.generated.cs" />
     <Compile Include="App_Data\Models\File.generated.cs" />
     <Compile Include="App_Data\Models\Folder.generated.cs" />
     <Compile Include="App_Data\Models\Home.generated.cs" />
@@ -519,6 +521,8 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Composing\RegisterServicesComposer.cs" />
+    <Compile Include="Controllers\RenderMvc\EditOrDeleteItemPageController.cs" />
+    <Compile Include="Controllers\RenderMvc\EditOrDeletePostPageController.cs" />
     <Compile Include="Controllers\RenderMvc\RetrievePageController.cs" />
     <Compile Include="Controllers\RenderMvc\LostItemsDetailsPageController.cs" />
     <Compile Include="Controllers\RenderMvc\LostPursePageController.cs" />
@@ -528,6 +532,7 @@
     <Compile Include="Controllers\RenderMvc\LostElectronicPageController.cs" />
     <Compile Include="Controllers\RenderMvc\PostPageController.cs" />
     <Compile Include="Controllers\RenderMvc\SearchPageController.cs" />
+    <Compile Include="Controllers\Surface\EditOrDeletePostSurfaceController.cs" />
     <Compile Include="Controllers\Surface\LostFashionAccessorySurfaceController.cs" />
     <Compile Include="Controllers\Surface\RetrieveSurfaceController.cs" />
     <Compile Include="Controllers\Surface\LostItemsDetailsSurfaceController.cs" />
@@ -538,6 +543,7 @@
     <Compile Include="Controllers\Surface\PostSurfaceController.cs" />
     <Compile Include="Controllers\Surface\SearchSurfaceController.cs" />
     <Compile Include="Models\DBHandler\GetItemTypesDBHandler.cs" />
+    <Compile Include="Models\DBHandler\GetLostItemsByEditIdDBHandler.cs" />
     <Compile Include="Models\DBHandler\GetLostItemsByIdDBHandler.cs" />
     <Compile Include="Models\DBHandler\GetLostItemsDBHandler.cs" />
     <Compile Include="Models\DBHandler\GetQuestionsFashionAccessoryDBHandler.cs" />
@@ -575,6 +581,7 @@
     <Compile Include="Models\dbo_Titles.cs">
       <DependentUpon>EntityModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\EditOrDeleteItemContentModel.cs" />
     <Compile Include="Models\EntityModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -597,6 +604,7 @@
       <DependentUpon>EntityModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\LostFashionAccessoryContentModel.cs" />
+    <Compile Include="Models\EditOrDeletePostContentModel.cs" />
     <Compile Include="Models\RetrieveItemContentModel.cs" />
     <Compile Include="Models\LostPurseContentModel.cs" />
     <Compile Include="Models\LostWalletContentModel.cs" />
@@ -605,6 +613,8 @@
     <Compile Include="Models\PostContentModel.cs" />
     <Compile Include="Models\SearchContentModel.cs" />
     <Compile Include="Models\LostItemDetailsContentModel.cs" />
+    <Compile Include="Models\ViewModel\EditOrDeleteItemViewModel.cs" />
+    <Compile Include="Models\ViewModel\EditOrDeletePostViewModel.cs" />
     <Compile Include="Models\ViewModel\ItemTypesViewModel.cs" />
     <Compile Include="Models\ViewModel\LostItemDetailsViewModel.cs" />
     <Compile Include="Models\ViewModel\LostKeysViewModel.cs" />
@@ -3671,6 +3681,10 @@
     <Content Include="Views\LostItemsDetailsPage.cshtml" />
     <Content Include="Views\Partials\LostItemDetailsPage.cshtml" />
     <Content Include="Views\Partials\RetrieveForm.cshtml" />
+    <Content Include="Views\EditOrDeleteItemPage.cshtml" />
+    <Content Include="Views\EditOrDeletePostPage.cshtml" />
+    <Content Include="Views\Partials\EditOrDeletePostForm.cshtml" />
+    <Content Include="Views\Partials\EditOrDeleteItemForm.cshtml" />
     <None Include="Views\Partials\SearchForm.cshtml" />
     <Content Include="Views\SearchPage.cshtml" />
     <Content Include="Views\PostPage.cshtml" />

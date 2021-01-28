@@ -16,6 +16,7 @@ warning 6002: The table/view 'TreasureRoom.dbo.dbo.LostItems' does not have a pr
       <PropertyRef Name="ID" />
     </Key>
     <Property Name="ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="EditID" Type="nvarchar" MaxLength="50" />
     <Property Name="Title" Type="nvarchar" MaxLength="50" />
     <Property Name="Description" Type="nvarchar" MaxLength="255" />
     <Property Name="Postcode" Type="nvarchar" MaxLength="50" />
@@ -92,6 +93,7 @@ warning 6002: The table/view 'TreasureRoom.dbo.dbo.Titles' does not have a prima
   <Function Name="Get_LostItems" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <Function Name="Post_LostItems" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="ID" Type="nvarchar" Mode="In" />
+    <Parameter Name="EditID" Type="nvarchar" Mode="In" />
     <Parameter Name="Title" Type="nvarchar" Mode="In" />
     <Parameter Name="Description" Type="nvarchar" Mode="In" />
     <Parameter Name="Postcode" Type="nvarchar" Mode="In" />
@@ -124,6 +126,7 @@ warning 6002: The table/view 'TreasureRoom.dbo.dbo.Titles' does not have a prima
     <EntitySet Name="dbo_LostItems" EntityType="Self.dbo_LostItems" store:Type="Tables" store:Schema="dbo" store:Name="dbo.LostItems">
       <DefiningQuery>SELECT 
     [dbo_LostItems].[ID] AS [ID], 
+    [dbo_LostItems].[EditID] AS [EditID], 
     [dbo_LostItems].[Title] AS [Title], 
     [dbo_LostItems].[Description] AS [Description], 
     [dbo_LostItems].[Postcode] AS [Postcode], 

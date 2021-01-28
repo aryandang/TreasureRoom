@@ -8,6 +8,8 @@ namespace TreasureRoom.Models.ViewModel
     {
         public string ID { get; set; }
 
+        public string EditID { get; set; }
+
         [Display(Name = "Title of the lost item:")]
         public string Title { get; set; }
 
@@ -26,6 +28,8 @@ namespace TreasureRoom.Models.ViewModel
 
         [Display(Name = "Image:")]
         public string Image { get; set; }
+
+        public HttpPostedFileBase ImageFile { get; set; }
 
 
         [Display(Name = "Date when the lost item was found:")]  

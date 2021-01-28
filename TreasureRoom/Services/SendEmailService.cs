@@ -14,6 +14,7 @@ namespace TreasureRoom.Services
             string fromEmailAddress = "treasureroomuk@gmail.com";
             string fromName = "Treasure Room UK";
             string body = null;
+            string EditOrDeleteLink = "http://treasurerom.web.local/edit-or-delete-post";
 
             var fromAddress = new MailAddress(fromEmailAddress, fromName);
             var toAddress = new MailAddress(ToEmailAddress, EmailFullName);
@@ -38,7 +39,8 @@ namespace TreasureRoom.Services
                               EmailRetrieveFullName
                               + Environment.NewLine + "Email Address: " + EmailRetrieveEmailAddress + Environment.NewLine +
                               "Phone Number: "
-                              + EmailRetrievePhoneNumber + Environment.NewLine + Environment.NewLine + "Thank you for using Treasure Room UK" + Environment.NewLine
+                              + EmailRetrievePhoneNumber + Environment.NewLine + Environment.NewLine +
+                              "Thank you for using Treasure Room UK" + Environment.NewLine
                               + "A UK based lost & search platform";
             }
             else
@@ -60,7 +62,8 @@ namespace TreasureRoom.Services
                               EmailRetrieveFullName
                               + Environment.NewLine + "Email Address: " + EmailRetrieveEmailAddress + Environment.NewLine +
                               "Phone Number: "
-                              + EmailRetrievePhoneNumber + Environment.NewLine + Environment.NewLine + "Thank you for using Treasure Room UK" + Environment.NewLine
+                              + EmailRetrievePhoneNumber + Environment.NewLine + Environment.NewLine +
+                              "Thank you for using Treasure Room UK" + Environment.NewLine
                               + "A UK based lost & search platform";
             }
 
