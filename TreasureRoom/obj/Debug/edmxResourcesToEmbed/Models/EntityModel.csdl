@@ -36,6 +36,27 @@
       <Parameter Name="Question3" Mode="In" Type="String" />
       <Parameter Name="Answer3" Mode="In" Type="String" />
     </FunctionImport>
+    <FunctionImport Name="Delete_LostItems">
+      <Parameter Name="EditID" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Update_LostItems">
+      <Parameter Name="EditID" Mode="In" Type="String" />
+      <Parameter Name="Title" Mode="In" Type="String" />
+      <Parameter Name="Description" Mode="In" Type="String" />
+      <Parameter Name="Postcode" Mode="In" Type="String" />
+      <Parameter Name="ItemType" Mode="In" Type="String" />
+      <Parameter Name="ImagePath" Mode="In" Type="String" />
+      <Parameter Name="DatePosted" Mode="In" Type="DateTime" />
+      <Parameter Name="UserTitle" Mode="In" Type="String" />
+      <Parameter Name="UserFullName" Mode="In" Type="String" />
+      <Parameter Name="UserEmailAddress" Mode="In" Type="String" />
+      <Parameter Name="Question1" Mode="In" Type="String" />
+      <Parameter Name="Answer1" Mode="In" Type="String" />
+      <Parameter Name="Question2" Mode="In" Type="String" />
+      <Parameter Name="Answer2" Mode="In" Type="String" />
+      <Parameter Name="Question3" Mode="In" Type="String" />
+      <Parameter Name="Answer3" Mode="In" Type="String" />
+    </FunctionImport>
   </EntityContainer>
   <ComplexType Name="Get_LostItems_Result">
     <Property Type="String" Name="ID" Nullable="false" MaxLength="50" />

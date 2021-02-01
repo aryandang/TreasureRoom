@@ -104,5 +104,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <FunctionImportMapping FunctionImportName="Post_LostItems" FunctionName="TreasureRoomModel.Store.Post_LostItems" />
+    <FunctionImportMapping FunctionImportName="Delete_LostItems" FunctionName="TreasureRoomModel.Store.Delete_LostItems" />
+    <FunctionImportMapping FunctionImportName="Update_LostItems" FunctionName="TreasureRoomModel.Store.Update_LostItems" />
   </EntityContainerMapping>
 </Mapping>

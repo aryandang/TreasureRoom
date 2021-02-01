@@ -20,7 +20,7 @@ namespace TreasureRoom.Models.DBHandler
                         Title = m.Title,
                         Description = m.Description,
                         ItemType = m.ItemType,
-                        Image = m.ImagePath,
+                        ImagePath = m.ImagePath,
                         Postcode = m.Postcode,
                         DatePosted = m.DatePosted.Value
                     }).ToList();
@@ -33,7 +33,7 @@ namespace TreasureRoom.Models.DBHandler
                         Title = m.Title,
                         Description = m.Description,
                         ItemType = m.ItemType,
-                        Image = m.ImagePath,
+                        ImagePath = m.ImagePath,
                         Postcode = m.Postcode,
                         DatePosted = m.DatePosted.Value
                     }).Where(m => (m.Description.Contains(searchTerm) || m.Title.Contains(searchTerm)) &&

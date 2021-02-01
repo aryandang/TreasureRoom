@@ -3,6 +3,7 @@ using System.Web.Mvc;
 using TreasureRoom.Models;
 using TreasureRoom.Models.DBHandler;
 using TreasureRoom.Models.ViewModel;
+using Umbraco.Core;
 using Umbraco.Web.Models;
 using Umbraco.Web.Mvc;
 
@@ -53,15 +54,36 @@ namespace TreasureRoom.Controllers.RenderMvc
 
             var getTitlesData = getTitlesDbHandler.GetTitles();
 
-            var editOrDeleteItemViewModel = new EditOrDeleteItemViewModel()
+            var editOrDeleteItemViewModel = new EditOrDeleteItemViewModel();
+            foreach (var val in getItemData)
             {
-                LostItemsData = getItemData,
-                ItemTypesData = getItemTypesData,
-                Question1Data = getQuestionsData,
-                Question2Data = getQuestionsData,
-                Question3Data = getQuestionsData,
-                TitlesData = getTitlesData
-            };
+                editOrDeleteItemViewModel = new EditOrDeleteItemViewModel()
+                {
+                    Title = val.Title,
+                    Description = val.Description,
+                    Postcode = val.Postcode,
+                    DatePosted = val.DatePosted,
+                    ImagePath = val.ImagePath,
+                    ImageFile = val.ImageFile,
+                    ItemType = val.ItemType,
+                    Question1 = val.Question1,
+                    Question2 = val.Question2,
+                    Question3 = val.Question3,
+                    Answer1 = val.Answer1,
+                    Answer2 = val.Answer2,
+                    Answer3 = val.Answer3,
+                    UserTitle = val.UserTitle,
+                    FullName = val.FullName,
+                    EmailAddress = val.EmailAddress,
+                    ItemTypesData = getItemTypesData,
+                    Question1Data = getQuestionsData,
+                    Question2Data = getQuestionsData,
+                    Question3Data = getQuestionsData,
+                    TitlesData = getTitlesData
+                };
+            }
+
+            
 
             editOrDeleteItemPageModel.EditOrDeleteItemViewModel = editOrDeleteItemViewModel;
 

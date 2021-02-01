@@ -39,6 +39,8 @@ namespace TreasureRoom.Models.ViewModel
 
         [Display(Name = "Upload Image")]
         public string ImagePath { get; set; }
+
+
         [Required(ErrorMessage = "Must select an image*")]
         public HttpPostedFileBase ImageFile { get; set; }
 
@@ -85,6 +87,7 @@ namespace TreasureRoom.Models.ViewModel
         [Required(ErrorMessage = "Must select a title*")]
         [Display(Name = "Title")]
         public string UserTitle { get; set; }
+
         public List<TitlesViewModel> TitlesData { get; set; }
 
 

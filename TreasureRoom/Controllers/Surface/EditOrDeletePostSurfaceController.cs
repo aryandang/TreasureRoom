@@ -36,10 +36,5 @@ namespace TreasureRoom.Controllers.Surface
             }
             return CurrentUmbracoPage();
         }
-
-        public ActionResult EditRecords(LostItemsViewModel model)
-        {
-
-        }
     }
 }

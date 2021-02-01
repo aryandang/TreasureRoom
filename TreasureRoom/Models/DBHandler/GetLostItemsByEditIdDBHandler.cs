@@ -20,7 +20,7 @@ namespace TreasureRoom.Models.DBHandler
                     Title = m.Title,
                     Description = m.Description,
                     ItemType = m.ItemType,
-                    Image = m.ImagePath,
+                    ImagePath = m.ImagePath,
                     Postcode = m.Postcode,
                     DatePosted = m.DatePosted.Value,
                     Question1 = m.Question1,
