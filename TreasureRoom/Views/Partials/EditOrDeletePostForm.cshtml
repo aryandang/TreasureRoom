@@ -8,11 +8,10 @@
             <h3>@Html.Raw("Please enter your key to edit or delete a post: ")</h3>
             <hr />
         </div>
-        <div class="form-group col-md-3">
+        <div class="form-group col-md-10">
             <div class="post-title-show"><h5>@Html.LabelFor(m => m.EditID)</h5></div>
             <div class="input-group">
-                @Html.EditorFor(m => m.EditID, new { htmlAttributes = new { @class = "post-searchfield", placeholder = "Key" } })
-
+                @Html.EditorFor(m => m.EditID, new { htmlAttributes = new { @class = "edit-Id-textbox editID-width", placeholder = "Key" } })
             </div>
             @Html.ValidationMessageFor(m => m.EditID, String.Empty, new { @class = "validation-messages" })
         </div>

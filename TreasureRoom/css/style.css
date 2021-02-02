@@ -595,3 +595,13 @@ hr {
     color: white;
     background:red;
 }
+.edit-Id-textbox {
+    height: 40px;
+    padding: 20px;
+    border: 1px solid black;
+    outline: none;
+    border-radius: 25px;
+}
+.editID-width {
+    width: 400px;
+}
