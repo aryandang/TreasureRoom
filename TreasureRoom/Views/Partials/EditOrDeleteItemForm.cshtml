@@ -30,10 +30,18 @@
         </div>
         <div class="form-group">
             <div class="post-title-show">@Html.LabelFor(m => Model.ImagePath)</div>
+            <p>Previously uploaded image:</p>
+            <br />
+            <div class="form-group">
+                <img src="@Url.Content(Model.ImagePath)" class="img-details-page" alt="">
+            </div>
+            <br />
             <div class="col-md-10">
                 <input type="file" name="ImageFile" />
             </div>
-            @Html.ValidationMessageFor(m => Model.ImagePath, String.Empty, new { @class = "validation-messages" })
+            @Html.ValidationMessageFor(m => Model.ImageFile, String.Empty, new { @class = "validation-messages" })
+            <br />
+            <i><p>Please upload the previous image or a new one.*</p></i>
         </div>
         <div class="form-group">
             <div class="post-title-show">@Html.LabelFor(m => Model.Postcode)</div>
@@ -44,10 +52,14 @@
         </div>
         <div class="form-group">
             <div class="post-title-show">@Html.LabelFor(m => Model.DatePosted)</div>
+            @Html.Raw("Your previous selected value: ")<br />
+            <p>@Convert.ToDateTime(Model.DatePosted).ToString("dd/MM/yyyy")</p>
             <div class="input-group">
                 @Html.EditorFor(m => Model.DatePosted, new { htmlAttributes = new { @class = "post-searchfield post-date", placeholder = "Date found" } })
             </div>
             @Html.ValidationMessageFor(m => Model.DatePosted, String.Empty, new { type = "date", @class = "validation-messages" })
+            <br />
+            <i><p>Please select the previous date or a new one*</p></i>
         </div>
         <br />
         <h3>@Html.Raw("Security Questions:")</h3>
@@ -121,6 +133,7 @@
             <br />
             <i>@Html.Raw("All fields are mandatory*")</i>
         </div>
-        <button id="Submit" class="search-btn">Submit</button>
+        <button id="Submit" class="search-btn">Edit Post</button>
+        @Html.ActionLink("Delete Post", "LoadForm", "DeleteItemSurface", new { editId = Model.EditID}, new { @class = "delete-btn" })
     </div>
 }

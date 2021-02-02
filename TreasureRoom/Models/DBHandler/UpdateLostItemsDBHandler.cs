@@ -8,7 +8,6 @@ namespace TreasureRoom.Models.DBHandler
 {
     public class UpdateLostItemsDBHandler
     {
-        EditOrDeleteItemViewModel editOrDeleteItemViewModel = new EditOrDeleteItemViewModel();
         public void UpdateLostItemsData(EditOrDeleteItemViewModel model)
         {
             using (var db = new TreasureRoomEntities())

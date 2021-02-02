@@ -8,11 +8,11 @@ namespace TreasureRoom.Models.DBHandler
 {
     public class DeleteLostItemsDbHandler
     {
-        public void DeleteLostItemsData(LostItemsViewModel model)
+        public void DeleteLostItemsData(string editId)
         {
             using (var db = new TreasureRoomEntities())
             {
-                db.Delete_LostItems(model.EditID);
+                db.Delete_LostItems(editId);
             }
         }
     }

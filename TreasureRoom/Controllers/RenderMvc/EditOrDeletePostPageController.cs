@@ -10,7 +10,7 @@ namespace TreasureRoom.Controllers.RenderMvc
     public class EditOrDeletePostPageController : RenderMvcController
     {
 
-        public ActionResult Index(ContentModel model)
+        public ActionResult Index(ContentModel model, string editId)
         {
             var editOrDeletePostPageModel = new EditOrDeletePostContentModel(model.Content);
 

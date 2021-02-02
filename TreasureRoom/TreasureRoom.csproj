@@ -494,6 +494,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Data\Models\DeleteItemPage.generated.cs" />
     <Compile Include="App_Data\Models\EditOrDeleteItemPage.generated.cs" />
     <Compile Include="App_Data\Models\EditOrDeletePostPage.generated.cs" />
     <Compile Include="App_Data\Models\File.generated.cs" />
@@ -521,6 +522,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Composing\RegisterServicesComposer.cs" />
+    <Compile Include="Controllers\RenderMvc\DeleteItemPageController.cs" />
     <Compile Include="Controllers\RenderMvc\EditOrDeleteItemPageController.cs" />
     <Compile Include="Controllers\RenderMvc\EditOrDeletePostPageController.cs" />
     <Compile Include="Controllers\RenderMvc\RetrievePageController.cs" />
@@ -532,6 +534,7 @@
     <Compile Include="Controllers\RenderMvc\LostElectronicPageController.cs" />
     <Compile Include="Controllers\RenderMvc\PostPageController.cs" />
     <Compile Include="Controllers\RenderMvc\SearchPageController.cs" />
+    <Compile Include="Controllers\Surface\DeleteItemSurfaceController.cs" />
     <Compile Include="Controllers\Surface\EditOrDeleteItemSurfaceController.cs" />
     <Compile Include="Controllers\Surface\EditOrDeletePostSurfaceController.cs" />
     <Compile Include="Controllers\Surface\LostFashionAccessorySurfaceController.cs" />
@@ -585,6 +588,7 @@
     <Compile Include="Models\dbo_Titles.cs">
       <DependentUpon>EntityModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\DeleteItemContentModel.cs" />
     <Compile Include="Models\EditOrDeleteItemContentModel.cs" />
     <Compile Include="Models\EntityModel.Context.cs">
       <AutoGen>True</AutoGen>
@@ -617,6 +621,7 @@
     <Compile Include="Models\PostContentModel.cs" />
     <Compile Include="Models\SearchContentModel.cs" />
     <Compile Include="Models\LostItemDetailsContentModel.cs" />
+    <Compile Include="Models\ViewModel\DeleteItemViewModel.cs" />
     <Compile Include="Models\ViewModel\EditOrDeleteItemViewModel.cs" />
     <Compile Include="Models\ViewModel\EditOrDeletePostViewModel.cs" />
     <Compile Include="Models\ViewModel\ItemTypesViewModel.cs" />
@@ -3690,6 +3695,8 @@
     <Content Include="Views\EditOrDeletePostPage.cshtml" />
     <Content Include="Views\Partials\EditOrDeletePostForm.cshtml" />
     <Content Include="Views\Partials\EditOrDeleteItemForm.cshtml" />
+    <Content Include="Views\DeleteItemPage.cshtml" />
+    <Content Include="Views\Partials\DeleteItemForm.cshtml" />
     <None Include="Views\Partials\SearchForm.cshtml" />
     <Content Include="Views\SearchPage.cshtml" />
     <Content Include="Views\PostPage.cshtml" />

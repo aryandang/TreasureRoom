@@ -59,10 +59,11 @@ namespace TreasureRoom.Controllers.RenderMvc
             {
                 editOrDeleteItemViewModel = new EditOrDeleteItemViewModel()
                 {
+                    EditID = val.EditID,
                     Title = val.Title,
                     Description = val.Description,
                     Postcode = val.Postcode,
-                    DatePosted = val.DatePosted,
+                    DatePosted = val.DatePosted.GetValueOrDefault(),
                     ImagePath = val.ImagePath,
                     ImageFile = val.ImageFile,
                     ItemType = val.ItemType,
