@@ -497,6 +497,7 @@
     <Compile Include="App_Data\Models\DeleteItemPage.generated.cs" />
     <Compile Include="App_Data\Models\EditOrDeleteItemPage.generated.cs" />
     <Compile Include="App_Data\Models\EditOrDeletePostPage.generated.cs" />
+    <Compile Include="App_Data\Models\ErrorPage.generated.cs" />
     <Compile Include="App_Data\Models\File.generated.cs" />
     <Compile Include="App_Data\Models\Folder.generated.cs" />
     <Compile Include="App_Data\Models\Home.generated.cs" />
@@ -3697,6 +3698,7 @@
     <Content Include="Views\Partials\EditOrDeleteItemForm.cshtml" />
     <Content Include="Views\DeleteItemPage.cshtml" />
     <Content Include="Views\Partials\DeleteItemForm.cshtml" />
+    <Content Include="Views\ErrorPage.cshtml" />
     <None Include="Views\Partials\SearchForm.cshtml" />
     <Content Include="Views\SearchPage.cshtml" />
     <Content Include="Views\PostPage.cshtml" />

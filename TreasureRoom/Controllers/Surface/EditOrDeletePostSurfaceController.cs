@@ -31,7 +31,7 @@ namespace TreasureRoom.Controllers.Surface
                     {
                         return RedirectToUmbracoPage(1246, queryString);
                     }
-                    return CurrentUmbracoPage();
+                    return RedirectToUmbracoPage(1254);
                 }
             }
             return CurrentUmbracoPage();
