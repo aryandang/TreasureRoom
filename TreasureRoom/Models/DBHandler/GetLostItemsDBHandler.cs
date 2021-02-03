@@ -14,7 +14,7 @@ namespace TreasureRoom.Models.DBHandler
             {
                 if (searchTerm.IsNullOrWhiteSpace() && postCode.IsNullOrWhiteSpace() && itemType.IsNullOrWhiteSpace())
                 {
-                     lostItems = db.dbo_LostItems.Select(m => new LostItemsViewModel()
+                    lostItems = db.dbo_LostItems.Select(m => new LostItemsViewModel()
                     {
                         ID = m.ID,
                         Title = m.Title,
@@ -23,7 +23,7 @@ namespace TreasureRoom.Models.DBHandler
                         ImagePath = m.ImagePath,
                         Postcode = m.Postcode,
                         DatePosted = m.DatePosted.Value
-                    }).ToList();
+                    }).OrderByDescending(m => m.DatePosted).ToList();
                 }
                 else if (!searchTerm.IsNullOrWhiteSpace() && !postCode.IsNullOrWhiteSpace() && !itemType.IsNullOrWhiteSpace())
                 {
@@ -38,9 +38,9 @@ namespace TreasureRoom.Models.DBHandler
                         DatePosted = m.DatePosted.Value
                     }).Where(m => (m.Description.Contains(searchTerm) || m.Title.Contains(searchTerm)) &&
                                   (m.Postcode.Contains(postCode))
-                                  & (m.ItemType.Contains(itemType))).ToList();
+                                  & (m.ItemType.Contains(itemType))).OrderByDescending(m => m.DatePosted).ToList();
                 }
-                
+
 
                 return lostItems;
             }

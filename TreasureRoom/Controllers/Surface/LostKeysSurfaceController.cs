@@ -3,6 +3,7 @@ using System.IO;
 using System.Web.Mvc;
 using TreasureRoom.Models.DBHandler;
 using TreasureRoom.Models.ViewModel;
+using TreasureRoom.Services;
 using Umbraco.Web.Mvc;
 
 namespace TreasureRoom.Controllers.Surface
@@ -10,6 +11,8 @@ namespace TreasureRoom.Controllers.Surface
     public class LostKeysSurfaceController : SurfaceController
     {
         private PostLostKeysDBHandler postLostKeysDbHandler = new PostLostKeysDBHandler();
+        private SendEmailService sendEmailService = new SendEmailService();
+
         public ActionResult SubmitForm(LostKeysViewModel model)
         {
             if (ModelState.IsValid)
@@ -19,6 +22,7 @@ namespace TreasureRoom.Controllers.Surface
                 model.EditID = GuidGenerator();
                 model.ItemType = "Keys";
                 postLostKeysDbHandler.PostLostItemsData(model);
+                sendEmailService.SendConfirmationEmail(model.EmailAddress, model.FullName, model.ItemType, model.EditID);
                 return Redirect("/success");
             }
             return CurrentUmbracoPage();
