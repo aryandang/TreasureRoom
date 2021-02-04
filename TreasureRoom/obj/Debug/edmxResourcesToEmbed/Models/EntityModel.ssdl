@@ -16,6 +16,7 @@ warning 6002: The table/view 'TreasureRoom.dbo.dbo.LostItems' does not have a pr
       <PropertyRef Name="ID" />
     </Key>
     <Property Name="ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="EditID" Type="nvarchar" MaxLength="50" />
     <Property Name="Title" Type="nvarchar" MaxLength="50" />
     <Property Name="Description" Type="nvarchar" MaxLength="255" />
     <Property Name="Postcode" Type="nvarchar" MaxLength="50" />
@@ -88,10 +89,14 @@ warning 6002: The table/view 'TreasureRoom.dbo.dbo.Titles' does not have a prima
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Title" Type="nvarchar" MaxLength="50" />
   </EntityType>
+  <Function Name="Delete_LostItems" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="EditID" Type="nvarchar" Mode="In" />
+  </Function>
   <Function Name="Get_ItemTypes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <Function Name="Get_LostItems" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <Function Name="Post_LostItems" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="ID" Type="nvarchar" Mode="In" />
+    <Parameter Name="EditID" Type="nvarchar" Mode="In" />
     <Parameter Name="Title" Type="nvarchar" Mode="In" />
     <Parameter Name="Description" Type="nvarchar" Mode="In" />
     <Parameter Name="Postcode" Type="nvarchar" Mode="In" />
@@ -114,6 +119,24 @@ warning 6002: The table/view 'TreasureRoom.dbo.dbo.Titles' does not have a prima
     <Parameter Name="EmailAddress" Type="nvarchar" Mode="In" />
     <Parameter Name="PhoneNumber" Type="nvarchar" Mode="In" />
   </Function>
+  <Function Name="Update_LostItems" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="EditID" Type="nvarchar" Mode="In" />
+    <Parameter Name="Title" Type="nvarchar" Mode="In" />
+    <Parameter Name="Description" Type="nvarchar" Mode="In" />
+    <Parameter Name="Postcode" Type="nvarchar" Mode="In" />
+    <Parameter Name="ItemType" Type="nvarchar" Mode="In" />
+    <Parameter Name="ImagePath" Type="nvarchar" Mode="In" />
+    <Parameter Name="DatePosted" Type="datetime" Mode="In" />
+    <Parameter Name="UserTitle" Type="nvarchar" Mode="In" />
+    <Parameter Name="UserFullName" Type="nvarchar" Mode="In" />
+    <Parameter Name="UserEmailAddress" Type="nvarchar" Mode="In" />
+    <Parameter Name="Question1" Type="nvarchar" Mode="In" />
+    <Parameter Name="Answer1" Type="nvarchar" Mode="In" />
+    <Parameter Name="Question2" Type="nvarchar" Mode="In" />
+    <Parameter Name="Answer2" Type="nvarchar" Mode="In" />
+    <Parameter Name="Question3" Type="nvarchar" Mode="In" />
+    <Parameter Name="Answer3" Type="nvarchar" Mode="In" />
+  </Function>
   <EntityContainer Name="TreasureRoomModelStoreContainer">
     <EntitySet Name="dbo_ItemTypes" EntityType="Self.dbo_ItemTypes" store:Type="Tables" store:Schema="dbo" store:Name="dbo.ItemTypes">
       <DefiningQuery>SELECT 
@@ -124,6 +147,7 @@ warning 6002: The table/view 'TreasureRoom.dbo.dbo.Titles' does not have a prima
     <EntitySet Name="dbo_LostItems" EntityType="Self.dbo_LostItems" store:Type="Tables" store:Schema="dbo" store:Name="dbo.LostItems">
       <DefiningQuery>SELECT 
     [dbo_LostItems].[ID] AS [ID], 
+    [dbo_LostItems].[EditID] AS [EditID], 
     [dbo_LostItems].[Title] AS [Title], 
     [dbo_LostItems].[Description] AS [Description], 
     [dbo_LostItems].[Postcode] AS [Postcode], 

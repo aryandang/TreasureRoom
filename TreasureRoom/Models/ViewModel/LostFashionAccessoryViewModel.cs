@@ -10,6 +10,8 @@ namespace TreasureRoom.Models.ViewModel
 
         public string ID { get; set; }
 
+        public string EditID { get; set; }
+
         [Required(ErrorMessage = "Must enter the lost item title*")]
         [StringLength(20)]
         [Display(Name = "Post Title")]
@@ -47,7 +49,7 @@ namespace TreasureRoom.Models.ViewModel
         [Display(Name = "Question 1")]
         [Required(ErrorMessage = "Must select one question*")]
         public string Question1 { get; set; }
-        public List<QuestionsFashionAccessoryViewModel> Question1Data { get; set; }
+        public List<QuestionsViewModel> Question1Data { get; set; }
 
 
         [Display(Name = "Answer 1")]
@@ -58,7 +60,7 @@ namespace TreasureRoom.Models.ViewModel
         [Display(Name = "Question 2")]
         [Required(ErrorMessage = "Must select one question*")]
         public string Question2 { get; set; }
-        public List<QuestionsFashionAccessoryViewModel> Question2Data { get; set; }
+        public List<QuestionsViewModel> Question2Data { get; set; }
 
 
         [Display(Name = "Answer 2")]
@@ -68,7 +70,7 @@ namespace TreasureRoom.Models.ViewModel
 
         [Display(Name = "Question 3")]
         public string Question3 { get; set; }
-        public List<QuestionsFashionAccessoryViewModel> Question3Data { get; set; }
+        public List<QuestionsViewModel> Question3Data { get; set; }
 
 
 

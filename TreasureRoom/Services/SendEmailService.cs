@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net.Mail;
-using System.Web;
 
 namespace TreasureRoom.Services
 {
@@ -38,7 +35,8 @@ namespace TreasureRoom.Services
                               EmailRetrieveFullName
                               + Environment.NewLine + "Email Address: " + EmailRetrieveEmailAddress + Environment.NewLine +
                               "Phone Number: "
-                              + EmailRetrievePhoneNumber + Environment.NewLine + Environment.NewLine + "Thank you for using Treasure Room UK" + Environment.NewLine
+                              + EmailRetrievePhoneNumber + Environment.NewLine + Environment.NewLine +
+                              "Thank you for using Treasure Room UK" + Environment.NewLine
                               + "A UK based lost & search platform";
             }
             else
@@ -60,9 +58,43 @@ namespace TreasureRoom.Services
                               EmailRetrieveFullName
                               + Environment.NewLine + "Email Address: " + EmailRetrieveEmailAddress + Environment.NewLine +
                               "Phone Number: "
-                              + EmailRetrievePhoneNumber + Environment.NewLine + Environment.NewLine + "Thank you for using Treasure Room UK" + Environment.NewLine
+                              + EmailRetrievePhoneNumber + Environment.NewLine + Environment.NewLine +
+                              "Thank you for using Treasure Room UK" + Environment.NewLine
                               + "A UK based lost & search platform";
             }
+
+            SmtpClient smtpClient = new SmtpClient();
+            using (var message = new MailMessage(fromAddress, toAddress)
+            {
+                Subject = subject,
+                Body = body,
+            })
+            {
+                message.IsBodyHtml = false;
+                smtpClient.Send(message);
+            }
+        }
+
+        public void SendConfirmationEmail(string ToEmailAddress, string EmailFullName, string EmailItemType, string EmailEditKey)
+        {
+            string fromEmailAddress = "treasureroomuk@gmail.com";
+            string fromName = "Treasure Room UK";
+            string body = null;
+            string EditOrDeleteLink = "http://treasureroom.web.local/edit-or-delete-post";
+
+            var fromAddress = new MailAddress(fromEmailAddress, fromName);
+            var toAddress = new MailAddress(ToEmailAddress, EmailFullName);
+            string subject = "Confirmation Of Success Post About A Lost " + EmailItemType;
+
+            body = "Dear " + EmailFullName + "," + Environment.NewLine + Environment.NewLine +
+                   "We are pleased to inform you that the your recent post about a lost " +
+                   EmailItemType.ToLower() + " has been posted!"
+                   + Environment.NewLine + Environment.NewLine +
+                   "In case you would like to edit the post or delete it from Treasure Room, please use the key below at " + EditOrDeleteLink + ":" + Environment.NewLine
+                   + Environment.NewLine + EmailEditKey +
+                   Environment.NewLine + Environment.NewLine +
+                   "Thank you for using Treasure Room UK" + Environment.NewLine
+                   + "A UK based lost & search platform";
 
             SmtpClient smtpClient = new SmtpClient();
             using (var message = new MailMessage(fromAddress, toAddress)

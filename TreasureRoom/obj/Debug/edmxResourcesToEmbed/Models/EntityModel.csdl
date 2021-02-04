@@ -5,9 +5,21 @@
     <FunctionImport Name="Get_ItemTypes" ReturnType="Collection(TreasureRoomModel.Get_ItemTypes_Result)" />
     <EntitySet Name="dbo_ItemTypes" EntityType="TreasureRoomModel.dbo_ItemTypes" />
     <EntitySet Name="dbo_Titles" EntityType="TreasureRoomModel.dbo_Titles" />
+    <EntitySet Name="dbo_Questions_Electronic" EntityType="TreasureRoomModel.dbo_Questions_Electronic" />
+    <EntitySet Name="dbo_Questions_FashionAccessory" EntityType="TreasureRoomModel.dbo_Questions_FashionAccessory" />
+    <EntitySet Name="dbo_Questions_Keys" EntityType="TreasureRoomModel.dbo_Questions_Keys" />
+    <EntitySet Name="dbo_Questions_WalletOrPurse" EntityType="TreasureRoomModel.dbo_Questions_WalletOrPurse" />
+    <EntitySet Name="dbo_RetrieveItemsUsers" EntityType="TreasureRoomModel.dbo_RetrieveItemsUsers" />
+    <FunctionImport Name="Post_RetrieveItemsUsers">
+      <Parameter Name="ID" Mode="In" Type="String" />
+      <Parameter Name="FullName" Mode="In" Type="String" />
+      <Parameter Name="EmailAddress" Mode="In" Type="String" />
+      <Parameter Name="PhoneNumber" Mode="In" Type="String" />
+    </FunctionImport>
     <EntitySet Name="dbo_LostItems" EntityType="TreasureRoomModel.dbo_LostItems" />
     <FunctionImport Name="Post_LostItems">
       <Parameter Name="ID" Mode="In" Type="String" />
+      <Parameter Name="EditID" Mode="In" Type="String" />
       <Parameter Name="Title" Mode="In" Type="String" />
       <Parameter Name="Description" Mode="In" Type="String" />
       <Parameter Name="Postcode" Mode="In" Type="String" />
@@ -24,16 +36,26 @@
       <Parameter Name="Question3" Mode="In" Type="String" />
       <Parameter Name="Answer3" Mode="In" Type="String" />
     </FunctionImport>
-    <EntitySet Name="dbo_Questions_Electronic" EntityType="TreasureRoomModel.dbo_Questions_Electronic" />
-    <EntitySet Name="dbo_Questions_FashionAccessory" EntityType="TreasureRoomModel.dbo_Questions_FashionAccessory" />
-    <EntitySet Name="dbo_Questions_Keys" EntityType="TreasureRoomModel.dbo_Questions_Keys" />
-    <EntitySet Name="dbo_Questions_WalletOrPurse" EntityType="TreasureRoomModel.dbo_Questions_WalletOrPurse" />
-    <EntitySet Name="dbo_RetrieveItemsUsers" EntityType="TreasureRoomModel.dbo_RetrieveItemsUsers" />
-    <FunctionImport Name="Post_RetrieveItemsUsers">
-      <Parameter Name="ID" Mode="In" Type="String" />
-      <Parameter Name="FullName" Mode="In" Type="String" />
-      <Parameter Name="EmailAddress" Mode="In" Type="String" />
-      <Parameter Name="PhoneNumber" Mode="In" Type="String" />
+    <FunctionImport Name="Delete_LostItems">
+      <Parameter Name="EditID" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Update_LostItems">
+      <Parameter Name="EditID" Mode="In" Type="String" />
+      <Parameter Name="Title" Mode="In" Type="String" />
+      <Parameter Name="Description" Mode="In" Type="String" />
+      <Parameter Name="Postcode" Mode="In" Type="String" />
+      <Parameter Name="ItemType" Mode="In" Type="String" />
+      <Parameter Name="ImagePath" Mode="In" Type="String" />
+      <Parameter Name="DatePosted" Mode="In" Type="DateTime" />
+      <Parameter Name="UserTitle" Mode="In" Type="String" />
+      <Parameter Name="UserFullName" Mode="In" Type="String" />
+      <Parameter Name="UserEmailAddress" Mode="In" Type="String" />
+      <Parameter Name="Question1" Mode="In" Type="String" />
+      <Parameter Name="Answer1" Mode="In" Type="String" />
+      <Parameter Name="Question2" Mode="In" Type="String" />
+      <Parameter Name="Answer2" Mode="In" Type="String" />
+      <Parameter Name="Question3" Mode="In" Type="String" />
+      <Parameter Name="Answer3" Mode="In" Type="String" />
     </FunctionImport>
   </EntityContainer>
   <ComplexType Name="Get_LostItems_Result">
@@ -61,27 +83,6 @@
     </Key>
     <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-  </EntityType>
-  <EntityType Name="dbo_LostItems">
-    <Key>
-      <PropertyRef Name="ID" />
-    </Key>
-    <Property Name="ID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-    <Property Name="Postcode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="ItemType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="ImagePath" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-    <Property Name="DatePosted" Type="DateTime" Precision="3" />
-    <Property Name="UserTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="UserFullName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <Property Name="UserEmailAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="Question1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <Property Name="Answer1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <Property Name="Question2" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <Property Name="Answer2" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <Property Name="Question3" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <Property Name="Answer3" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="dbo_Questions_Electronic">
     <Key>
@@ -119,5 +120,27 @@
     <Property Name="FullName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="EmailAddress" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="PhoneNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="dbo_LostItems">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EditID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Postcode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ItemType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ImagePath" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="DatePosted" Type="DateTime" Precision="3" />
+    <Property Name="UserTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserFullName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="UserEmailAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Question1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Answer1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Question2" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Answer2" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Question3" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Answer3" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
   </EntityType>
 </Schema>

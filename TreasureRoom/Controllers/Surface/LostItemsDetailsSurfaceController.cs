@@ -11,7 +11,7 @@ namespace TreasureRoom.Controllers.Surface
 {
     public class LostItemDetailsSurfaceController : SurfaceController
     {
-        public ActionResult LoadForm(LostItemDetailsViewModel model, string id)
+        public ActionResult LoadForm(LostItemDetailsViewModel model)
         {
             var queryString = new NameValueCollection();
             if (!string.IsNullOrWhiteSpace(model.ID))
