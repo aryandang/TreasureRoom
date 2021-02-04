@@ -84,3 +84,4 @@ C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom\obj\Debug\Tr
 C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom\obj\Debug\TreasureRoom.csproj.CopyComplete
 C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom\obj\Debug\TreasureRoom.dll
 C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom\obj\Debug\TreasureRoom.pdb
+C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom\obj\Debug\TreasureRoom.csprojAssemblyReference.cache

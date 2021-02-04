@@ -32,6 +32,8 @@ warning 6002: The table/view 'TreasureRoom.dbo.dbo.LostItems' does not have a pr
     <Property Name="Answer2" Type="nvarchar" MaxLength="100" />
     <Property Name="Question3" Type="nvarchar" MaxLength="100" />
     <Property Name="Answer3" Type="nvarchar" MaxLength="100" />
+    <Property Name="AgeAbove18AndHonesty" Type="bit" />
+    <Property Name="ConsentToData" Type="bit" />
   </EntityType>
   <!--Errors Found During Generation:
 warning 6002: The table/view 'TreasureRoom.dbo.dbo.Questions.Electronic' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
@@ -79,6 +81,8 @@ warning 6002: The table/view 'TreasureRoom.dbo.dbo.RetrieveItemsUsers' does not 
     <Property Name="FullName" Type="nvarchar" MaxLength="100" />
     <Property Name="EmailAddress" Type="nvarchar" MaxLength="100" />
     <Property Name="PhoneNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="AgeAbove18AndHonesty" Type="bit" />
+    <Property Name="ConsentToData" Type="bit" />
   </EntityType>
   <!--Errors Found During Generation:
 warning 6002: The table/view 'TreasureRoom.dbo.dbo.Titles' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
@@ -112,12 +116,16 @@ warning 6002: The table/view 'TreasureRoom.dbo.dbo.Titles' does not have a prima
     <Parameter Name="Answer2" Type="nvarchar" Mode="In" />
     <Parameter Name="Question3" Type="nvarchar" Mode="In" />
     <Parameter Name="Answer3" Type="nvarchar" Mode="In" />
+    <Parameter Name="AgeAbove18AndHonesty" Type="bit" Mode="In" />
+    <Parameter Name="ConsentToData" Type="bit" Mode="In" />
   </Function>
   <Function Name="Post_RetrieveItemsUsers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="ID" Type="nvarchar" Mode="In" />
     <Parameter Name="FullName" Type="nvarchar" Mode="In" />
     <Parameter Name="EmailAddress" Type="nvarchar" Mode="In" />
     <Parameter Name="PhoneNumber" Type="nvarchar" Mode="In" />
+    <Parameter Name="AgeAbove18AndHonesty" Type="bit" Mode="In" />
+    <Parameter Name="ConsentToData" Type="bit" Mode="In" />
   </Function>
   <Function Name="Update_LostItems" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="EditID" Type="nvarchar" Mode="In" />
@@ -162,7 +170,9 @@ warning 6002: The table/view 'TreasureRoom.dbo.dbo.Titles' does not have a prima
     [dbo_LostItems].[Question2] AS [Question2], 
     [dbo_LostItems].[Answer2] AS [Answer2], 
     [dbo_LostItems].[Question3] AS [Question3], 
-    [dbo_LostItems].[Answer3] AS [Answer3]
+    [dbo_LostItems].[Answer3] AS [Answer3], 
+    [dbo_LostItems].[AgeAbove18AndHonesty] AS [AgeAbove18AndHonesty], 
+    [dbo_LostItems].[ConsentToData] AS [ConsentToData]
     FROM [dbo].[dbo.LostItems] AS [dbo_LostItems]</DefiningQuery>
     </EntitySet>
     <EntitySet Name="dbo_Questions_Electronic" EntityType="Self.dbo_Questions_Electronic" store:Type="Tables" store:Schema="dbo" store:Name="dbo.Questions.Electronic">
@@ -194,7 +204,9 @@ warning 6002: The table/view 'TreasureRoom.dbo.dbo.Titles' does not have a prima
     [dbo_RetrieveItemsUsers].[ID] AS [ID], 
     [dbo_RetrieveItemsUsers].[FullName] AS [FullName], 
     [dbo_RetrieveItemsUsers].[EmailAddress] AS [EmailAddress], 
-    [dbo_RetrieveItemsUsers].[PhoneNumber] AS [PhoneNumber]
+    [dbo_RetrieveItemsUsers].[PhoneNumber] AS [PhoneNumber], 
+    [dbo_RetrieveItemsUsers].[AgeAbove18AndHonesty] AS [AgeAbove18AndHonesty], 
+    [dbo_RetrieveItemsUsers].[ConsentToData] AS [ConsentToData]
     FROM [dbo].[dbo.RetrieveItemsUsers] AS [dbo_RetrieveItemsUsers]</DefiningQuery>
     </EntitySet>
     <EntitySet Name="dbo_Titles" EntityType="Self.dbo_Titles" store:Type="Tables" store:Schema="dbo" store:Name="dbo.Titles">

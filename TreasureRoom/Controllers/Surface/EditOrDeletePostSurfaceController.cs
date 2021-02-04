@@ -25,14 +25,25 @@ namespace TreasureRoom.Controllers.Surface
             {
                 var getItemsByEditId = getLostItemsByEditIdDbHandler.GetLostItemsById(model.EditID);
                 model.LostItemsData = getItemsByEditId;
-                foreach (var value in model.LostItemsData)
+
+                if (model.LostItemsData.Count != 0)
                 {
-                    if (model.EditID.Equals(value.EditID))
+                    foreach (var value in model.LostItemsData)
                     {
-                        return RedirectToUmbracoPage(1246, queryString);
+
+                        if (model.EditID.Equals(value.EditID))
+                        {
+                            return RedirectToUmbracoPage(1246, queryString);
+                        }
+                        return RedirectToUmbracoPage(1254);
                     }
+                }
+                else
+                {
                     return RedirectToUmbracoPage(1254);
                 }
+                
+
             }
             return CurrentUmbracoPage();
         }

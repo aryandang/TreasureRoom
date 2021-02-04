@@ -31,5 +31,7 @@ namespace TreasureRoom.Models
         public string Answer2 { get; set; }
         public string Question3 { get; set; }
         public string Answer3 { get; set; }
+        public Nullable<bool> AgeAbove18AndHonesty { get; set; }
+        public Nullable<bool> ConsentToData { get; set; }
     }
 }

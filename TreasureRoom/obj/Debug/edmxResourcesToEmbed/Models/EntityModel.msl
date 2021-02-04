@@ -72,6 +72,8 @@
     <EntitySetMapping Name="dbo_RetrieveItemsUsers">
       <EntityTypeMapping TypeName="TreasureRoomModel.dbo_RetrieveItemsUsers">
         <MappingFragment StoreEntitySet="dbo_RetrieveItemsUsers">
+          <ScalarProperty Name="ConsentToData" ColumnName="ConsentToData" />
+          <ScalarProperty Name="AgeAbove18AndHonesty" ColumnName="AgeAbove18AndHonesty" />
           <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
           <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
           <ScalarProperty Name="FullName" ColumnName="FullName" />
@@ -79,10 +81,11 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <FunctionImportMapping FunctionImportName="Post_RetrieveItemsUsers" FunctionName="TreasureRoomModel.Store.Post_RetrieveItemsUsers" />
     <EntitySetMapping Name="dbo_LostItems">
       <EntityTypeMapping TypeName="TreasureRoomModel.dbo_LostItems">
         <MappingFragment StoreEntitySet="dbo_LostItems">
+          <ScalarProperty Name="ConsentToData" ColumnName="ConsentToData" />
+          <ScalarProperty Name="AgeAbove18AndHonesty" ColumnName="AgeAbove18AndHonesty" />
           <ScalarProperty Name="Answer3" ColumnName="Answer3" />
           <ScalarProperty Name="Question3" ColumnName="Question3" />
           <ScalarProperty Name="Answer2" ColumnName="Answer2" />
@@ -103,8 +106,9 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <FunctionImportMapping FunctionImportName="Post_LostItems" FunctionName="TreasureRoomModel.Store.Post_LostItems" />
     <FunctionImportMapping FunctionImportName="Delete_LostItems" FunctionName="TreasureRoomModel.Store.Delete_LostItems" />
+    <FunctionImportMapping FunctionImportName="Post_LostItems" FunctionName="TreasureRoomModel.Store.Post_LostItems" />
+    <FunctionImportMapping FunctionImportName="Post_RetrieveItemsUsers" FunctionName="TreasureRoomModel.Store.Post_RetrieveItemsUsers" />
     <FunctionImportMapping FunctionImportName="Update_LostItems" FunctionName="TreasureRoomModel.Store.Update_LostItems" />
   </EntityContainerMapping>
 </Mapping>

@@ -10,13 +10,10 @@
     <EntitySet Name="dbo_Questions_Keys" EntityType="TreasureRoomModel.dbo_Questions_Keys" />
     <EntitySet Name="dbo_Questions_WalletOrPurse" EntityType="TreasureRoomModel.dbo_Questions_WalletOrPurse" />
     <EntitySet Name="dbo_RetrieveItemsUsers" EntityType="TreasureRoomModel.dbo_RetrieveItemsUsers" />
-    <FunctionImport Name="Post_RetrieveItemsUsers">
-      <Parameter Name="ID" Mode="In" Type="String" />
-      <Parameter Name="FullName" Mode="In" Type="String" />
-      <Parameter Name="EmailAddress" Mode="In" Type="String" />
-      <Parameter Name="PhoneNumber" Mode="In" Type="String" />
-    </FunctionImport>
     <EntitySet Name="dbo_LostItems" EntityType="TreasureRoomModel.dbo_LostItems" />
+    <FunctionImport Name="Delete_LostItems">
+      <Parameter Name="EditID" Mode="In" Type="String" />
+    </FunctionImport>
     <FunctionImport Name="Post_LostItems">
       <Parameter Name="ID" Mode="In" Type="String" />
       <Parameter Name="EditID" Mode="In" Type="String" />
@@ -35,9 +32,16 @@
       <Parameter Name="Answer2" Mode="In" Type="String" />
       <Parameter Name="Question3" Mode="In" Type="String" />
       <Parameter Name="Answer3" Mode="In" Type="String" />
+      <Parameter Name="AgeAbove18AndHonesty" Mode="In" Type="Boolean" />
+      <Parameter Name="ConsentToData" Mode="In" Type="Boolean" />
     </FunctionImport>
-    <FunctionImport Name="Delete_LostItems">
-      <Parameter Name="EditID" Mode="In" Type="String" />
+    <FunctionImport Name="Post_RetrieveItemsUsers">
+      <Parameter Name="ID" Mode="In" Type="String" />
+      <Parameter Name="FullName" Mode="In" Type="String" />
+      <Parameter Name="EmailAddress" Mode="In" Type="String" />
+      <Parameter Name="PhoneNumber" Mode="In" Type="String" />
+      <Parameter Name="AgeAbove18AndHonesty" Mode="In" Type="Boolean" />
+      <Parameter Name="ConsentToData" Mode="In" Type="Boolean" />
     </FunctionImport>
     <FunctionImport Name="Update_LostItems">
       <Parameter Name="EditID" Mode="In" Type="String" />
@@ -120,6 +124,8 @@
     <Property Name="FullName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="EmailAddress" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="PhoneNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AgeAbove18AndHonesty" Type="Boolean" />
+    <Property Name="ConsentToData" Type="Boolean" />
   </EntityType>
   <EntityType Name="dbo_LostItems">
     <Key>
@@ -142,5 +148,7 @@
     <Property Name="Answer2" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="Question3" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="Answer3" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="AgeAbove18AndHonesty" Type="Boolean" />
+    <Property Name="ConsentToData" Type="Boolean" />
   </EntityType>
 </Schema>
