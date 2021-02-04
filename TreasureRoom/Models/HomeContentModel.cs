@@ -1,6 +1,7 @@
 ﻿using TreasureRoom.Models.ViewModel;
 using Umbraco.Core.Models.PublishedContent;
 using Umbraco.Web.Models;
+using Umbraco.Web.PublishedModels;
 
 namespace TreasureRoom.Models
 {
@@ -12,5 +13,7 @@ namespace TreasureRoom.Models
         }
 
         public HomeViewModel HomeViewModel { get; set; }
+
+        public Home Home { get; set; }
     }
 }

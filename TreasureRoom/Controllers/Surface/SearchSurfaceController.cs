@@ -16,6 +16,8 @@ namespace TreasureRoom.Controllers.Surface
 {
     public class SearchSurfaceController : SurfaceController
     {
+
+        [HttpPost]
         public ActionResult SubmitForm(SearchViewModel model)
         {
             if (!ModelState.IsValid)
@@ -38,7 +40,7 @@ namespace TreasureRoom.Controllers.Surface
                 queryString.Add("ItemType", model.ItemType);
             }
 
-            return RedirectToCurrentUmbracoPage(queryString);
+            return RedirectToUmbracoPage(1188, queryString);
         }
     }
 }

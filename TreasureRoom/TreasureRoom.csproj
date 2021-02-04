@@ -526,6 +526,7 @@
     <Compile Include="Controllers\RenderMvc\DeleteItemPageController.cs" />
     <Compile Include="Controllers\RenderMvc\EditOrDeleteItemPageController.cs" />
     <Compile Include="Controllers\RenderMvc\EditOrDeletePostPageController.cs" />
+    <Compile Include="Controllers\RenderMvc\HomeController.cs" />
     <Compile Include="Controllers\RenderMvc\RetrievePageController.cs" />
     <Compile Include="Controllers\RenderMvc\LostItemsDetailsPageController.cs" />
     <Compile Include="Controllers\RenderMvc\LostPursePageController.cs" />
@@ -546,6 +547,7 @@
     <Compile Include="Controllers\Surface\LostKeysSurfaceController.cs" />
     <Compile Include="Controllers\Surface\LostElectronicSurfaceController.cs" />
     <Compile Include="Controllers\Surface\PostSurfaceController.cs" />
+    <Compile Include="Controllers\Surface\HomeSurfaceController.cs" />
     <Compile Include="Controllers\Surface\SearchSurfaceController.cs" />
     <Compile Include="Models\DBHandler\DeleteLostItemsDbHandler.cs" />
     <Compile Include="Models\DBHandler\GetItemTypesDBHandler.cs" />
