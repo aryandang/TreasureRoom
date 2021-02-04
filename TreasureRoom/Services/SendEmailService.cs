@@ -88,7 +88,7 @@ namespace TreasureRoom.Services
 
             body = "Dear " + EmailFullName + "," + Environment.NewLine + Environment.NewLine +
                    "We are pleased to inform you that the your recent post about a lost " +
-                   EmailItemType.ToLower() + "has been posted!"
+                   EmailItemType.ToLower() + " has been posted!"
                    + Environment.NewLine + Environment.NewLine +
                    "In case you would like to edit the post or delete it from Treasure Room, please use the key below at " + EditOrDeleteLink + ":" + Environment.NewLine
                    + Environment.NewLine + EmailEditKey +

@@ -620,6 +620,7 @@
     <Compile Include="Models\LostKeysContentModel.cs" />
     <Compile Include="Models\LostElectronicContentModel.cs" />
     <Compile Include="Models\PostContentModel.cs" />
+    <Compile Include="Models\HomeContentModel.cs" />
     <Compile Include="Models\SearchContentModel.cs" />
     <Compile Include="Models\LostItemDetailsContentModel.cs" />
     <Compile Include="Models\ViewModel\DeleteItemViewModel.cs" />
@@ -640,6 +641,7 @@
     <Compile Include="Models\ViewModel\QuestionsElectronicViewModel.cs" />
     <Compile Include="Models\ViewModel\QuestionsViewModel.cs" />
     <Compile Include="Models\ViewModel\RetrieveViewModel.cs" />
+    <Compile Include="Models\ViewModel\HomeViewModel.cs" />
     <Compile Include="Models\ViewModel\SearchViewModel.cs" />
     <Compile Include="Models\ViewModel\TitlesViewModel.cs" />
     <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
