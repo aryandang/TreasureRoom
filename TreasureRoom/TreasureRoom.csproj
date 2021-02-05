@@ -517,6 +517,8 @@
     <Compile Include="App_Data\Models\ServicesControls.generated.cs" />
     <Compile Include="App_Data\Models\SuccessPage.generated.cs" />
     <Compile Include="App_Data\Models\SuccessPageControls.generated.cs" />
+    <Compile Include="App_Data\Models\TermsAndConditionsControls.generated.cs" />
+    <Compile Include="App_Data\Models\TermsAndConditionsPage.generated.cs" />
     <Compile Include="App_Data\Models\TestimonialsControls.generated.cs" />
     <Compile Include="App_Data\Models\WhyChooseUsControls.generated.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -3709,6 +3711,7 @@
     <Content Include="Views\SuccessPage.cshtml" />
     <Content Include="Views\RetrievePage.cshtml" />
     <Content Include="Views\RetrieveSuccessPage.cshtml" />
+    <Content Include="Views\TermsAndConditionsPage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\TEMP\FileUploads\" />

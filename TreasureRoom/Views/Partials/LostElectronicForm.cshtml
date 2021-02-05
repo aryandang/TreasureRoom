@@ -132,6 +132,9 @@
                 @Html.CheckBoxFor(m => m.ConsentToData, new { htmlAttributes = new { @class = "post-searchfield", placeholder = "Full Name" } })
             </div>
             @Html.ValidationMessageFor(m => m.ConsentToData, String.Empty, new { @class = "validation-messages" })
+            <br/>
+            <a href="/terms-and-conditions">Terms & Conditions</a>
+            <br />
             <br />
             <i>@Html.Raw("All fields are mandatory*")</i>
         </div>
