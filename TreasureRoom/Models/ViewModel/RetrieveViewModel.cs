@@ -45,5 +45,15 @@ namespace TreasureRoom.Models.ViewModel
         [StringLength(50)]
         [Display(Name = "Phone Number")]
         public string PhoneNumber { get; set; }
+
+
+        [Display(Name = "My age is above 18 and all data I have filled is honestly filled.")]
+        [Range(typeof(bool), "true", "true", ErrorMessage = "Only 18 above and honest data is permitted.*")]
+        public bool Age18AboveAndHonesty { get; set; }
+
+
+        [Display(Name = "I consent to usage of my personal data by Treasure Room.")]
+        [Range(typeof(bool), "true", "true", ErrorMessage = "You must consent that your personal data will be used by Treasure Room*")]
+        public bool ConsentToData { get; set; }
     }
 }

@@ -1,0 +1,11 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.TermsAndConditionsPage>
+@using ContentModels = Umbraco.Web.PublishedModels;
+@{
+	Layout = "Master.cshtml";
+}
+<div class="container">
+    <br />
+    @Model.TCheading
+    <hr />
+    @Model.TCbody
+</div>

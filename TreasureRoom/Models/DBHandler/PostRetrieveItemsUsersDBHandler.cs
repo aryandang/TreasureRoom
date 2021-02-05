@@ -10,7 +10,7 @@ namespace TreasureRoom.Models.DBHandler
         {
             using (var db = new TreasureRoomEntities())
             {
-                db.Post_RetrieveItemsUsers(model.ID, model.FullName, model.EmailAddress, model.PhoneNumber);
+                db.Post_RetrieveItemsUsers(model.ID, model.FullName, model.EmailAddress, model.PhoneNumber, model.Age18AboveAndHonesty, model.ConsentToData);
             }
         }
     }

@@ -78,6 +78,25 @@
                 </div>
                 @Html.ValidationMessageFor(m => m.PhoneNumber, String.Empty, new { @class = "validation-messages" })
             </div>
+            <div class="form-group">
+                <div class="post-title-show">@Html.LabelFor(m => m.Age18AboveAndHonesty)</div>
+                <div class="input-group">
+                    @Html.CheckBoxFor(m => m.Age18AboveAndHonesty, new { htmlAttributes = new { @class = "post-searchfield", placeholder = "Full Name" } })
+                </div>
+                @Html.ValidationMessageFor(m => m.Age18AboveAndHonesty, String.Empty, new { @class = "validation-messages" })
+            </div>
+            <div class="form-group">
+                <div class="post-title-show">@Html.LabelFor(m => m.ConsentToData)</div>
+                <div class="input-group">
+                    @Html.CheckBoxFor(m => m.ConsentToData, new { htmlAttributes = new { @class = "post-searchfield", placeholder = "Full Name" } })
+                </div>
+                @Html.ValidationMessageFor(m => m.ConsentToData, String.Empty, new { @class = "validation-messages" })
+                <br/>
+                <a href="/terms-and-conditions">Terms & Conditions</a>
+                <br />
+                <br />
+                <i>@Html.Raw("All fields are mandatory*")</i>
+            </div>
             <br />
             <div class="form-group">
                 <button id="Submit" class="search-btn">Submit</button>

@@ -46,28 +46,16 @@ namespace TreasureRoom.Models
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Get_ItemTypes_Result>("Get_ItemTypes");
         }
     
-        public virtual int Post_RetrieveItemsUsers(string iD, string fullName, string emailAddress, string phoneNumber)
+        public virtual int Delete_LostItems(string editID)
         {
-            var iDParameter = iD != null ?
-                new ObjectParameter("ID", iD) :
-                new ObjectParameter("ID", typeof(string));
+            var editIDParameter = editID != null ?
+                new ObjectParameter("EditID", editID) :
+                new ObjectParameter("EditID", typeof(string));
     
-            var fullNameParameter = fullName != null ?
-                new ObjectParameter("FullName", fullName) :
-                new ObjectParameter("FullName", typeof(string));
-    
-            var emailAddressParameter = emailAddress != null ?
-                new ObjectParameter("EmailAddress", emailAddress) :
-                new ObjectParameter("EmailAddress", typeof(string));
-    
-            var phoneNumberParameter = phoneNumber != null ?
-                new ObjectParameter("PhoneNumber", phoneNumber) :
-                new ObjectParameter("PhoneNumber", typeof(string));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("Post_RetrieveItemsUsers", iDParameter, fullNameParameter, emailAddressParameter, phoneNumberParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("Delete_LostItems", editIDParameter);
         }
     
-        public virtual int Post_LostItems(string iD, string editID, string title, string description, string postcode, string itemType, string imagePath, Nullable<System.DateTime> datePosted, string userTitle, string userFullName, string userEmailAddress, string question1, string answer1, string question2, string answer2, string question3, string answer3)
+        public virtual int Post_LostItems(string iD, string editID, string title, string description, string postcode, string itemType, string imagePath, Nullable<System.DateTime> datePosted, string userTitle, string userFullName, string userEmailAddress, string question1, string answer1, string question2, string answer2, string question3, string answer3, Nullable<bool> ageAbove18AndHonesty, Nullable<bool> consentToData)
         {
             var iDParameter = iD != null ?
                 new ObjectParameter("ID", iD) :
@@ -137,16 +125,44 @@ namespace TreasureRoom.Models
                 new ObjectParameter("Answer3", answer3) :
                 new ObjectParameter("Answer3", typeof(string));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("Post_LostItems", iDParameter, editIDParameter, titleParameter, descriptionParameter, postcodeParameter, itemTypeParameter, imagePathParameter, datePostedParameter, userTitleParameter, userFullNameParameter, userEmailAddressParameter, question1Parameter, answer1Parameter, question2Parameter, answer2Parameter, question3Parameter, answer3Parameter);
+            var ageAbove18AndHonestyParameter = ageAbove18AndHonesty.HasValue ?
+                new ObjectParameter("AgeAbove18AndHonesty", ageAbove18AndHonesty) :
+                new ObjectParameter("AgeAbove18AndHonesty", typeof(bool));
+    
+            var consentToDataParameter = consentToData.HasValue ?
+                new ObjectParameter("ConsentToData", consentToData) :
+                new ObjectParameter("ConsentToData", typeof(bool));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("Post_LostItems", iDParameter, editIDParameter, titleParameter, descriptionParameter, postcodeParameter, itemTypeParameter, imagePathParameter, datePostedParameter, userTitleParameter, userFullNameParameter, userEmailAddressParameter, question1Parameter, answer1Parameter, question2Parameter, answer2Parameter, question3Parameter, answer3Parameter, ageAbove18AndHonestyParameter, consentToDataParameter);
         }
     
-        public virtual int Delete_LostItems(string editID)
+        public virtual int Post_RetrieveItemsUsers(string iD, string fullName, string emailAddress, string phoneNumber, Nullable<bool> ageAbove18AndHonesty, Nullable<bool> consentToData)
         {
-            var editIDParameter = editID != null ?
-                new ObjectParameter("EditID", editID) :
-                new ObjectParameter("EditID", typeof(string));
+            var iDParameter = iD != null ?
+                new ObjectParameter("ID", iD) :
+                new ObjectParameter("ID", typeof(string));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("Delete_LostItems", editIDParameter);
+            var fullNameParameter = fullName != null ?
+                new ObjectParameter("FullName", fullName) :
+                new ObjectParameter("FullName", typeof(string));
+    
+            var emailAddressParameter = emailAddress != null ?
+                new ObjectParameter("EmailAddress", emailAddress) :
+                new ObjectParameter("EmailAddress", typeof(string));
+    
+            var phoneNumberParameter = phoneNumber != null ?
+                new ObjectParameter("PhoneNumber", phoneNumber) :
+                new ObjectParameter("PhoneNumber", typeof(string));
+    
+            var ageAbove18AndHonestyParameter = ageAbove18AndHonesty.HasValue ?
+                new ObjectParameter("AgeAbove18AndHonesty", ageAbove18AndHonesty) :
+                new ObjectParameter("AgeAbove18AndHonesty", typeof(bool));
+    
+            var consentToDataParameter = consentToData.HasValue ?
+                new ObjectParameter("ConsentToData", consentToData) :
+                new ObjectParameter("ConsentToData", typeof(bool));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("Post_RetrieveItemsUsers", iDParameter, fullNameParameter, emailAddressParameter, phoneNumberParameter, ageAbove18AndHonestyParameter, consentToDataParameter);
         }
     
         public virtual int Update_LostItems(string editID, string title, string description, string postcode, string itemType, string imagePath, Nullable<System.DateTime> datePosted, string userTitle, string userFullName, string userEmailAddress, string question1, string answer1, string question2, string answer2, string question3, string answer3)

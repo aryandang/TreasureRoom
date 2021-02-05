@@ -1,12 +1,11 @@
-﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.Home>
-@using ContentModels = Umbraco.Web.PublishedModels;
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<TreasureRoom.Models.HomeContentModel>
 <!--banner section-->
 <section id="banner">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <p class="promo-title">@Model.BannerTitle</p>
-                @Html.Partial("~/Views/Partials/Search.cshtml")
+                <p class="promo-title">@Model.Home.BannerTitle</p>
+                @Html.Partial("~/Views/Partials/Search.cshtml", Model.HomeViewModel)
             </div>
         </div>
     </div>
