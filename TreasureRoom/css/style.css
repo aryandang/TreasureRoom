@@ -208,7 +208,6 @@ main {
 #about {
     background: #f8f9fa;
     padding-top: 50px;
-    padding-bottom: 50px;
 }
 
 .about-title {
@@ -226,8 +225,10 @@ main {
 }
 
 .image-fluid {
-    width: 614px;
-    height: 463px;
+    width: 175%;
+    height: 70%;
+    /*width: 614px;
+    height: 463px;*/
 }
 
 /* testimonials section */
@@ -249,7 +250,8 @@ main {
 }
 
 .testimonials-image-fluid {
-    height: 90%;
+    height: 80%;
+    width: 180%;
     margin-left: -90px;
 }
 
