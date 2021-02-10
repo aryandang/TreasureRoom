@@ -13,13 +13,13 @@ namespace TreasureRoom.Models.ViewModel
         public string EditID { get; set; }
 
         [Required(ErrorMessage = "Must enter the lost item title*")]
-        [StringLength(20)]
+        [StringLength(50)]
         [Display(Name = "Post Title")]
         public string Title { get; set; }
 
 
         [Required(ErrorMessage = "Must enter a description*")]
-        [StringLength(55)]
+        [StringLength(255)]
         public string Description { get; set; }
 
 
@@ -54,6 +54,7 @@ namespace TreasureRoom.Models.ViewModel
 
         [Display(Name = "Answer 1")]
         [Required(ErrorMessage = "Must answer the question")]
+        [StringLength(100)]
         public string Answer1 { get; set; }
 
 
@@ -65,6 +66,7 @@ namespace TreasureRoom.Models.ViewModel
 
         [Display(Name = "Answer 2")]
         [Required(ErrorMessage = "Must answer the question")]
+        [StringLength(100)]
         public string Answer2 { get; set; }
 
 
@@ -75,6 +77,7 @@ namespace TreasureRoom.Models.ViewModel
 
 
         [Display(Name = "Answer 3")]
+        [StringLength(100)]
         public string Answer3 { get; set; }
 
 
@@ -92,7 +95,7 @@ namespace TreasureRoom.Models.ViewModel
 
         [EmailAddress]
         [Required(ErrorMessage = "Must enter a valid email address*")]
-        [StringLength(100)]
+        [StringLength(50)]
         [Display(Name = "Email Address")]
         public string EmailAddress { get; set; }
 
