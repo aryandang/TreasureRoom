@@ -13,6 +13,8 @@ namespace TreasureRoom.Controllers.Surface
     public class DeleteItemSurfaceController : SurfaceController
     {
         private DeleteLostItemsDbHandler deleteLostItemsDbHandler = new DeleteLostItemsDbHandler();
+        private GetLostItemsByEditIdDBHandler getLostItemsByEditIdDbHandler = new GetLostItemsByEditIdDBHandler();
+
 
         public ActionResult LoadForm(DeleteItemViewModel model)
         {
@@ -26,8 +28,34 @@ namespace TreasureRoom.Controllers.Surface
 
         public ActionResult DeleteForm(DeleteItemViewModel model)
         {
-            deleteLostItemsDbHandler.DeleteLostItemsData(model.EditID);
-            return RedirectToUmbracoPage(1248);
+
+            var queryString = new NameValueCollection();
+            if (!string.IsNullOrWhiteSpace(model.EditID))
+            {
+                queryString.Add("editId", model.EditID);
+            }
+
+            var getItemsByEditId = getLostItemsByEditIdDbHandler.GetLostItemsById(model.EditID);
+            model.LostItemsData = getItemsByEditId;
+            
+            if (model.LostItemsData.Count != 0)
+            {
+                foreach (var value in model.LostItemsData)
+                {
+                    if (value.EditID.Equals(model.EditID))
+                    {
+                        deleteLostItemsDbHandler.DeleteLostItemsData(model.EditID);
+                        return RedirectToUmbracoPage(1248);
+                    }
+                    return RedirectToUmbracoPage(1254);
+                }
+            }
+            else
+            {
+                return RedirectToUmbracoPage(1254);
+            }
+            return CurrentUmbracoPage();
+
         }
     }
 }
