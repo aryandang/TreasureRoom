@@ -208,6 +208,7 @@ main {
 #about {
     background: #f8f9fa;
     padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 .about-title {
@@ -225,7 +226,7 @@ main {
 }
 
 .image-fluid {
-    width: 175%;
+    width: 170%;
     height: 70%;
     /*width: 614px;
     height: 463px;*/
