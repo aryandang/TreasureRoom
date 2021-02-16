@@ -46,6 +46,20 @@ namespace Umbraco.Web.PublishedModels
 		// properties
 
 		///<summary>
+		/// Consent Form
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("consentForm")]
+		public IPublishedContent ConsentForm => TermsAndConditionsControls.GetConsentForm(this);
+
+		///<summary>
+		/// Participation Form
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("participationForm")]
+		public IPublishedContent ParticipationForm => TermsAndConditionsControls.GetParticipationForm(this);
+
+		///<summary>
 		/// T&C Body
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]

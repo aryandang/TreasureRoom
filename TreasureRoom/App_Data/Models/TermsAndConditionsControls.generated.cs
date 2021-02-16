@@ -24,6 +24,14 @@ namespace Umbraco.Web.PublishedModels
 	/// <summary>Terms And Conditions Controls</summary>
 	public partial interface ITermsAndConditionsControls : IPublishedContent
 	{
+		/// <summary>Consent Form</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		IPublishedContent ConsentForm { get; }
+
+		/// <summary>Participation Form</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		IPublishedContent ParticipationForm { get; }
+
 		/// <summary>T&C Body</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		IHtmlString TCbody { get; }
@@ -57,6 +65,28 @@ namespace Umbraco.Web.PublishedModels
 		{ }
 
 		// properties
+
+		///<summary>
+		/// Consent Form
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("consentForm")]
+		public IPublishedContent ConsentForm => GetConsentForm(this);
+
+		/// <summary>Static getter for Consent Form</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		public static IPublishedContent GetConsentForm(ITermsAndConditionsControls that) => that.Value<IPublishedContent>("consentForm");
+
+		///<summary>
+		/// Participation Form
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("participationForm")]
+		public IPublishedContent ParticipationForm => GetParticipationForm(this);
+
+		/// <summary>Static getter for Participation Form</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		public static IPublishedContent GetParticipationForm(ITermsAndConditionsControls that) => that.Value<IPublishedContent>("participationForm");
 
 		///<summary>
 		/// T&C Body
