@@ -1,5 +1,4 @@
-﻿using System;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using TreasureRoom.Models;
 using TreasureRoom.Models.DBHandler;
 using TreasureRoom.Models.ViewModel;

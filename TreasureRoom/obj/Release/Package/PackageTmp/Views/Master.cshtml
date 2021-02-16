@@ -1,0 +1,28 @@
+﻿@using ClientDependency.Core.Mvc
+@inherits Umbraco.Web.Mvc.UmbracoViewPage
+@{
+    Layout = null;
+
+    Html.RequiresCss("/css/style.css");
+    Html.RequiresCss("https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css");
+    Html.RequiresCss("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+
+    Html.RequiresJs("https://code.jquery.com/jquery-3.3.1.slim.min.js");
+    Html.RequiresJs("https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js");
+    Html.RequiresJs("/js/smooth-scroll.js");
+
+}
+<html>
+<head>
+    @Html.RenderCssHere()
+</head>
+<body>
+@Html.Partial("~/Views/Partials/Navigation.cshtml")
+
+@RenderBody()
+@Html.Partial("~/Views/Partials/Footer.cshtml")
+@Html.RenderJsHere()
+<!-- smooth scroll -->
+<script>var scroll = new SmoothScroll('a[href*="#"]');</script>
+</body>
+</html>

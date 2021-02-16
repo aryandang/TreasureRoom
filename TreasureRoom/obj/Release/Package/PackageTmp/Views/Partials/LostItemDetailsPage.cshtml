@@ -1,0 +1,48 @@
+﻿
+@inherits UmbracoViewPage<TreasureRoom.Models.ViewModel.LostItemDetailsViewModel>
+
+@using (Html.BeginUmbracoForm("LoadForm", "LostItemDetailsSurface", FormMethod.Post))
+{
+    foreach (var item in Model.LostItemsData)
+    {
+        <div class="container post-form_body">
+            <br />
+            <h3>@Html.Raw("Lost Item Details:")</h3>
+            <hr />
+            <div class="form-group">
+                <img src="@Url.Content(item.ImagePath)" class="img-details-page" alt="">
+            </div>
+            <br />
+            <div class="form-group">
+                <div class="details-title-show">
+                    @Html.LabelFor(modelItem => item.DatePosted)
+                </div>
+                @Html.DisplayFor(modelItem => item.DatePosted.Value.DayOfWeek)
+                <br />
+                @Convert.ToDateTime(item.DatePosted).ToString("dd/MM/yyyy")
+            </div>
+            <div class="form-group">
+                <div class="details-title-show">
+                    @Html.LabelFor(modelItem => item.Postcode)
+                </div>
+                @Html.DisplayFor(modelItem => item.Postcode)
+            </div>
+            <div class="form-group">
+                <div class="details-title-show">
+                    @Html.LabelFor(modelItem => item.Title)
+                </div>
+                @Html.DisplayFor(m => item.Title)
+            </div>
+            <div class="form-group">
+                <div class="details-title-show">
+                    @Html.LabelFor(modelItem => item.Description)
+                </div>
+                @Html.DisplayFor(m => item.Description)
+            </div>
+            <br/>
+            <div class="form-group">
+                @Html.ActionLink("Retrieve Item", "LoadForm", "RetrieveSurface", new {id = item.ID}, new {@class = "item-card_btn"})
+            </div>
+        </div>
+    }
+}

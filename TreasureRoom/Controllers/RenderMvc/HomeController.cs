@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using TreasureRoom.Models;
 using TreasureRoom.Models.DBHandler;
 using TreasureRoom.Models.ViewModel;
@@ -16,7 +12,7 @@ namespace TreasureRoom.Controllers.RenderMvc
     {
         private GetItemTypesDBHandler getItemTypesDbHandler = new GetItemTypesDBHandler();
 
-        public ActionResult Index(ContentModel model)
+        public override ActionResult Index(ContentModel model)
         {
             var homePageModel = new HomeContentModel(model.Content);
 

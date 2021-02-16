@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using TreasureRoom.Models.ViewModel;
-
-namespace TreasureRoom.Models.DBHandler
+﻿namespace TreasureRoom.Models.DBHandler
 {
     public class DeleteLostItemsDbHandler
     {

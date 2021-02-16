@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Web;
 
 namespace TreasureRoom.Models.ViewModel
 {
@@ -13,16 +10,20 @@ namespace TreasureRoom.Models.ViewModel
 
 
         [Display(Name = "Answer 1")]
-        [Required(ErrorMessage = "Must answer the question")]
+        [Required(ErrorMessage = "Must answer the question*")]
+        [StringLength(100)]
         public string Answer1Input { get; set; }
 
 
         [Display(Name = "Answer 2")]
-        [Required(ErrorMessage = "Must answer the question")]
+        [Required(ErrorMessage = "Must answer the question*")]
+        [StringLength(100)]
         public string Answer2Input { get; set; }
 
 
         [Display(Name = "Answer 3")]
+        [StringLength(100)]
+        [Required(ErrorMessage = "Must answer the question*")]
         public string Answer3Input { get; set; }
 
 

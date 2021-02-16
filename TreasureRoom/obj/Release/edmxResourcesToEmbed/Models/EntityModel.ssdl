@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TreasureRoomModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'TreasureRoom.dbo.dbo.ItemTypes' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="dbo_ItemTypes">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="ItemType" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'TreasureRoom.dbo.dbo.LostItems' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="dbo_LostItems">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="EditID" Type="nvarchar" MaxLength="50" />
+    <Property Name="Title" Type="nvarchar" MaxLength="50" />
+    <Property Name="Description" Type="nvarchar" MaxLength="255" />
+    <Property Name="Postcode" Type="nvarchar" MaxLength="50" />
+    <Property Name="ItemType" Type="nvarchar" MaxLength="50" />
+    <Property Name="ImagePath" Type="nvarchar" MaxLength="500" />
+    <Property Name="DatePosted" Type="datetime" />
+    <Property Name="UserTitle" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserFullName" Type="nvarchar" MaxLength="100" />
+    <Property Name="UserEmailAddress" Type="nvarchar" MaxLength="50" />
+    <Property Name="Question1" Type="nvarchar" MaxLength="100" />
+    <Property Name="Answer1" Type="nvarchar" MaxLength="100" />
+    <Property Name="Question2" Type="nvarchar" MaxLength="100" />
+    <Property Name="Answer2" Type="nvarchar" MaxLength="100" />
+    <Property Name="Question3" Type="nvarchar" MaxLength="100" />
+    <Property Name="Answer3" Type="nvarchar" MaxLength="100" />
+    <Property Name="AgeAbove18AndHonesty" Type="bit" />
+    <Property Name="ConsentToData" Type="bit" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'TreasureRoom.dbo.dbo.Questions.Electronic' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="dbo_Questions_Electronic">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Question" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'TreasureRoom.dbo.dbo.Questions.FashionAccessory' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="dbo_Questions_FashionAccessory">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Question" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'TreasureRoom.dbo.dbo.Questions.Keys' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="dbo_Questions_Keys">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Question" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'TreasureRoom.dbo.dbo.Questions.WalletOrPurse' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="dbo_Questions_WalletOrPurse">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Question" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'TreasureRoom.dbo.dbo.RetrieveItemsUsers' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="dbo_RetrieveItemsUsers">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="100" />
+    <Property Name="EmailAddress" Type="nvarchar" MaxLength="100" />
+    <Property Name="PhoneNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="AgeAbove18AndHonesty" Type="bit" />
+    <Property Name="ConsentToData" Type="bit" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'TreasureRoom.dbo.dbo.Titles' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="dbo_Titles">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <Function Name="Delete_LostItems" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="EditID" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="Get_ItemTypes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="Get_LostItems" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="Post_LostItems" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID" Type="nvarchar" Mode="In" />
+    <Parameter Name="EditID" Type="nvarchar" Mode="In" />
+    <Parameter Name="Title" Type="nvarchar" Mode="In" />
+    <Parameter Name="Description" Type="nvarchar" Mode="In" />
+    <Parameter Name="Postcode" Type="nvarchar" Mode="In" />
+    <Parameter Name="ItemType" Type="nvarchar" Mode="In" />
+    <Parameter Name="ImagePath" Type="nvarchar" Mode="In" />
+    <Parameter Name="DatePosted" Type="datetime" Mode="In" />
+    <Parameter Name="UserTitle" Type="nvarchar" Mode="In" />
+    <Parameter Name="UserFullName" Type="nvarchar" Mode="In" />
+    <Parameter Name="UserEmailAddress" Type="nvarchar" Mode="In" />
+    <Parameter Name="Question1" Type="nvarchar" Mode="In" />
+    <Parameter Name="Answer1" Type="nvarchar" Mode="In" />
+    <Parameter Name="Question2" Type="nvarchar" Mode="In" />
+    <Parameter Name="Answer2" Type="nvarchar" Mode="In" />
+    <Parameter Name="Question3" Type="nvarchar" Mode="In" />
+    <Parameter Name="Answer3" Type="nvarchar" Mode="In" />
+    <Parameter Name="AgeAbove18AndHonesty" Type="bit" Mode="In" />
+    <Parameter Name="ConsentToData" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="Post_RetrieveItemsUsers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID" Type="nvarchar" Mode="In" />
+    <Parameter Name="FullName" Type="nvarchar" Mode="In" />
+    <Parameter Name="EmailAddress" Type="nvarchar" Mode="In" />
+    <Parameter Name="PhoneNumber" Type="nvarchar" Mode="In" />
+    <Parameter Name="AgeAbove18AndHonesty" Type="bit" Mode="In" />
+    <Parameter Name="ConsentToData" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="Update_LostItems" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="EditID" Type="nvarchar" Mode="In" />
+    <Parameter Name="Title" Type="nvarchar" Mode="In" />
+    <Parameter Name="Description" Type="nvarchar" Mode="In" />
+    <Parameter Name="Postcode" Type="nvarchar" Mode="In" />
+    <Parameter Name="ItemType" Type="nvarchar" Mode="In" />
+    <Parameter Name="ImagePath" Type="nvarchar" Mode="In" />
+    <Parameter Name="DatePosted" Type="datetime" Mode="In" />
+    <Parameter Name="UserTitle" Type="nvarchar" Mode="In" />
+    <Parameter Name="UserFullName" Type="nvarchar" Mode="In" />
+    <Parameter Name="UserEmailAddress" Type="nvarchar" Mode="In" />
+    <Parameter Name="Question1" Type="nvarchar" Mode="In" />
+    <Parameter Name="Answer1" Type="nvarchar" Mode="In" />
+    <Parameter Name="Question2" Type="nvarchar" Mode="In" />
+    <Parameter Name="Answer2" Type="nvarchar" Mode="In" />
+    <Parameter Name="Question3" Type="nvarchar" Mode="In" />
+    <Parameter Name="Answer3" Type="nvarchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="TreasureRoomModelStoreContainer">
+    <EntitySet Name="dbo_ItemTypes" EntityType="Self.dbo_ItemTypes" store:Type="Tables" store:Schema="dbo" store:Name="dbo.ItemTypes">
+      <DefiningQuery>SELECT 
+    [dbo_ItemTypes].[ID] AS [ID], 
+    [dbo_ItemTypes].[ItemType] AS [ItemType]
+    FROM [dbo].[dbo.ItemTypes] AS [dbo_ItemTypes]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="dbo_LostItems" EntityType="Self.dbo_LostItems" store:Type="Tables" store:Schema="dbo" store:Name="dbo.LostItems">
+      <DefiningQuery>SELECT 
+    [dbo_LostItems].[ID] AS [ID], 
+    [dbo_LostItems].[EditID] AS [EditID], 
+    [dbo_LostItems].[Title] AS [Title], 
+    [dbo_LostItems].[Description] AS [Description], 
+    [dbo_LostItems].[Postcode] AS [Postcode], 
+    [dbo_LostItems].[ItemType] AS [ItemType], 
+    [dbo_LostItems].[ImagePath] AS [ImagePath], 
+    [dbo_LostItems].[DatePosted] AS [DatePosted], 
+    [dbo_LostItems].[UserTitle] AS [UserTitle], 
+    [dbo_LostItems].[UserFullName] AS [UserFullName], 
+    [dbo_LostItems].[UserEmailAddress] AS [UserEmailAddress], 
+    [dbo_LostItems].[Question1] AS [Question1], 
+    [dbo_LostItems].[Answer1] AS [Answer1], 
+    [dbo_LostItems].[Question2] AS [Question2], 
+    [dbo_LostItems].[Answer2] AS [Answer2], 
+    [dbo_LostItems].[Question3] AS [Question3], 
+    [dbo_LostItems].[Answer3] AS [Answer3], 
+    [dbo_LostItems].[AgeAbove18AndHonesty] AS [AgeAbove18AndHonesty], 
+    [dbo_LostItems].[ConsentToData] AS [ConsentToData]
+    FROM [dbo].[dbo.LostItems] AS [dbo_LostItems]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="dbo_Questions_Electronic" EntityType="Self.dbo_Questions_Electronic" store:Type="Tables" store:Schema="dbo" store:Name="dbo.Questions.Electronic">
+      <DefiningQuery>SELECT 
+    [dbo_Questions_Electronic].[ID] AS [ID], 
+    [dbo_Questions_Electronic].[Question] AS [Question]
+    FROM [dbo].[dbo.Questions.Electronic] AS [dbo_Questions_Electronic]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="dbo_Questions_FashionAccessory" EntityType="Self.dbo_Questions_FashionAccessory" store:Type="Tables" store:Schema="dbo" store:Name="dbo.Questions.FashionAccessory">
+      <DefiningQuery>SELECT 
+    [dbo_Questions_FashionAccessory].[ID] AS [ID], 
+    [dbo_Questions_FashionAccessory].[Question] AS [Question]
+    FROM [dbo].[dbo.Questions.FashionAccessory] AS [dbo_Questions_FashionAccessory]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="dbo_Questions_Keys" EntityType="Self.dbo_Questions_Keys" store:Type="Tables" store:Schema="dbo" store:Name="dbo.Questions.Keys">
+      <DefiningQuery>SELECT 
+    [dbo_Questions_Keys].[ID] AS [ID], 
+    [dbo_Questions_Keys].[Question] AS [Question]
+    FROM [dbo].[dbo.Questions.Keys] AS [dbo_Questions_Keys]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="dbo_Questions_WalletOrPurse" EntityType="Self.dbo_Questions_WalletOrPurse" store:Type="Tables" store:Schema="dbo" store:Name="dbo.Questions.WalletOrPurse">
+      <DefiningQuery>SELECT 
+    [dbo_Questions_WalletOrPurse].[ID] AS [ID], 
+    [dbo_Questions_WalletOrPurse].[Question] AS [Question]
+    FROM [dbo].[dbo.Questions.WalletOrPurse] AS [dbo_Questions_WalletOrPurse]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="dbo_RetrieveItemsUsers" EntityType="Self.dbo_RetrieveItemsUsers" store:Type="Tables" store:Schema="dbo" store:Name="dbo.RetrieveItemsUsers">
+      <DefiningQuery>SELECT 
+    [dbo_RetrieveItemsUsers].[ID] AS [ID], 
+    [dbo_RetrieveItemsUsers].[FullName] AS [FullName], 
+    [dbo_RetrieveItemsUsers].[EmailAddress] AS [EmailAddress], 
+    [dbo_RetrieveItemsUsers].[PhoneNumber] AS [PhoneNumber], 
+    [dbo_RetrieveItemsUsers].[AgeAbove18AndHonesty] AS [AgeAbove18AndHonesty], 
+    [dbo_RetrieveItemsUsers].[ConsentToData] AS [ConsentToData]
+    FROM [dbo].[dbo.RetrieveItemsUsers] AS [dbo_RetrieveItemsUsers]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="dbo_Titles" EntityType="Self.dbo_Titles" store:Type="Tables" store:Schema="dbo" store:Name="dbo.Titles">
+      <DefiningQuery>SELECT 
+    [dbo_Titles].[ID] AS [ID], 
+    [dbo_Titles].[Title] AS [Title]
+    FROM [dbo].[dbo.Titles] AS [dbo_Titles]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

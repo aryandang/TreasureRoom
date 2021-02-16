@@ -24,7 +24,7 @@ namespace TreasureRoom.Services
                               + Environment.NewLine + Environment.NewLine +
                               "This individual has answered the security questions with the following answers: "
                               + Environment.NewLine + "Question 1: " + EmailQuestion1 + Environment.NewLine +
-                              "Their answer:" + EmailAnswer1 + Environment.NewLine +
+                              "Their answer: " + EmailAnswer1 + Environment.NewLine +
                               "Question 2: " + EmailQuestion2 + Environment.NewLine + "Their answer: " + EmailAnswer2 +
                               Environment.NewLine + "Question 3: " +
                               EmailQuestion3 + Environment.NewLine + "Their answer: " + EmailAnswer3 + Environment.NewLine +
@@ -48,7 +48,7 @@ namespace TreasureRoom.Services
                               + Environment.NewLine + Environment.NewLine +
                              "This individual has answered the security questions with the following answers: "
                               + Environment.NewLine + "Question 1: " + EmailQuestion1 + Environment.NewLine +
-                              "Their answer:" + EmailAnswer1 + Environment.NewLine +
+                              "Their answer: " + EmailAnswer1 + Environment.NewLine +
                               "Question 2: " + EmailQuestion2 + Environment.NewLine + "Their answer: " + EmailAnswer2 +
                               Environment.NewLine +
                               Environment.NewLine +

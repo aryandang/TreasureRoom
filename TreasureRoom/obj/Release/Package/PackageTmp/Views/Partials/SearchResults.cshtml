@@ -1,0 +1,44 @@
+﻿@inherits UmbracoViewPage<TreasureRoom.Models.ViewModel.SearchViewModel>
+
+@using (Html.BeginUmbracoForm("SubmitForm", "SearchSurface", FormMethod.Get))
+{
+    <body>
+        @if (Model.LostItemsData.Capacity == 0)
+        {
+            <p style="color: red">
+                No match found. Please search again.
+            </p>
+        }
+        else
+        {
+            foreach (var item in Model.LostItemsData)
+            {
+                <div class="item-card_body">
+                    <div class="item-card">
+                        <div class="item-card_img">
+                            <img src="@Url.Content(item.ImagePath)" alt="">
+                        </div>
+                        <div class="item-card_info">
+                            <div class="item-card_date">
+                                <span>
+                                    <div class="item-card-item_type"><p>@Html.DisplayFor(modelItem => item.Postcode), @Html.DisplayFor(modelItem => item.ItemType)</p></div>
+                                    @Html.DisplayFor(modelItem => item.DatePosted.Value.DayOfWeek)
+                                </span>
+                                <span>
+                                    @Convert.ToDateTime(item.DatePosted).ToString("dd/MM/yyyy")
+                                </span>
+                            </div>
+                            <h1 class="item-card_title">@Html.DisplayFor(modelItem => item.Title)</h1>
+                            <p class="item-card_text">
+                                @Html.DisplayFor(modelItem => item.Description) found at @Html.DisplayFor(modelItem => item.Postcode) which is
+                            </p>
+                            @Html.ActionLink("Read more", "LoadForm", "LostItemDetailsSurface", new {id = item.ID}, new{@class="item-card_btn" })
+                        </div>
+                    </div>
+                </div>
+            }
+        }
+        <div class="container post-form_body">
+        </div>
+    </body>
+}

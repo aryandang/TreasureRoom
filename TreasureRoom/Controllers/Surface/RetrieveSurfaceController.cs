@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using StackExchange.Profiling.Internal;
+using System;
 using System.Collections.Specialized;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using TreasureRoom.Models.DBHandler;
 using TreasureRoom.Models.ViewModel;
@@ -38,7 +36,7 @@ namespace TreasureRoom.Controllers.Surface
                 {
                     if (value.Answer3 == null)
                     {
-                        if (value.Answer1.Contains(model.Answer1Input) && (value.Answer2.Contains(model.Answer2Input)))
+                        if (value.Answer1.Contains(model.Answer1Input, StringComparison.CurrentCultureIgnoreCase) && (value.Answer2.Contains(model.Answer2Input, StringComparison.CurrentCultureIgnoreCase)))
                         {
                             sendEmailService.SendEmail( value.EmailAddress, value.FullName, value.ItemType, model.FullName, model.EmailAddress, model.PhoneNumber,
                                 value.Question1, model.Answer1Input, value.Question2, model.Answer2Input,
@@ -47,7 +45,7 @@ namespace TreasureRoom.Controllers.Surface
                     }
                     else
                     {
-                        if (value.Answer1.Contains(model.Answer1Input) && (value.Answer2.Contains(model.Answer2Input)) && (value.Answer3.Contains(model.Answer3Input)))
+                        if (value.Answer1.Contains(model.Answer1Input, StringComparison.CurrentCultureIgnoreCase) && (value.Answer2.Contains(model.Answer2Input, StringComparison.CurrentCultureIgnoreCase)) && (value.Answer3.Contains(model.Answer3Input, StringComparison.CurrentCultureIgnoreCase)))
                         {
                             sendEmailService.SendEmail(value.EmailAddress, value.FullName, value.ItemType, model.FullName, model.EmailAddress, model.PhoneNumber,
                                 value.Question1, model.Answer1Input, value.Question2, model.Answer2Input,

@@ -1,0 +1,29 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.Home>
+@using ContentModels = Umbraco.Web.PublishedModels;
+
+    @{
+    }
+
+    <!-- Services section -->
+    <section id="services">
+        <div class="container text-center">
+            <div class="title">@Model.ServicesHeader</div>
+            <div class="row text-center">
+                <div class="col-md-4 services">
+                    <img src="@Model.FirstColumnImage.GetCropUrl()" class="services-img" />
+                    @Model.FirstColumnHeading
+                    @Model.FirstColumnText
+                </div>
+                <div class="col-md-4 services">
+                    <img src="@Model.SecondColumnImage.GetCropUrl()" class="services-img">
+                    @Model.SecondColumnHeading
+                    @Model.SecondColumnText
+                </div>
+                <div class="col-md-4 services">
+                    <img src="@Model.ThirdColumnImage.GetCropUrl()" class="services-img">
+                    @Model.ThirdColumnHeading
+                    @Model.ThirdColumnText
+                </div>
+            </div>
+        </div>
+    </section>
