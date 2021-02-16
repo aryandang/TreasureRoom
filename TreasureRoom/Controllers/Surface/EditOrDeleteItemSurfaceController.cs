@@ -1,14 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Collections.Specialized;
 using System.IO;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using TreasureRoom.Models.DBHandler;
 using TreasureRoom.Models.ViewModel;
-using TreasureRoom.Services;
-using Umbraco.Web.Models.ContentEditing;
 using Umbraco.Web.Mvc;
 
 namespace TreasureRoom.Controllers.Surface

@@ -1,0 +1,23 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.TermsAndConditionsPage>
+@using ContentModels = Umbraco.Web.PublishedModels;
+@{
+    Layout = "Master.cshtml";
+}
+<div class="container">
+    <br />
+    @Model.TCheading
+    <hr />
+    @Model.TCbody
+    <br />
+    <div class="TnCDocs">
+        <h4>Agreeing to consent of data means you agree to signing the consent form below:</h4>
+        <br />
+        <a href=@Model.ConsentForm.Url() target="_blank" rel="noopener noreferrer">Consent Form</a>
+        <br />
+        <br />
+        <h4>Agreeing to consent of data also means you have read the following document</h4>
+        <br />
+        <a href=@Model.ParticipationForm.Url() target="_blank" rel="noopener noreferrer">Participation Information Sheet</a>
+        <br />
+    </div>
+</div>

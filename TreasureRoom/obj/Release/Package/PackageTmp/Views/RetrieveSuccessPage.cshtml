@@ -1,0 +1,11 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.RetrieveSuccessPage>
+@using ContentModels = Umbraco.Web.PublishedModels;
+@{
+	Layout = "Master.cshtml";
+}
+<div class="success-page col-md-auto">
+    <br />
+    @Model.FirstLineText
+    <hr />
+    @Model.SecondLineText
+</div>

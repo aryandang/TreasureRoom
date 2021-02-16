@@ -1,0 +1,13 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<TreasureRoom.Models.HomeContentModel>
+<!--banner section-->
+<section id="banner">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <p class="promo-title">@Model.Home.BannerTitle</p>
+                @Html.Partial("~/Views/Partials/Search.cshtml", Model.HomeViewModel)
+            </div>
+        </div>
+    </div>
+    <img src="/images/BannerWave.png" id="banner-wave-img">
+</section>

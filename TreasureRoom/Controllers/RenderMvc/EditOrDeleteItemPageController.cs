@@ -3,7 +3,6 @@ using System.Web.Mvc;
 using TreasureRoom.Models;
 using TreasureRoom.Models.DBHandler;
 using TreasureRoom.Models.ViewModel;
-using Umbraco.Core;
 using Umbraco.Web.Models;
 using Umbraco.Web.Mvc;
 

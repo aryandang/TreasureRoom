@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI.WebControls;
-using TreasureRoom.Models.ViewModel;
+﻿using TreasureRoom.Models.ViewModel;
 
 namespace TreasureRoom.Services
 {

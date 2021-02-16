@@ -1,0 +1,20 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.Home>
+@using ContentModels = Umbraco.Web.PublishedModels;
+
+<section id="testimonials">
+    <div class="container ">
+        <div class="title text-center">@Model.TestimonialsHeader</div>
+        <div class="testimonials-sub-heading">
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <img src="@Model.TestimonialsImage.GetCropUrl()" class="testimonials-image-fluid">
+            </div>
+            <div class="col-md-5 testimonials">
+                @Model.AryanDangText
+                <img src="/images/AryanDang.jpeg">
+                <p class="user-details"><b>Aryan Dang</b><br>Founder</p>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,5 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="..\packages\Microsoft.CodeAnalysis.Analyzers.3.0.0\build\Microsoft.CodeAnalysis.Analyzers.props" Condition="Exists('..\packages\Microsoft.CodeAnalysis.Analyzers.3.0.0\build\Microsoft.CodeAnalysis.Analyzers.props')" />
   <Import Project="..\packages\UmbracoCms.8.10.1\build\UmbracoCms.props" Condition="Exists('..\packages\UmbracoCms.8.10.1\build\UmbracoCms.props')" />
   <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
@@ -27,6 +29,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TypeScriptToolsVersion>4.0</TypeScriptToolsVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -119,11 +122,11 @@
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.1.1.1\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.CodeAnalysis, Version=2.10.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.CodeAnalysis.Common.2.10.0\lib\netstandard1.3\Microsoft.CodeAnalysis.dll</HintPath>
+    <Reference Include="Microsoft.CodeAnalysis, Version=3.8.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeAnalysis.Common.3.8.0\lib\netstandard2.0\Microsoft.CodeAnalysis.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.CodeAnalysis.CSharp, Version=2.10.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.CodeAnalysis.CSharp.2.10.0\lib\netstandard1.3\Microsoft.CodeAnalysis.CSharp.dll</HintPath>
+    <Reference Include="Microsoft.CodeAnalysis.CSharp, Version=3.8.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeAnalysis.CSharp.3.8.0\lib\netstandard2.0\Microsoft.CodeAnalysis.CSharp.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Extensions.Configuration, Version=3.1.8.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
@@ -232,11 +235,11 @@
       <Private>True</Private>
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.Buffers, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Buffers.4.4.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
     </Reference>
-    <Reference Include="System.Collections.Immutable, Version=1.2.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Collections.Immutable.1.5.0\lib\netstandard2.0\System.Collections.Immutable.dll</HintPath>
+    <Reference Include="System.Collections.Immutable, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Collections.Immutable.5.0.0\lib\net461\System.Collections.Immutable.dll</HintPath>
     </Reference>
     <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.ComponentModel.Annotations.4.7.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
@@ -299,23 +302,23 @@
       <Private>True</Private>
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.Memory, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Memory.4.5.2\lib\netstandard2.0\System.Memory.dll</HintPath>
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
     </Reference>
     <Reference Include="System.Numerics" />
-    <Reference Include="System.Numerics.Vectors, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Numerics.Vectors.4.4.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
     </Reference>
     <Reference Include="System.Reflection, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Reflection.4.3.0\lib\net462\System.Reflection.dll</HintPath>
       <Private>True</Private>
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.Reflection.Metadata, Version=1.4.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Reflection.Metadata.1.6.0\lib\netstandard2.0\System.Reflection.Metadata.dll</HintPath>
+    <Reference Include="System.Reflection.Metadata, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Reflection.Metadata.5.0.0\lib\net461\System.Reflection.Metadata.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Runtime.4.3.0\lib\net462\System.Runtime.dll</HintPath>
@@ -358,8 +361,8 @@
       <Private>True</Private>
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.Text.Encoding.CodePages, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Text.Encoding.CodePages.4.3.0\lib\net46\System.Text.Encoding.CodePages.dll</HintPath>
+    <Reference Include="System.Text.Encoding.CodePages, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encoding.CodePages.4.5.1\lib\net461\System.Text.Encoding.CodePages.dll</HintPath>
     </Reference>
     <Reference Include="System.Threading.Tasks" />
     <Reference Include="System.Threading.Tasks.Dataflow, Version=4.6.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
@@ -639,16 +642,11 @@
     <Compile Include="Models\ViewModel\LostItemsViewModel.cs" />
     <Compile Include="Models\ViewModel\LostElectronicViewModel.cs" />
     <Compile Include="Models\ViewModel\PostViewModel.cs" />
-    <Compile Include="Models\ViewModel\QuestionsWalletOrPurseViewModel.cs" />
-    <Compile Include="Models\ViewModel\QuestionsFashionAccessoryViewModel.cs" />
-    <Compile Include="Models\ViewModel\QuestionsKeysViewModel.cs" />
-    <Compile Include="Models\ViewModel\QuestionsElectronicViewModel.cs" />
     <Compile Include="Models\ViewModel\QuestionsViewModel.cs" />
     <Compile Include="Models\ViewModel\RetrieveViewModel.cs" />
     <Compile Include="Models\ViewModel\HomeViewModel.cs" />
     <Compile Include="Models\ViewModel\SearchViewModel.cs" />
     <Compile Include="Models\ViewModel\TitlesViewModel.cs" />
-    <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\EditLostItemService.cs" />
     <Compile Include="Services\SendEmailService.cs" />
@@ -716,39 +714,26 @@
     <Content Include="bin\amd64\sqlceqp40.dll" />
     <Content Include="bin\amd64\sqlcese40.dll" />
     <Content Include="bin\AngleSharp.dll" />
-    <Content Include="bin\AngleSharp.xml" />
     <Content Include="bin\Antlr3.Runtime.dll" />
-    <Content Include="bin\Antlr3.Runtime.pdb" />
     <Content Include="bin\ClientDependency.Core.dll" />
     <Content Include="bin\ClientDependency.Core.Mvc.dll" />
-    <Content Include="bin\ClientDependency.Core.Mvc.pdb" />
-    <Content Include="bin\ClientDependency.Core.pdb" />
     <Content Include="bin\CSharpTest.Net.Collections.dll" />
-    <Content Include="bin\CSharpTest.Net.Collections.xml" />
     <Content Include="bin\cs\Microsoft.CodeAnalysis.CSharp.resources.dll" />
     <Content Include="bin\cs\Microsoft.CodeAnalysis.resources.dll" />
     <Content Include="bin\de\Microsoft.CodeAnalysis.CSharp.resources.dll" />
     <Content Include="bin\de\Microsoft.CodeAnalysis.resources.dll" />
     <Content Include="bin\EntityFramework.dll" />
     <Content Include="bin\EntityFramework.SqlServer.dll" />
-    <Content Include="bin\EntityFramework.SqlServer.xml" />
-    <Content Include="bin\EntityFramework.xml" />
     <Content Include="bin\es\Microsoft.CodeAnalysis.CSharp.resources.dll" />
     <Content Include="bin\es\Microsoft.CodeAnalysis.resources.dll" />
     <Content Include="bin\Examine.dll" />
-    <Content Include="bin\Examine.pdb" />
     <Content Include="bin\fr\Microsoft.CodeAnalysis.CSharp.resources.dll" />
     <Content Include="bin\fr\Microsoft.CodeAnalysis.resources.dll" />
     <Content Include="bin\HtmlAgilityPack.dll" />
-    <Content Include="bin\HtmlAgilityPack.pdb" />
-    <Content Include="bin\HtmlAgilityPack.xml" />
     <Content Include="bin\HtmlSanitizer.dll" />
-    <Content Include="bin\HtmlSanitizer.xml" />
     <Content Include="bin\ICSharpCode.SharpZipLib.dll" />
     <Content Include="bin\ImageProcessor.dll" />
     <Content Include="bin\ImageProcessor.Web.dll" />
-    <Content Include="bin\ImageProcessor.Web.xml" />
-    <Content Include="bin\ImageProcessor.xml" />
     <Content Include="bin\it\Microsoft.CodeAnalysis.CSharp.resources.dll" />
     <Content Include="bin\it\Microsoft.CodeAnalysis.resources.dll" />
     <Content Include="bin\ja\Microsoft.CodeAnalysis.CSharp.resources.dll" />
@@ -756,58 +741,29 @@
     <Content Include="bin\ko\Microsoft.CodeAnalysis.CSharp.resources.dll" />
     <Content Include="bin\ko\Microsoft.CodeAnalysis.resources.dll" />
     <Content Include="bin\LightInject.Annotation.dll" />
-    <Content Include="bin\LightInject.Annotation.pdb" />
     <Content Include="bin\LightInject.dll" />
     <Content Include="bin\LightInject.Mvc.dll" />
-    <Content Include="bin\LightInject.Mvc.pdb" />
-    <Content Include="bin\LightInject.pdb" />
     <Content Include="bin\LightInject.Web.dll" />
-    <Content Include="bin\LightInject.Web.pdb" />
-    <Content Include="bin\LightInject.Web.xml" />
     <Content Include="bin\LightInject.WebApi.dll" />
-    <Content Include="bin\LightInject.WebApi.pdb" />
-    <Content Include="bin\LightInject.WebApi.xml" />
-    <Content Include="bin\LightInject.xml" />
     <Content Include="bin\Lucene.Net.dll" />
-    <Content Include="bin\Lucene.Net.pdb" />
-    <Content Include="bin\Lucene.Net.xml" />
     <Content Include="bin\Markdown.dll" />
     <Content Include="bin\Microsoft.AspNet.Identity.Core.dll" />
-    <Content Include="bin\Microsoft.AspNet.Identity.Core.xml" />
     <Content Include="bin\Microsoft.AspNet.Identity.Owin.dll" />
-    <Content Include="bin\Microsoft.AspNet.Identity.Owin.xml" />
     <Content Include="bin\Microsoft.AspNet.SignalR.Core.dll" />
-    <Content Include="bin\Microsoft.AspNet.SignalR.Core.pdb" />
-    <Content Include="bin\Microsoft.AspNet.SignalR.Core.xml" />
     <Content Include="bin\Microsoft.CodeAnalysis.CSharp.dll" />
-    <Content Include="bin\Microsoft.CodeAnalysis.CSharp.pdb" />
-    <Content Include="bin\Microsoft.CodeAnalysis.CSharp.xml" />
     <Content Include="bin\Microsoft.CodeAnalysis.dll" />
-    <Content Include="bin\Microsoft.CodeAnalysis.pdb" />
-    <Content Include="bin\Microsoft.CodeAnalysis.xml" />
     <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
-    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
     <Content Include="bin\Microsoft.Extensions.DependencyInjection.Abstractions.dll" />
-    <Content Include="bin\Microsoft.Extensions.DependencyInjection.Abstractions.xml" />
     <Content Include="bin\Microsoft.IO.RecyclableMemoryStream.dll" />
-    <Content Include="bin\Microsoft.IO.RecyclableMemoryStream.pdb" />
     <Content Include="bin\Microsoft.Owin.dll" />
     <Content Include="bin\Microsoft.Owin.Host.SystemWeb.dll" />
-    <Content Include="bin\Microsoft.Owin.Host.SystemWeb.xml" />
     <Content Include="bin\Microsoft.Owin.Security.Cookies.dll" />
-    <Content Include="bin\Microsoft.Owin.Security.Cookies.xml" />
     <Content Include="bin\Microsoft.Owin.Security.dll" />
     <Content Include="bin\Microsoft.Owin.Security.OAuth.dll" />
-    <Content Include="bin\Microsoft.Owin.Security.OAuth.xml" />
-    <Content Include="bin\Microsoft.Owin.Security.xml" />
-    <Content Include="bin\Microsoft.Owin.xml" />
     <Content Include="bin\Microsoft.Web.Infrastructure.dll" />
     <Content Include="bin\MiniProfiler.dll" />
     <Content Include="bin\MiniProfiler.Shared.dll" />
-    <Content Include="bin\MiniProfiler.Shared.xml" />
-    <Content Include="bin\MiniProfiler.xml" />
     <Content Include="bin\Newtonsoft.Json.dll" />
-    <Content Include="bin\Newtonsoft.Json.xml" />
     <Content Include="bin\NPoco.dll" />
     <Content Include="bin\Our.Umbraco.OsmMaps.dll" />
     <Content Include="bin\Owin.dll" />
@@ -857,36 +813,23 @@
     <Content Include="bin\ru\Microsoft.CodeAnalysis.CSharp.resources.dll" />
     <Content Include="bin\ru\Microsoft.CodeAnalysis.resources.dll" />
     <Content Include="bin\Semver.dll" />
-    <Content Include="bin\Semver.xml" />
     <Content Include="bin\Serilog.dll" />
     <Content Include="bin\Serilog.Enrichers.Process.dll" />
     <Content Include="bin\Serilog.Enrichers.Thread.dll" />
-    <Content Include="bin\Serilog.Enrichers.Thread.xml" />
     <Content Include="bin\Serilog.Filters.Expressions.dll" />
-    <Content Include="bin\Serilog.Filters.Expressions.xml" />
     <Content Include="bin\Serilog.Formatting.Compact.dll" />
     <Content Include="bin\Serilog.Formatting.Compact.Reader.dll" />
-    <Content Include="bin\Serilog.Formatting.Compact.Reader.xml" />
-    <Content Include="bin\Serilog.Formatting.Compact.xml" />
-    <Content Include="bin\Serilog.pdb" />
     <Content Include="bin\Serilog.Settings.AppSettings.dll" />
     <Content Include="bin\Serilog.Sinks.Async.dll" />
-    <Content Include="bin\Serilog.Sinks.Async.xml" />
     <Content Include="bin\Serilog.Sinks.File.dll" />
-    <Content Include="bin\Serilog.Sinks.File.xml" />
     <Content Include="bin\Serilog.Sinks.Map.dll" />
-    <Content Include="bin\Serilog.Sinks.Map.xml" />
-    <Content Include="bin\Serilog.xml" />
     <Content Include="bin\Superpower.dll" />
-    <Content Include="bin\Superpower.xml" />
     <Content Include="bin\System.AppContext.dll" />
     <Content Include="bin\System.Collections.Immutable.dll" />
-    <Content Include="bin\System.Collections.Immutable.xml" />
     <Content Include="bin\System.Console.dll" />
     <Content Include="bin\System.Data.SqlServerCe.dll" />
     <Content Include="bin\System.Data.SqlServerCe.Entity.dll" />
     <Content Include="bin\System.Diagnostics.DiagnosticSource.dll" />
-    <Content Include="bin\System.Diagnostics.DiagnosticSource.xml" />
     <Content Include="bin\System.Diagnostics.FileVersionInfo.dll" />
     <Content Include="bin\System.Diagnostics.StackTrace.dll" />
     <Content Include="bin\System.IO.Compression.dll" />
@@ -896,10 +839,8 @@
     <Content Include="bin\System.Linq.dll" />
     <Content Include="bin\System.Linq.Expressions.dll" />
     <Content Include="bin\System.Net.Http.Formatting.dll" />
-    <Content Include="bin\System.Net.Http.Formatting.xml" />
     <Content Include="bin\System.Reflection.dll" />
     <Content Include="bin\System.Reflection.Metadata.dll" />
-    <Content Include="bin\System.Reflection.Metadata.xml" />
     <Content Include="bin\System.Runtime.dll" />
     <Content Include="bin\System.Runtime.Extensions.dll" />
     <Content Include="bin\System.Runtime.InteropServices.dll" />
@@ -909,30 +850,18 @@
     <Content Include="bin\System.Security.Cryptography.X509Certificates.dll" />
     <Content Include="bin\System.Text.Encoding.CodePages.dll" />
     <Content Include="bin\System.Threading.Tasks.Dataflow.dll" />
-    <Content Include="bin\System.Threading.Tasks.Dataflow.xml" />
     <Content Include="bin\System.Threading.Tasks.Extensions.dll" />
-    <Content Include="bin\System.Threading.Tasks.Extensions.xml" />
     <Content Include="bin\System.Threading.Thread.dll" />
     <Content Include="bin\System.ValueTuple.dll" />
-    <Content Include="bin\System.ValueTuple.xml" />
     <Content Include="bin\System.Web.Helpers.dll" />
-    <Content Include="bin\System.Web.Helpers.xml" />
     <Content Include="bin\System.Web.Http.dll" />
     <Content Include="bin\System.Web.Http.WebHost.dll" />
-    <Content Include="bin\System.Web.Http.WebHost.xml" />
-    <Content Include="bin\System.Web.Http.xml" />
     <Content Include="bin\System.Web.Mvc.dll" />
-    <Content Include="bin\System.Web.Mvc.xml" />
     <Content Include="bin\System.Web.Optimization.dll" />
-    <Content Include="bin\System.Web.Optimization.xml" />
     <Content Include="bin\System.Web.Razor.dll" />
-    <Content Include="bin\System.Web.Razor.xml" />
     <Content Include="bin\System.Web.WebPages.Deployment.dll" />
-    <Content Include="bin\System.Web.WebPages.Deployment.xml" />
     <Content Include="bin\System.Web.WebPages.dll" />
     <Content Include="bin\System.Web.WebPages.Razor.dll" />
-    <Content Include="bin\System.Web.WebPages.Razor.xml" />
-    <Content Include="bin\System.Web.WebPages.xml" />
     <Content Include="bin\System.Xml.ReaderWriter.dll" />
     <Content Include="bin\System.Xml.XmlDocument.dll" />
     <Content Include="bin\System.Xml.XPath.dll" />
@@ -942,24 +871,13 @@
     <Content Include="bin\tr\Microsoft.CodeAnalysis.CSharp.resources.dll" />
     <Content Include="bin\tr\Microsoft.CodeAnalysis.resources.dll" />
     <Content Include="bin\Umbraco.Core.dll" />
-    <Content Include="bin\Umbraco.Core.pdb" />
-    <Content Include="bin\Umbraco.Core.xml" />
     <Content Include="bin\Umbraco.Examine.dll" />
-    <Content Include="bin\Umbraco.Examine.pdb" />
-    <Content Include="bin\Umbraco.Examine.xml" />
     <Content Include="bin\Umbraco.ModelsBuilder.Api.dll" />
-    <Content Include="bin\Umbraco.ModelsBuilder.Api.pdb" />
     <Content Include="bin\Umbraco.ModelsBuilder.dll" />
     <Content Include="bin\Umbraco.ModelsBuilder.Embedded.dll" />
-    <Content Include="bin\Umbraco.ModelsBuilder.Embedded.pdb" />
-    <Content Include="bin\Umbraco.ModelsBuilder.Embedded.xml" />
-    <Content Include="bin\Umbraco.ModelsBuilder.pdb" />
     <Content Include="bin\Umbraco.SampleSite.dll" />
     <Content Include="bin\Umbraco.Web.dll" />
-    <Content Include="bin\Umbraco.Web.pdb" />
     <Content Include="bin\Umbraco.Web.UI.dll" />
-    <Content Include="bin\Umbraco.Web.UI.xml" />
-    <Content Include="bin\Umbraco.Web.xml" />
     <Content Include="bin\WebGrease.dll" />
     <Content Include="bin\x86\Microsoft.VC90.CRT\msvcr90.dll" />
     <Content Include="bin\x86\sqlceca40.dll" />
@@ -992,14 +910,15 @@
     <Content Include="config\Lang\sv-SE.user.xml" />
     <Content Include="config\Lang\zh-CN.user.xml" />
     <Content Include="config\logviewer.searches.config.js" />
-    <Content Include="Content\bootstrap-theme.css" />
-    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap-grid.css" />
+    <Content Include="Content\bootstrap-grid.min.css" />
+    <Content Include="Content\bootstrap-reboot.css" />
+    <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="css\RTE-Styles.css" />
     <Content Include="css\style.css" />
     <Content Include="favicon.ico" />
-    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Content\Site.css" />
     <Content Include="Global.asax" />
     <Content Include="images\AryanDang.jpeg" />
@@ -1022,16 +941,6 @@
       <DependentUpon>EntityModel.edmx</DependentUpon>
       <LastGenOutput>EntityModel.cs</LastGenOutput>
     </Content>
-    <Content Include="obj\Debug\TempPE\Models.EntityModel.Context.cs.dll" />
-    <Content Include="obj\Debug\TempPE\Models.EntityModel.cs.dll" />
-    <Content Include="obj\Debug\TempPE\Models.EntityModel.Designer.cs.dll" />
-    <Content Include="obj\Debug\TempPE\Models.Model1.Context.cs.dll" />
-    <Content Include="obj\Debug\TempPE\Models.Model1.cs.dll" />
-    <Content Include="obj\Debug\TempPE\Models.Model1.Designer.cs.dll" />
-    <Content Include="obj\Debug\TreasureRoom.csproj.FileListAbsolute.txt" />
-    <Content Include="obj\Debug\TreasureRoom.Web.csproj.FileListAbsolute.txt" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="config\imageprocessor\security.config" />
     <Content Include="config\imageprocessor\processing.config" />
     <Content Include="config\imageprocessor\cache.config" />
@@ -1057,38 +966,11 @@
     <Content Include="App_Data\Models\models.hash" />
     <Content Include="App_Data\packages\createdPackages.config" />
     <Content Include="App_Data\packages\installedPackages.config" />
-    <Content Include="App_Data\TEMP\ExamineIndexes\External\segments.gen" />
-    <Content Include="App_Data\TEMP\ExamineIndexes\External\segments_10" />
-    <Content Include="App_Data\TEMP\ExamineIndexes\External\_s.cfs" />
-    <Content Include="App_Data\TEMP\ExamineIndexes\External\_s_1.del" />
-    <Content Include="App_Data\TEMP\ExamineIndexes\External\_t.cfs" />
-    <Content Include="App_Data\TEMP\ExamineIndexes\External\_u.cfs" />
-    <Content Include="App_Data\TEMP\ExamineIndexes\External\_u_1.del" />
-    <Content Include="App_Data\TEMP\ExamineIndexes\External\_v.cfs" />
-    <Content Include="App_Data\TEMP\ExamineIndexes\External\_v_1.del" />
-    <Content Include="App_Data\TEMP\ExamineIndexes\External\_w.cfs" />
-    <Content Include="App_Data\TEMP\ExamineIndexes\External\_w_1.del" />
-    <Content Include="App_Data\TEMP\ExamineIndexes\External\_x.cfs" />
-    <Content Include="App_Data\TEMP\ExamineIndexes\Internal\segments.gen" />
-    <Content Include="App_Data\TEMP\ExamineIndexes\Internal\segments_19" />
-    <Content Include="App_Data\TEMP\ExamineIndexes\Internal\_10.cfs" />
-    <Content Include="App_Data\TEMP\ExamineIndexes\Internal\_11.cfs" />
-    <Content Include="App_Data\TEMP\ExamineIndexes\Internal\_11_1.del" />
-    <Content Include="App_Data\TEMP\ExamineIndexes\Internal\_12.cfs" />
-    <Content Include="App_Data\TEMP\ExamineIndexes\Internal\_12_1.del" />
-    <Content Include="App_Data\TEMP\ExamineIndexes\Internal\_13.cfs" />
-    <Content Include="App_Data\TEMP\ExamineIndexes\Internal\_13_1.del" />
-    <Content Include="App_Data\TEMP\ExamineIndexes\Internal\_14.cfs" />
-    <Content Include="App_Data\TEMP\ExamineIndexes\Internal\_z.cfs" />
-    <Content Include="App_Data\TEMP\ExamineIndexes\Internal\_z_1.del" />
-    <Content Include="App_Data\TEMP\ExamineIndexes\Members\segments.gen" />
-    <Content Include="App_Data\TEMP\ExamineIndexes\Members\segments_2" />
     <Content Include="App_Data\TEMP\NuCache\NuCache.Content.db" />
     <Content Include="App_Data\TEMP\NuCache\NuCache.Media.db" />
     <Content Include="App_Data\TEMP\TypesCache\umbraco-types.DESKTOP-10GN34Q.hash" />
     <Content Include="App_Data\TEMP\TypesCache\umbraco-types.DESKTOP-10GN34Q.list" />
     <Content Include="bin\amd64\Microsoft.VC90.CRT\Microsoft.VC90.CRT.manifest" />
-    <Content Include="bin\LightInject.WebApi.dll.config" />
     <Content Include="bin\roslyn\csc.exe.config" />
     <Content Include="bin\roslyn\csc.rsp" />
     <Content Include="bin\roslyn\csi.exe.config" />
@@ -1116,19 +998,103 @@
     <Content Include="Models\EntityModel.edmx.diagram">
       <DependentUpon>EntityModel.edmx</DependentUpon>
     </Content>
-    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
-    <Content Include="obj\Debug\edmxResourcesToEmbed\Models\EntityModel.csdl" />
-    <Content Include="obj\Debug\edmxResourcesToEmbed\Models\EntityModel.msl" />
-    <Content Include="obj\Debug\edmxResourcesToEmbed\Models\EntityModel.ssdl" />
-    <Content Include="obj\Debug\edmxResourcesToEmbed\Models\Model1.csdl" />
-    <Content Include="obj\Debug\edmxResourcesToEmbed\Models\Model1.msl" />
-    <Content Include="obj\Debug\edmxResourcesToEmbed\Models\Model1.ssdl" />
-    <Content Include="obj\Debug\TreasureRoom.csproj.CoreCompileInputs.cache" />
-    <Content Include="obj\Debug\TreasureRoom.Web.csproj.CopyComplete" />
-    <Content Include="obj\Debug\TreasureRoom.Web.csproj.CoreCompileInputs.cache" />
-    <Content Include="obj\Debug\TreasureRoom.Web.csprojAssemblyReference.cache" />
+    <Content Include="Scripts\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\esm\popper-utils.js" />
+    <Content Include="Scripts\esm\popper-utils.min.js" />
+    <Content Include="Scripts\esm\popper.js" />
+    <Content Include="Scripts\esm\popper.min.js" />
+    <Content Include="Scripts\popper-utils.js" />
+    <Content Include="Scripts\popper-utils.min.js" />
+    <Content Include="Scripts\popper.js" />
+    <Content Include="Scripts\popper.min.js" />
+    <Content Include="Scripts\src\index.js" />
+    <Content Include="Scripts\src\methods\defaults.js" />
+    <Content Include="Scripts\src\methods\destroy.js" />
+    <Content Include="Scripts\src\methods\disableEventListeners.js" />
+    <Content Include="Scripts\src\methods\enableEventListeners.js" />
+    <Content Include="Scripts\src\methods\placements.js" />
+    <Content Include="Scripts\src\methods\update.js" />
+    <Content Include="Scripts\src\modifiers\applyStyle.js" />
+    <Content Include="Scripts\src\modifiers\arrow.js" />
+    <Content Include="Scripts\src\modifiers\computeStyle.js" />
+    <Content Include="Scripts\src\modifiers\flip.js" />
+    <Content Include="Scripts\src\modifiers\hide.js" />
+    <Content Include="Scripts\src\modifiers\index.js" />
+    <Content Include="Scripts\src\modifiers\inner.js" />
+    <Content Include="Scripts\src\modifiers\keepTogether.js" />
+    <Content Include="Scripts\src\modifiers\offset.js" />
+    <Content Include="Scripts\src\modifiers\preventOverflow.js" />
+    <Content Include="Scripts\src\modifiers\shift.js" />
+    <Content Include="Scripts\src\utils\clockwise.js" />
+    <Content Include="Scripts\src\utils\computeAutoPlacement.js" />
+    <Content Include="Scripts\src\utils\debounce.js" />
+    <Content Include="Scripts\src\utils\find.js" />
+    <Content Include="Scripts\src\utils\findCommonOffsetParent.js" />
+    <Content Include="Scripts\src\utils\findIndex.js" />
+    <Content Include="Scripts\src\utils\getBordersSize.js" />
+    <Content Include="Scripts\src\utils\getBoundaries.js" />
+    <Content Include="Scripts\src\utils\getBoundingClientRect.js" />
+    <Content Include="Scripts\src\utils\getClientRect.js" />
+    <Content Include="Scripts\src\utils\getFixedPositionOffsetParent.js" />
+    <Content Include="Scripts\src\utils\getOffsetParent.js" />
+    <Content Include="Scripts\src\utils\getOffsetRect.js" />
+    <Content Include="Scripts\src\utils\getOffsetRectRelativeToArbitraryNode.js" />
+    <Content Include="Scripts\src\utils\getOppositePlacement.js" />
+    <Content Include="Scripts\src\utils\getOppositeVariation.js" />
+    <Content Include="Scripts\src\utils\getOuterSizes.js" />
+    <Content Include="Scripts\src\utils\getParentNode.js" />
+    <Content Include="Scripts\src\utils\getPopperOffsets.js" />
+    <Content Include="Scripts\src\utils\getReferenceNode.js" />
+    <Content Include="Scripts\src\utils\getReferenceOffsets.js" />
+    <Content Include="Scripts\src\utils\getRoot.js" />
+    <Content Include="Scripts\src\utils\getRoundedOffsets.js" />
+    <Content Include="Scripts\src\utils\getScroll.js" />
+    <Content Include="Scripts\src\utils\getScrollParent.js" />
+    <Content Include="Scripts\src\utils\getStyleComputedProperty.js" />
+    <Content Include="Scripts\src\utils\getSupportedPropertyName.js" />
+    <Content Include="Scripts\src\utils\getViewportOffsetRectRelativeToArtbitraryNode.js" />
+    <Content Include="Scripts\src\utils\getWindow.js" />
+    <Content Include="Scripts\src\utils\getWindowSizes.js" />
+    <Content Include="Scripts\src\utils\includeScroll.js" />
+    <Content Include="Scripts\src\utils\index.js" />
+    <Content Include="Scripts\src\utils\isBrowser.js" />
+    <Content Include="Scripts\src\utils\isFixed.js" />
+    <Content Include="Scripts\src\utils\isFunction.js" />
+    <Content Include="Scripts\src\utils\isIE.js" />
+    <Content Include="Scripts\src\utils\isModifierEnabled.js" />
+    <Content Include="Scripts\src\utils\isModifierRequired.js" />
+    <Content Include="Scripts\src\utils\isNumeric.js" />
+    <Content Include="Scripts\src\utils\isOffsetContainer.js" />
+    <Content Include="Scripts\src\utils\removeEventListeners.js" />
+    <Content Include="Scripts\src\utils\runModifiers.js" />
+    <Content Include="Scripts\src\utils\setAttributes.js" />
+    <Content Include="Scripts\src\utils\setStyles.js" />
+    <Content Include="Scripts\src\utils\setupEventListeners.js" />
+    <Content Include="Scripts\umd\popper-utils.js" />
+    <Content Include="Scripts\umd\popper-utils.min.js" />
+    <Content Include="Scripts\umd\popper.js" />
+    <Content Include="Scripts\umd\popper.min.js" />
     <Content Include="TCDocuments\ConstentForm.pdf" />
     <Content Include="TCDocuments\PARTICIPANT INFORMATION SHEET.pdf" />
+    <Content Include="libman.json" />
+    <Content Include="Scripts\index.js.flow" />
+    <Content Include="Scripts\esm\popper.min.js.map" />
+    <Content Include="Scripts\esm\popper.js.map" />
+    <Content Include="Scripts\esm\popper-utils.min.js.map" />
+    <Content Include="Scripts\esm\popper-utils.js.map" />
+    <Content Include="Scripts\bootstrap.min.js.map" />
+    <Content Include="Scripts\bootstrap.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.css.map" />
+    <Content Include="Content\bootstrap-grid.min.css.map" />
+    <Content Include="Content\bootstrap-grid.css.map" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -3707,6 +3673,16 @@
     <Content Include="Views\DeleteItemPage.cshtml" />
     <Content Include="Views\Partials\DeleteItemForm.cshtml" />
     <Content Include="Views\ErrorPage.cshtml" />
+    <Content Include="Scripts\umd\popper.min.js.map" />
+    <Content Include="Scripts\umd\popper.js.map" />
+    <Content Include="Scripts\umd\popper.js.flow" />
+    <Content Include="Scripts\umd\popper-utils.min.js.map" />
+    <Content Include="Scripts\umd\popper-utils.js.map" />
+    <Content Include="Scripts\README.md" />
+    <Content Include="Scripts\popper.min.js.map" />
+    <Content Include="Scripts\popper.js.map" />
+    <Content Include="Scripts\popper-utils.min.js.map" />
+    <Content Include="Scripts\popper-utils.js.map" />
     <None Include="Views\Partials\SearchForm.cshtml" />
     <Content Include="Views\SearchPage.cshtml" />
     <Content Include="Views\PostPage.cshtml" />
@@ -3722,6 +3698,7 @@
     <Folder Include="App_Plugins\uSync8\components\" />
     <Folder Include="App_Plugins\uSync8\lang\" />
     <Folder Include="App_Plugins\uSync8\settings\" />
+    <Folder Include="fonts\" />
     <Folder Include="Interfaces\" />
     <Folder Include="Items-Images\" />
     <Folder Include="Views\AccountSurface\" />
@@ -3730,30 +3707,27 @@
     <Folder Include="Views\MacroPartials\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Content\bootstrap.min.css.map" />
-    <Content Include="Content\bootstrap.css.map" />
-    <Content Include="Content\bootstrap-theme.min.css.map" />
-    <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Analyzer Include="..\packages\Microsoft.CodeAnalysis.Analyzers.2.6.1\analyzers\dotnet\cs\Microsoft.CodeAnalysis.Analyzers.dll" />
-    <Analyzer Include="..\packages\Microsoft.CodeAnalysis.Analyzers.2.6.1\analyzers\dotnet\cs\Microsoft.CodeAnalysis.CSharp.Analyzers.dll" />
+    <Analyzer Include="..\packages\Microsoft.CodeAnalysis.Analyzers.3.0.0\analyzers\dotnet\cs\Microsoft.CodeAnalysis.Analyzers.dll" />
+    <Analyzer Include="..\packages\Microsoft.CodeAnalysis.Analyzers.3.0.0\analyzers\dotnet\cs\Microsoft.CodeAnalysis.CSharp.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="Scripts\index.d.ts" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
   <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
@@ -3789,10 +3763,13 @@
     <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
     <Error Condition="!Exists('..\packages\UmbracoCms.8.10.1\build\UmbracoCms.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\UmbracoCms.8.10.1\build\UmbracoCms.props'))" />
     <Error Condition="!Exists('..\packages\UmbracoCms.8.10.1\build\UmbracoCms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\UmbracoCms.8.10.1\build\UmbracoCms.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeAnalysis.Analyzers.3.0.0\build\Microsoft.CodeAnalysis.Analyzers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeAnalysis.Analyzers.3.0.0\build\Microsoft.CodeAnalysis.Analyzers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeAnalysis.Analyzers.3.0.0\build\Microsoft.CodeAnalysis.Analyzers.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeAnalysis.Analyzers.3.0.0\build\Microsoft.CodeAnalysis.Analyzers.targets'))" />
   </Target>
   <Import Project="..\packages\Umbraco.SqlServerCE.4.0.0.1\build\Umbraco.SqlServerCE.targets" Condition="Exists('..\packages\Umbraco.SqlServerCE.4.0.0.1\build\Umbraco.SqlServerCE.targets')" />
   <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
   <Import Project="..\packages\UmbracoCms.8.10.1\build\UmbracoCms.targets" Condition="Exists('..\packages\UmbracoCms.8.10.1\build\UmbracoCms.targets')" />
+  <Import Project="..\packages\Microsoft.CodeAnalysis.Analyzers.3.0.0\build\Microsoft.CodeAnalysis.Analyzers.targets" Condition="Exists('..\packages\Microsoft.CodeAnalysis.Analyzers.3.0.0\build\Microsoft.CodeAnalysis.Analyzers.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

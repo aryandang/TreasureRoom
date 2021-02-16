@@ -11,7 +11,7 @@ namespace TreasureRoom.Controllers.RenderMvc
     {
         private GetTitlesDBHandler getTitlesDbHandler = new GetTitlesDBHandler();
         private GetQuestionsWalletOrPurseElectronicDBHandler getQuestionsWalletOrPurseElectronicDbHandler = new GetQuestionsWalletOrPurseElectronicDBHandler();
-        public ActionResult Index(ContentModel model)
+        public override ActionResult Index(ContentModel model)
         {
             var lostPurseContentModel = new LostPurseContentModel(model.Content);
 

@@ -1,0 +1,106 @@
+﻿
+@inherits UmbracoViewPage<TreasureRoom.Models.ViewModel.RetrieveViewModel>
+
+@using (Html.BeginUmbracoForm("SubmitForm", "RetrieveSurface", FormMethod.Post))
+{
+    foreach (var item in Model.LostItemsData)
+    {
+        <div class="container post-form_body">
+            <br />
+            <h3>@Html.Raw("Security Questions:")</h3>
+            <hr />
+            <div class="form-group">
+                <div class="details-title-show">
+                    @Html.LabelFor(modelItem => item.Question1)
+                </div>
+                @Html.DisplayFor(modelItem => item.Question1)
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Answer1Input)
+                <div class="input-group">
+                    @Html.EditorFor(m => m.Answer1Input, new { htmlAttributes = new { @class = "post-searchfield answer", placeholder = "Answer 1" } })
+                </div>
+                @Html.ValidationMessageFor(m => m.Answer1Input, String.Empty, new { @class = "validation-messages" })
+            </div>
+            <div class="form-group">
+                <div class="details-title-show">
+                    @Html.LabelFor(modelItem => item.Question2)
+                </div>
+                @Html.DisplayFor(modelItem => item.Question2)
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Answer2Input)
+                <div class="input-group">
+                    @Html.EditorFor(m => m.Answer2Input, new { htmlAttributes = new { @class = "post-searchfield answer", placeholder = "Answer 2" } })
+                </div>
+                @Html.ValidationMessageFor(m => m.Answer2Input, String.Empty, new { @class = "validation-messages" })
+            </div>
+            @if (item.Question3 != null)
+            {
+                <div class="form-group">
+                    <div class="details-title-show">
+                        @Html.LabelFor(modelItem => item.Question3)
+                    </div>
+                    @Html.DisplayFor(m => item.Question3)
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Answer3Input)
+                    <div class="input-group">
+                        @Html.EditorFor(m => m.Answer3Input, new { htmlAttributes = new { @class = "post-searchfield answer", placeholder = "Answer 3" } })
+                    </div>
+                    @Html.ValidationMessageFor(m => m.Answer3Input, String.Empty, new { @class = "validation-messages" })
+                </div>
+            }
+            <div class="form-group">
+                <div class="details-title-show">
+                    @Html.LabelFor(m => m.FullName)
+                </div>
+                <div class="input-group">
+                    @Html.EditorFor(m => m.FullName, new { htmlAttributes = new { @class = "post-searchfield", placeholder = "Full Name" } })
+                </div>
+                @Html.ValidationMessageFor(m => m.FullName, String.Empty, new { @class = "validation-messages" })
+            </div>
+            <div class="form-group">
+                <div class="details-title-show">
+                    @Html.LabelFor(m => m.EmailAddress)
+                </div>
+                <div class="input-group">
+                    @Html.EditorFor(m => m.EmailAddress, new { htmlAttributes = new { @class = "post-searchfield", placeholder = "Email Address" } })
+                </div>
+                @Html.ValidationMessageFor(m => m.EmailAddress, String.Empty, new { @class = "validation-messages" })
+            </div>
+            <div class="form-group">
+                <div class="details-title-show">
+                    @Html.LabelFor(m => m.PhoneNumber)
+                </div>
+                <div class="input-group">
+                    @Html.EditorFor(m => m.PhoneNumber, new { htmlAttributes = new { @class = "post-searchfield", placeholder = "Phone Number" } })
+                </div>
+                @Html.ValidationMessageFor(m => m.PhoneNumber, String.Empty, new { @class = "validation-messages" })
+            </div>
+            <div class="form-group">
+                <div class="post-title-show">@Html.LabelFor(m => m.Age18AboveAndHonesty)</div>
+                <div class="input-group">
+                    @Html.CheckBoxFor(m => m.Age18AboveAndHonesty, new { htmlAttributes = new { @class = "post-searchfield", placeholder = "Full Name" } })
+                </div>
+                @Html.ValidationMessageFor(m => m.Age18AboveAndHonesty, String.Empty, new { @class = "validation-messages" })
+            </div>
+            <div class="form-group">
+                <div class="post-title-show">@Html.LabelFor(m => m.ConsentToData)</div>
+                <div class="input-group">
+                    @Html.CheckBoxFor(m => m.ConsentToData, new { htmlAttributes = new { @class = "post-searchfield", placeholder = "Full Name" } })
+                </div>
+                @Html.ValidationMessageFor(m => m.ConsentToData, String.Empty, new { @class = "validation-messages" })
+                <br/>
+                <a href="/terms-and-conditions">Terms & Conditions</a>
+                <br />
+                <br />
+                <i>@Html.Raw("All fields are mandatory*")</i>
+            </div>
+            <br />
+            <div class="form-group">
+                <button id="Submit" class="search-btn">Submit</button>
+            </div>
+        </div>
+    }
+}
