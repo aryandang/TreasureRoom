@@ -52,8 +52,6 @@ C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom\bin\roslyn\V
 C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom\bin\MailChimp.Net.dll
 C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom\bin\Microsoft.Bcl.AsyncInterfaces.dll
-C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom\bin\Microsoft.CodeAnalysis.CSharp.dll
-C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom\bin\Microsoft.CodeAnalysis.dll
 C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom\bin\Microsoft.Extensions.Configuration.Abstractions.dll
 C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom\bin\Microsoft.Extensions.Configuration.Binder.dll
 C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom\bin\Microsoft.Extensions.Configuration.dll
@@ -64,13 +62,10 @@ C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom\bin\Microsof
 C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom\bin\Microsoft.Extensions.Options.dll
 C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom\bin\Microsoft.Extensions.Primitives.dll
 C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom\bin\System.Buffers.dll
-C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom\bin\System.Collections.Immutable.dll
 C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom\bin\System.ComponentModel.Annotations.dll
 C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom\bin\System.Memory.dll
 C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom\bin\System.Numerics.Vectors.dll
-C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom\bin\System.Reflection.Metadata.dll
 C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom\bin\System.Runtime.CompilerServices.Unsafe.dll
-C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom\bin\System.Text.Encoding.CodePages.dll
 C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom\bin\Microsoft.Bcl.AsyncInterfaces.xml
 C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom\bin\Microsoft.CodeAnalysis.pdb
 C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom\bin\Microsoft.CodeAnalysis.xml
@@ -121,3 +116,4 @@ C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom\obj\Debug\Tr
 C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom\obj\Debug\TreasureRoom.csproj.CopyComplete
 C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom\obj\Debug\TreasureRoom.dll
 C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom\obj\Debug\TreasureRoom.pdb
+C:\Users\Aryan Dang\Desktop\Treasure Room\TreasureRoom\TreasureRoom\obj\Debug\TreasureRoom.csprojAssemblyReference.cache

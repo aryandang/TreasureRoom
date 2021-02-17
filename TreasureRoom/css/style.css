@@ -140,12 +140,31 @@ main {
     background: #ffeb3b;
 }
 
+
     .search-btn:hover {
         background: #ffc107;
         cursor: pointer;
         outline: none;
         border: none;
     }
+
+.search-btn-form {
+    height: 40px;
+    width: 140px;
+    border: none;
+    border-radius: 25px;
+    color: black;
+    background: #ffeb3b;
+    margin-bottom: 100px;
+}
+
+
+.search-btn-form:hover {
+    background: #ffc107;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
 
 .col-md-12 {
     margin-bottom: 30px;
@@ -227,7 +246,7 @@ main {
 
 .image-fluid {
     width: 170%;
-    height: 70%;
+    height: auto;
     /*width: 614px;
     height: 463px;*/
 }
@@ -246,14 +265,14 @@ main {
 .testimonials {
     border-left: 4px solid #101cb9;
     margin-top: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
     margin-left: 280px;
 }
 
 .testimonials-image-fluid {
-    height: 80%;
-    width: 180%;
-    margin-left: -90px;
+    height: auto;
+    width: 155%;
+    margin-left: -20px;
 }
 
 .testimonials img {
